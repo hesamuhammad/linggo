@@ -1,10 +1,14 @@
 import React from 'react'
 import {Button} from 'antd';
+import '../App.css'
+import {Row, Col, Affix} from 'antd'
 
 export default function NavBarIna() {
     return (
-        <div style={{background: "black"}}>
+        <div>
+            <Row type='flex' align="middle" className="gradientNav">
             <Button ghost>Default</Button>
+            </Row>
         </div>
     )
 }
