@@ -11,3 +11,46 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.bread {
+  font-size: 11px;
+  line-height: 19px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  font-weight: 700;
+}
+
+.ant-layout {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex: auto;
+  flex: auto;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.BreadHeader {
+  background: url(./images/header-page.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 20rem;
+}
+
+.BreadHeader p {
+  margin: 0;
+  color: white;
+  font-family: "Muli", sans-serif;
+  font-size: 40px;
+  text-shadow: 6px 5px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 6.5rem;
+}
+
+.gutter-box {
+  padding: 5px 0;
+  text-align: center;
+}
