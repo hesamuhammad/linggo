@@ -7,6 +7,13 @@ import Pricing from "./pages/Pricing";
 import Service from "./pages/Service";
 import Aboutus from "./pages/Aboutus";
 import Contactus from "./pages/Contactus";
+import Termsofservice from "./pages/Terms/Termsofservice";
+import Privacy from "./pages/Terms/Privacy";
+import Translatoragree from "./pages/Terms/Translatoragree";
+import TranslatorNDA from "./pages/Terms/TranslatorNDA";
+import Signin from "./pages/Users/Signin";
+import Signup from "./pages/Users/Signup";
+import Ourteam from "./pages/Team/Ourteam";
 
 function App() {
     return (
@@ -27,6 +34,27 @@ function App() {
                 </Route>
                 <Route exact path="/contactus">
                     <Contactus />
+                </Route>
+                <Route exact path="/signin">
+                    <Signin />
+                </Route>
+                <Route exact path="/signup">
+                    <Signup />
+                </Route>
+                <Route exact path="/our-team">
+                    <Ourteam />
+                </Route>
+                <Route exact path="/terms-of-service">
+                    <Termsofservice />
+                </Route>
+                <Route exact path="/terms-of-service/privacy-policy/">
+                    <Privacy />
+                </Route>
+                <Route exact path="/terms-of-service/translator-agreement/">
+                    <Translatoragree />
+                </Route>
+                <Route exact path="/terms-of-service/translator-nda/">
+                    <TranslatorNDA />
                 </Route>
             </Switch>
             <Footer />

@@ -1,11 +1,19 @@
-import React, { Component } from "react";
+import React from "react";
 import { Layout, Menu } from "antd";
 import Image from "../assets/images/logo.png";
 import { Link } from "react-router-dom";
+import { Button } from "antd";
 
 const { Header } = Layout;
 
-export default class Navbar extends Component {
+export default class ButtonSize extends React.Component {
+    state = {
+        size: "large"
+    };
+
+    handleSizeChange = e => {
+        this.setState({ size: e.target.value });
+    };
     render() {
         return (
             <div>
@@ -14,7 +22,7 @@ export default class Navbar extends Component {
                         <div className="logo" />
 
                         <Menu
-                            theme="light"
+                            theme="dark"
                             mode="horizontal"
                             defaultSelectedKeys={["2"]}
                             style={{ lineHeight: "64px" }}
@@ -45,6 +53,16 @@ export default class Navbar extends Component {
                             </Menu.Item>
                             <Menu.Item key="5">
                                 <Link to="/contactus">Contact Us</Link>
+                            </Menu.Item>
+                            <Menu.Item key="6">
+                                <Button type="primary">
+                                    <Link to="/signin">Sign In</Link>
+                                </Button>
+                            </Menu.Item>
+                            <Menu.Item key="7">
+                                <Button>
+                                    <Link to="/signup">Sign Up</Link>
+                                </Button>
                             </Menu.Item>
                         </Menu>
                     </Header>
