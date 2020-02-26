@@ -5,30 +5,37 @@ import Navbar from "./components/NavBarIna";
 import Footer from "./components/Footer";
 import ContactUs from "./pages/ContactUs";
 import Pricing from "./pages/Pricing";
-import Service from "./pages/Service"
-
+import Service from "./pages/Service";
+import Profile from "./pages/Profile";
+import Project from "./pages/Project"
 
 function App() {
-    return (
-        <Router>
-            <Navbar />
-            <Switch>
-                <Route exact path="/">
-                    <Home />
-                </Route>
-                <Route exact path="/contact">
-                    <ContactUs />
-                </Route>
-                <Route exact path="/pricing">
-                    <Pricing />
-                </Route>
-                <Route exact path="/service">
-                    <Service />
-                </Route>
-            </Switch>
-            <Footer />
-        </Router>
-    );
+  return (
+    <Router>
+      <Navbar className="navIndex"/>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route exact path="/contact">
+          <ContactUs />
+        </Route>
+        <Route exact path="/pricing">
+          <Pricing />
+        </Route>
+        <Route exact path="/service">
+          <Service />
+        </Route>
+        <Route exact path="/profile">
+          <Profile />
+        </Route>
+        <Route exact path="/project">
+          <Project />
+        </Route>
+      </Switch>
+      <Footer />
+    </Router>
+  );
 }
 
 export default App;

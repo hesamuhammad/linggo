@@ -1,10 +1,12 @@
 import React, { Component } from "react";
-
+import ServiceCard from '../components/ServiceCard'
 export default class Home extends Component {
     render() {
         return (
-            <div>
+            <div className="paddingPage">
                 <h1>INI HOME</h1>
+                <ServiceCard/>
+                
             </div>
         );
     }
