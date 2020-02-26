@@ -2,7 +2,7 @@ import React from "react";
 import { Card, Col, Row } from "antd";
 import "../App.css";
 
-export default function DetailPricing() {
+export default function PricingCard() {
   return (
     <div style={{ background: "#ECECEC", padding: "15px 0" }}>
       <div style={{ margin: "auto", textAlign: "center", width: "70%" }}>

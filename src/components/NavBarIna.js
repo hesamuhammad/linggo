@@ -1,7 +1,7 @@
 import React from 'react'
 import {Button} from 'antd';
 import '../App.css'
-import {Row, Col, Affix} from 'antd'
+import {Row} from 'antd'
 
 export default function NavBarIna() {
     return (

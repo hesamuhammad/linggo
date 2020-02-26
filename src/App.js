@@ -5,6 +5,7 @@ import Navbar from "./components/NavBarIna";
 import Footer from "./components/Footer";
 import ContactUs from "./pages/ContactUs";
 import Pricing from "./pages/Pricing";
+import Service from "./pages/Service"
 
 
 function App() {
@@ -20,6 +21,9 @@ function App() {
                 </Route>
                 <Route exact path="/pricing">
                     <Pricing />
+                </Route>
+                <Route exact path="/service">
+                    <Service />
                 </Route>
             </Switch>
             <Footer />

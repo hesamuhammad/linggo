@@ -1,13 +1,13 @@
 import React from "react";
-import PricingHeader from "../components/PricingHeader";
-import DetailPricing from "../components/DetailPricing"
+import PricingDetail from "../components/PricingDetail";
+import PricingCard from "../components/PricingCard"
 
 
 export default function Pricing() {
   return (
     <div>
-        <PricingHeader />
-        <DetailPricing />
+        <PricingDetail />
+        <PricingCard />
     </div>
   );
 }

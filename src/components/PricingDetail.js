@@ -1,11 +1,11 @@
 import React from "react";
 import '../App.css'
 
-export default function PricingHeader() {
+export default function PricingDetail() {
   return (
-    <div>
+    <div style={{width: "70%", margin: "0 auto"}}>
       <h1 className="titleFont" style={{textAlign: "center", fontSize: "40px", paddingTop:"20px"}}>Pricing</h1>
-      <p style={{fontSize:"12px", width: "70%", margin: "0 auto", textAlign:"center", paddingBottom:"20px"}}>
+      <p style={{fontSize:"12px", margin: "0 auto", textAlign:"center", paddingBottom:"20px"}}>
         Our rates depend on what level the source language is at, ranging from
         standard to business language, but most of our work is for sworn or
         certified NAATI translation requests.
