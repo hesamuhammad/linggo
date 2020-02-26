@@ -4,12 +4,12 @@ import "../App.css";
 
 export default function PricingCard() {
   return (
-    <div style={{ background: "#ECECEC", padding: "15px 0" }}>
-      <div style={{ margin: "auto", textAlign: "center", width: "70%" }}>
+    <div>
+      <div style={{ margin: "auto", textAlign: "center"}}>
         <Row justify="space-around" gutter={16} style={{ margin: "auto" }}>
           <Col span={8}>
-            <Card hoverable style={{ height: "330px" }}>
-              <h3 className="medFont" style={{ paddingBottom: "12px" }}>
+            <Card hoverable bordered={false} style={{ minHeight: "290px", maxHeight: "500px" }}>
+              <h3 className="medFont titleFont" style={{ paddingBottom: "12px" }}>
                 General
               </h3>
               <hr style={{ opacity: "30%" }} />
@@ -34,8 +34,8 @@ export default function PricingCard() {
             </Card>
           </Col>
           <Col span={8}>
-            <Card hoverable bordered={false} style={{ height: "330px" }}>
-              <h3 className="medFont" style={{ paddingBottom: "12px" }}>
+            <Card hoverable bordered={false} style={{ minHeight: "290px", maxHeight: "500px" }}>
+              <h3 className="medFont titleFont" style={{ paddingBottom: "12px" }}>
                 Specialized
               </h3>
               <hr style={{ opacity: "30%" }} />
@@ -56,14 +56,14 @@ export default function PricingCard() {
             </Card>
           </Col>
           <Col span={8}>
-            <Card hoverable bordered={false} style={{ height: "330px" }}>
-              <h3 className="medFont" style={{ paddingBottom: "12px" }}>
+            <Card hoverable bordered={false} style={{ minHeight: "290px", maxHeight: "500px" }}>
+              <h3 className="medFont titleFont" style={{ paddingBottom: "12px" }}>
                 NAATI Certified
               </h3>
               <hr style={{ opacity: "30%" }} />
               <h3>$ 0.17<h5>per word</h5></h3>
               <hr style={{ opacity: "30%" }} />
-              <p className="smallFont">
+              <p className="smallFont desFont">
                 For your legal and immigration translation needs.
               </p>
             </Card>
