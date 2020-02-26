@@ -1,16 +1,12 @@
 import React from "react";
 import "../App.css";
-import Service1 from "../assets/images/service1.jpg";
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
 
 export default function ServiceGeneral() {
   return (
     <div>
       <h3
-        className="medFont"
-        style={{ paddingBottom: "12px", textAlign: "center" }}
+        className="bigFont titleFont"
+        style={{ paddingBottom: "12px", textAlign: "left" }}
       >
         General Translation
       </h3>
