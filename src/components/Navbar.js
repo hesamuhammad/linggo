@@ -3,6 +3,7 @@ import { Layout, Menu } from "antd";
 import Image from "../assets/images/logo.png";
 import { Link } from "react-router-dom";
 import { Button } from "antd";
+import Drawer from "./Drawer/Drawer";
 
 const { Header } = Layout;
 
@@ -63,6 +64,9 @@ export default class ButtonSize extends React.Component {
                                 <Button>
                                     <Link to="/signup">Sign Up</Link>
                                 </Button>
+                            </Menu.Item>
+                            <Menu.Item key="8">
+                                <Drawer />
                             </Menu.Item>
                         </Menu>
                     </Header>

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Card, Row, Col } from "antd";
-
+import { Card, CardDeck } from "react-bootstrap";
+import { Icon } from "antd";
 const { Meta } = Card;
 
 export default class Ourteam extends Component {
@@ -65,64 +65,246 @@ export default class Ourteam extends Component {
                         Our Team
                     </p>
                 </div>
-                <Row
+                <div
                     style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        paddingLeft: "10%",
-                        paddingRight: "10%"
+                        paddingLeft: "20%",
+                        paddingRight: "20%",
+                        textAlign: "center"
                     }}
                 >
-                    <Col span={4}>
-                        <Card
-                            hoverable
-                            style={{ width: 240 }}
-                            cover={<img alt="example" src={item1.avatar_url} />}
-                        >
-                            <Meta
-                                title={item1.name}
-                                description="Back End Developer"
+                    <CardDeck>
+                        <Card style={{ borderStyle: "none" }}>
+                            <Card.Img
+                                variant="top"
+                                src={item1.avatar_url}
+                                style={{
+                                    borderRadius: "50%"
+                                }}
                             />
+                            <Card.Body>
+                                <Card.Title style={{ fontWeight: "bold" }}>
+                                    {item1.name}
+                                </Card.Title>
+                                <Card.Text
+                                    style={{
+                                        fontWeight: "bold",
+                                        fontStyle: "italic",
+                                        fontSize: "2vh"
+                                    }}
+                                >
+                                    Full Stack Developer
+                                </Card.Text>
+                                <div>
+                                    <Icon
+                                        type="facebook"
+                                        theme="filled"
+                                        style={{
+                                            fontSize: "3vh",
+                                            padding: "0 2%"
+                                        }}
+                                    />
+                                    <Icon
+                                        type="twitter-square"
+                                        theme="filled"
+                                        style={{
+                                            fontSize: "3vh",
+                                            padding: "0 2%"
+                                        }}
+                                    />
+                                    <Icon
+                                        type="instagram"
+                                        theme="filled"
+                                        style={{
+                                            fontSize: "3vh",
+                                            padding: "0 2%"
+                                        }}
+                                    />
+                                    <Icon
+                                        type="mail"
+                                        theme="filled"
+                                        style={{
+                                            fontSize: "3vh",
+                                            padding: "0 2%"
+                                        }}
+                                    />
+                                </div>
+                            </Card.Body>
                         </Card>
-                    </Col>
-                    <Col span={4}>
-                        <Card
-                            hoverable
-                            style={{ width: 240 }}
-                            cover={<img alt="example" src={item2.avatar_url} />}
-                        >
-                            <Meta
-                                title={item2.name}
-                                description="Front End Developer"
+                        <Card style={{ borderStyle: "none" }}>
+                            <Card.Img
+                                variant="top"
+                                src={item2.avatar_url}
+                                style={{
+                                    borderRadius: "50%"
+                                }}
                             />
+                            <Card.Body>
+                                <Card.Title style={{ fontWeight: "bold" }}>
+                                    Hesa Muhammad
+                                </Card.Title>
+                                <Card.Text
+                                    style={{
+                                        fontWeight: "bold",
+                                        fontStyle: "italic",
+                                        fontSize: "2vh"
+                                    }}
+                                >
+                                    Front End Developer
+                                </Card.Text>
+                                <div>
+                                    <Icon
+                                        type="facebook"
+                                        theme="filled"
+                                        style={{
+                                            fontSize: "3vh",
+                                            padding: "0 2%"
+                                        }}
+                                    />
+                                    <Icon
+                                        type="twitter-square"
+                                        theme="filled"
+                                        style={{
+                                            fontSize: "3vh",
+                                            padding: "0 2%"
+                                        }}
+                                    />
+                                    <Icon
+                                        type="instagram"
+                                        theme="filled"
+                                        style={{
+                                            fontSize: "3vh",
+                                            padding: "0 2%"
+                                        }}
+                                    />
+                                    <Icon
+                                        type="mail"
+                                        theme="filled"
+                                        style={{
+                                            fontSize: "3vh",
+                                            padding: "0 2%"
+                                        }}
+                                    />
+                                </div>
+                            </Card.Body>
                         </Card>
-                    </Col>
-
-                    <Col span={4}>
-                        <Card
-                            hoverable
-                            style={{ width: 240 }}
-                            cover={<img alt="example" src={item3.avatar_url} />}
-                        >
-                            <Meta
-                                title={item3.name}
-                                description="Front End Developer"
+                        {/* </CardDeck>
+                    <CardDeck> */}
+                        <Card style={{ borderStyle: "none" }}>
+                            <Card.Img
+                                variant="top"
+                                src={item3.avatar_url}
+                                style={{
+                                    borderRadius: "50%"
+                                }}
                             />
+                            <Card.Body>
+                                <Card.Title style={{ fontWeight: "bold" }}>
+                                    {item3.name}
+                                </Card.Title>
+                                <Card.Text
+                                    style={{
+                                        fontWeight: "bold",
+                                        fontStyle: "italic",
+                                        fontSize: "2vh"
+                                    }}
+                                >
+                                    Front End Developer
+                                </Card.Text>
+                                <div>
+                                    <Icon
+                                        type="facebook"
+                                        theme="filled"
+                                        style={{
+                                            fontSize: "3vh",
+                                            padding: "0 2%"
+                                        }}
+                                    />
+                                    <Icon
+                                        type="twitter-square"
+                                        theme="filled"
+                                        style={{
+                                            fontSize: "3vh",
+                                            padding: "0 2%"
+                                        }}
+                                    />
+                                    <Icon
+                                        type="instagram"
+                                        theme="filled"
+                                        style={{
+                                            fontSize: "3vh",
+                                            padding: "0 2%"
+                                        }}
+                                    />
+                                    <Icon
+                                        type="mail"
+                                        theme="filled"
+                                        style={{
+                                            fontSize: "3vh",
+                                            padding: "0 2%"
+                                        }}
+                                    />
+                                </div>
+                            </Card.Body>
                         </Card>
-                    </Col>
-                    <Col span={4}>
-                        <Card
-                            hoverable
-                            style={{ width: 240 }}
-                            cover={<img alt="example" src={item4.avatar_url} />}
-                        >
-                            <Meta
-                                title={item4.name}
-                                description="Front End Developer"
+                        <Card style={{ borderStyle: "none" }}>
+                            <Card.Img
+                                variant="top"
+                                src={item4.avatar_url}
+                                style={{
+                                    borderRadius: "50%"
+                                }}
                             />
+                            <Card.Body>
+                                <Card.Title style={{ fontWeight: "bold" }}>
+                                    {item4.name}
+                                </Card.Title>
+                                <Card.Text
+                                    style={{
+                                        fontWeight: "bold",
+                                        fontStyle: "italic",
+                                        fontSize: "2vh"
+                                    }}
+                                >
+                                    Front End Developer
+                                </Card.Text>
+                                <div>
+                                    <Icon
+                                        type="facebook"
+                                        theme="filled"
+                                        style={{
+                                            fontSize: "3vh",
+                                            padding: "0 2%"
+                                        }}
+                                    />
+                                    <Icon
+                                        type="twitter-square"
+                                        theme="filled"
+                                        style={{
+                                            fontSize: "3vh",
+                                            padding: "0 2%"
+                                        }}
+                                    />
+                                    <Icon
+                                        type="instagram"
+                                        theme="filled"
+                                        style={{
+                                            fontSize: "3vh",
+                                            padding: "0 2%"
+                                        }}
+                                    />
+                                    <Icon
+                                        type="mail"
+                                        theme="filled"
+                                        style={{
+                                            fontSize: "3vh",
+                                            padding: "0 2%"
+                                        }}
+                                    />
+                                </div>
+                            </Card.Body>
                         </Card>
-                    </Col>
-                </Row>
+                    </CardDeck>
+                </div>
             </div>
         );
     }

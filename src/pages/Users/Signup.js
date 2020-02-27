@@ -1,5 +1,7 @@
 import React from "react";
 import { Formik } from "formik";
+import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
 import {
     Form,
     Input,
@@ -13,6 +15,8 @@ import {
     Button,
     AutoComplete
 } from "antd";
+
+import { register } from "../../actions";
 
 const formItemLayout = {
     labelCol: {
@@ -38,7 +42,7 @@ const tailFormItemLayout = {
     }
 };
 
-const Basic = () => (
+const SignUp = props => (
     <div
         style={{
             display: "flex",
@@ -63,10 +67,8 @@ const Basic = () => (
                 return errors;
             }}
             onSubmit={(values, { setSubmitting }) => {
-                setTimeout(() => {
-                    alert(JSON.stringify(values, null, 2));
-                    setSubmitting(false);
-                }, 400);
+                console.log("INI VALUES", values);
+                props.signup(values, props.history);
             }}
         >
             {({
@@ -130,4 +132,12 @@ const Basic = () => (
     </div>
 );
 
-export default Basic;
+const mapDispatchToProps = dispatch => {
+    return {
+        signup: (values, history) => {
+            dispatch(register(values, history));
+        }
+    };
+};
+
+export default withRouter(connect(null, mapDispatchToProps)(SignUp));

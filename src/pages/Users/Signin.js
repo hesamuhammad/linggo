@@ -1,8 +1,12 @@
 import React from "react";
 import { Form, Icon, Input, Button } from "antd";
-import { Formik } from "formik";
+import { login } from "../../actions";
 
-const Basic = () => (
+import { Formik } from "formik";
+import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
+
+const SignIn = props => (
     <div
         style={{
             display: "flex",
@@ -12,38 +16,21 @@ const Basic = () => (
     >
         <h1 style={{ textAlign: "center" }}>Sign In</h1>
         <Formik
-            initialValues={{ email: "", password: "" }}
-            validate={values => {
-                const errors = {};
-                if (!values.email) {
-                    errors.email = "Required";
-                } else if (
-                    !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(
-                        values.email
-                    )
-                ) {
-                    errors.email = "Invalid email address";
-                }
-                return errors;
+            initialValues={{
+                email: "",
+                password: ""
             }}
-            onSubmit={(values, { setSubmitting }) => {
-                setTimeout(() => {
-                    alert(JSON.stringify(values, null, 2));
-                    setSubmitting(false);
-                }, 400);
+            onSubmit={(values, actions) => {
+                props.login(values, props.history);
             }}
         >
-            {({
-                values,
-                errors,
-                touched,
-                handleChange,
-                handleBlur,
-                handleSubmit,
-                isSubmitting
-                /* and other goodies */
-            }) => (
-                <Form onSubmit={handleSubmit} className="login-form">
+            {props => (
+                <Form
+                    className="login-form"
+                    onSubmit={(values, actions) => {
+                        props.login(values, props.history);
+                    }}
+                >
                     <Form.Item>
                         <Input
                             prefix={
@@ -55,11 +42,10 @@ const Basic = () => (
                             type="email"
                             placeholder="Email"
                             name="email"
-                            onChange={handleChange}
-                            onBlur={handleBlur}
-                            value={values.email}
+                            onChange={props.handleChange}
+                            onBlur={props.handleBlur}
+                            value={props.values.email}
                         />
-                        {errors.email && touched.email && errors.email}
                     </Form.Item>
                     <Form.Item>
                         <Input
@@ -72,17 +58,16 @@ const Basic = () => (
                             type="password"
                             placeholder="Password"
                             name="password"
-                            onChange={handleChange}
-                            onBlur={handleBlur}
-                            value={values.password}
+                            onChange={props.handleChange}
+                            onBlur={props.handleBlur}
+                            value={props.values.password}
                         />
-                        {errors.password && touched.password && errors.password}
                     </Form.Item>
                     <Button
                         type="primary"
                         htmlType="submit"
                         className="login-form-button"
-                        disabled={isSubmitting}
+                        disabled={props.isSubmitting}
                     >
                         Submit
                     </Button>
@@ -92,4 +77,12 @@ const Basic = () => (
     </div>
 );
 
-export default Basic;
+const mapDispatchToProps = dispatch => {
+    return {
+        login: (values, history) => {
+            dispatch(login(values, history));
+        }
+    };
+};
+
+export default withRouter(connect(null, mapDispatchToProps)(SignIn));
