@@ -1,171 +1,133 @@
 import React from "react";
-import { Form, Input, Tooltip, Icon, Checkbox, Button } from "antd";
-import { Link } from "react-router-dom";
+import { Formik } from "formik";
+import {
+    Form,
+    Input,
+    Tooltip,
+    Icon,
+    Cascader,
+    Select,
+    Row,
+    Col,
+    Checkbox,
+    Button,
+    AutoComplete
+} from "antd";
 
-class RegistrationForm extends React.Component {
-    state = {
-        confirmDirty: false,
-        autoCompleteResult: []
-    };
-
-    handleSubmit = e => {
-        e.preventDefault();
-        this.props.form.validateFieldsAndScroll((err, values) => {
-            if (!err) {
-                console.log("Received values of form: ", values);
-            }
-        });
-    };
-
-    handleConfirmBlur = e => {
-        const { value } = e.target;
-        this.setState({ confirmDirty: this.state.confirmDirty || !!value });
-    };
-
-    compareToFirstPassword = (rule, value, callback) => {
-        const { form } = this.props;
-        if (value && value !== form.getFieldValue("password")) {
-            callback("Two passwords that you enter is inconsistent!");
-        } else {
-            callback();
-        }
-    };
-
-    validateToNextPassword = (rule, value, callback) => {
-        const { form } = this.props;
-        if (value && this.state.confirmDirty) {
-            form.validateFields(["confirm"], { force: true });
-        }
-        callback();
-    };
-
-    render() {
-        const { getFieldDecorator } = this.props.form;
-
-        const formItemLayout = {
-            labelCol: {
-                xs: { span: 24 },
-                sm: { span: 8 }
-            },
-            wrapperCol: {
-                xs: { span: 24 },
-                sm: { span: 16 }
-            }
-        };
-        const tailFormItemLayout = {
-            wrapperCol: {
-                xs: {
-                    span: 24,
-                    offset: 0
-                },
-                sm: {
-                    span: 16,
-                    offset: 8
-                }
-            }
-        };
-
-        return (
-            <div style={{ display: "flex" }}>
-                <div style={{ width: 400, maxWidth: 300, margin: "auto" }}>
-                    <h2 style={{ textAlign: "center" }}>Register</h2>
-                    <Form {...formItemLayout} onSubmit={this.handleSubmit}>
-                        <Form.Item
-                            label={
-                                <span>
-                                    First Name &nbsp;
-                                    <Tooltip title="What is your first name?">
-                                        <Icon type="question-circle-o" />
-                                    </Tooltip>
-                                </span>
-                            }
-                        >
-                            {getFieldDecorator("nickname", {
-                                rules: [
-                                    {
-                                        required: true,
-                                        message:
-                                            "Please input your first name!",
-                                        whitespace: true
-                                    }
-                                ]
-                            })(<Input />)}
-                        </Form.Item>
-                        <Form.Item
-                            label={
-                                <span>
-                                    Last Name &nbsp;
-                                    <Tooltip title="What is your last name?">
-                                        <Icon type="question-circle-o" />
-                                    </Tooltip>
-                                </span>
-                            }
-                        >
-                            {getFieldDecorator("nickname", {
-                                rules: [
-                                    {
-                                        required: true,
-                                        message: "Please input your last name!",
-                                        whitespace: true
-                                    }
-                                ]
-                            })(<Input />)}
-                        </Form.Item>
-                        <Form.Item label="E-mail">
-                            {getFieldDecorator("email", {
-                                rules: [
-                                    {
-                                        type: "email",
-                                        message:
-                                            "The input is not valid E-mail!"
-                                    },
-                                    {
-                                        required: true,
-                                        message: "Please input your E-mail!"
-                                    }
-                                ]
-                            })(<Input />)}
-                        </Form.Item>
-                        <Form.Item label="Password" hasFeedback>
-                            {getFieldDecorator("password", {
-                                rules: [
-                                    {
-                                        required: true,
-                                        message: "Please input your password!"
-                                    },
-                                    {
-                                        validator: this.validateToNextPassword
-                                    }
-                                ]
-                            })(<Input.Password />)}
-                        </Form.Item>
-                        <Form.Item {...tailFormItemLayout}>
-                            {getFieldDecorator("agreement", {
-                                valuePropName: "checked"
-                            })(
-                                <Checkbox>
-                                    I have read the{" "}
-                                    <Link
-                                        to="/terms-of-service/privacy-policy/"
-                                        target="_blank"
-                                    >
-                                        Privacy Policy
-                                    </Link>
-                                </Checkbox>
-                            )}
-                        </Form.Item>
-                        <Form.Item {...tailFormItemLayout}>
-                            <Button type="primary" htmlType="submit">
-                                Register
-                            </Button>
-                        </Form.Item>
-                    </Form>
-                </div>
-            </div>
-        );
+const formItemLayout = {
+    labelCol: {
+        xs: { span: 24 },
+        sm: { span: 8 }
+    },
+    wrapperCol: {
+        xs: { span: 24 },
+        sm: { span: 16 }
     }
-}
+};
 
-const signup = Form.create({ name: "register" })(RegistrationForm);
+const tailFormItemLayout = {
+    wrapperCol: {
+        xs: {
+            span: 24,
+            offset: 0
+        },
+        sm: {
+            span: 16,
+            offset: 8
+        }
+    }
+};
 
-export default signup;
+const Basic = () => (
+    <div
+        style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center"
+        }}
+    >
+        <h1>Register</h1>
+        <Formik
+            initialValues={{ email: "", password: "" }}
+            validate={values => {
+                const errors = {};
+                if (!values.email) {
+                    errors.email = "Required";
+                } else if (
+                    !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(
+                        values.email
+                    )
+                ) {
+                    errors.email = "Invalid email address";
+                }
+                return errors;
+            }}
+            onSubmit={(values, { setSubmitting }) => {
+                setTimeout(() => {
+                    alert(JSON.stringify(values, null, 2));
+                    setSubmitting(false);
+                }, 400);
+            }}
+        >
+            {({
+                values,
+                errors,
+                touched,
+                handleChange,
+                handleBlur,
+                handleSubmit,
+                isSubmitting
+                /* and other goodies */
+            }) => (
+                <Form {...formItemLayout} onSubmit={handleSubmit}>
+                    <Form.Item
+                        label={
+                            <span>
+                                Username &nbsp;
+                                <Tooltip title="What is your username?">
+                                    <Icon type="question-circle-o" />
+                                </Tooltip>
+                            </span>
+                        }
+                    >
+                        <Input
+                            type="text"
+                            name="userName"
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            value={values.userName}
+                        />
+                        {errors.userName && touched.userName && errors.userName}
+                    </Form.Item>
+                    <Form.Item label="E-mail">
+                        <Input
+                            type="email"
+                            name="email"
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            value={values.email}
+                        />
+                        {errors.email && touched.email && errors.email}
+                    </Form.Item>
+                    <Form.Item label="Password" hasFeedback>
+                        <Input
+                            type="password"
+                            name="password"
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            value={values.password}
+                        />
+                        {errors.password && touched.password && errors.password}
+                    </Form.Item>
+                    <Form.Item {...tailFormItemLayout}>
+                        <Button type="primary" disabled={isSubmitting}>
+                            Submit
+                        </Button>
+                    </Form.Item>
+                </Form>
+            )}
+        </Formik>
+    </div>
+);
+
+export default Basic;

@@ -1,87 +1,95 @@
 import React from "react";
-import { Form, Icon, Input, Button, Checkbox } from "antd";
+import { Form, Icon, Input, Button } from "antd";
+import { Formik } from "formik";
 
-class NormalLoginForm extends React.Component {
-    handleSubmit = e => {
-        e.preventDefault();
-        this.props.form.validateFields((err, values) => {
-            if (!err) {
-                console.log("Received values of form: ", values);
-            }
-        });
-    };
-
-    render() {
-        const { getFieldDecorator } = this.props.form;
-        return (
-            <div style={{ display: "flex" }}>
-                <div style={{ width: 400, maxWidth: 300, margin: "auto" }}>
-                    <h2 style={{ textAlign: "center" }}>Sign In</h2>
-                    <Form onSubmit={this.handleSubmit} className="login-form">
-                        <Form.Item>
-                            {getFieldDecorator("username", {
-                                rules: [
-                                    {
-                                        required: true,
-                                        message: "Please input your username!"
-                                    }
-                                ]
-                            })(
-                                <Input
-                                    prefix={
-                                        <Icon
-                                            type="user"
-                                            style={{ color: "rgba(0,0,0,.25)" }}
-                                        />
-                                    }
-                                    placeholder="Username"
+const Basic = () => (
+    <div
+        style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center"
+        }}
+    >
+        <h1 style={{ textAlign: "center" }}>Sign In</h1>
+        <Formik
+            initialValues={{ email: "", password: "" }}
+            validate={values => {
+                const errors = {};
+                if (!values.email) {
+                    errors.email = "Required";
+                } else if (
+                    !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(
+                        values.email
+                    )
+                ) {
+                    errors.email = "Invalid email address";
+                }
+                return errors;
+            }}
+            onSubmit={(values, { setSubmitting }) => {
+                setTimeout(() => {
+                    alert(JSON.stringify(values, null, 2));
+                    setSubmitting(false);
+                }, 400);
+            }}
+        >
+            {({
+                values,
+                errors,
+                touched,
+                handleChange,
+                handleBlur,
+                handleSubmit,
+                isSubmitting
+                /* and other goodies */
+            }) => (
+                <Form onSubmit={handleSubmit} className="login-form">
+                    <Form.Item>
+                        <Input
+                            prefix={
+                                <Icon
+                                    type="lock"
+                                    style={{ color: "rgba(0,0,0,.25)" }}
                                 />
-                            )}
-                        </Form.Item>
-                        <Form.Item>
-                            {getFieldDecorator("password", {
-                                rules: [
-                                    {
-                                        required: true,
-                                        message: "Please input your Password!"
-                                    }
-                                ]
-                            })(
-                                <Input
-                                    prefix={
-                                        <Icon
-                                            type="lock"
-                                            style={{ color: "rgba(0,0,0,.25)" }}
-                                        />
-                                    }
-                                    type="password"
-                                    placeholder="Password"
+                            }
+                            type="email"
+                            placeholder="Email"
+                            name="email"
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            value={values.email}
+                        />
+                        {errors.email && touched.email && errors.email}
+                    </Form.Item>
+                    <Form.Item>
+                        <Input
+                            prefix={
+                                <Icon
+                                    type="lock"
+                                    style={{ color: "rgba(0,0,0,.25)" }}
                                 />
-                            )}
-                        </Form.Item>
-                        <Form.Item>
-                            {getFieldDecorator("remember", {
-                                valuePropName: "checked",
-                                initialValue: true
-                            })(<Checkbox>Remember me</Checkbox>)}
-                        </Form.Item>
-                        <Form.Item>
-                            <Button
-                                type="primary"
-                                htmlType="submit"
-                                className="login-form-button"
-                            >
-                                Log in
-                            </Button>
-                            Or <a href="/signup">register now!</a>
-                        </Form.Item>
-                    </Form>
-                </div>
-            </div>
-        );
-    }
-}
+                            }
+                            type="password"
+                            placeholder="Password"
+                            name="password"
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            value={values.password}
+                        />
+                        {errors.password && touched.password && errors.password}
+                    </Form.Item>
+                    <Button
+                        type="primary"
+                        htmlType="submit"
+                        className="login-form-button"
+                        disabled={isSubmitting}
+                    >
+                        Submit
+                    </Button>
+                </Form>
+            )}
+        </Formik>
+    </div>
+);
 
-const login = Form.create({ name: "normal_login" })(NormalLoginForm);
-
-export default login;
+export default Basic;
