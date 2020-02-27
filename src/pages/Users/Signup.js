@@ -85,8 +85,8 @@ const SignUp = props => (
                     <Form.Item
                         label={
                             <span>
-                                Username &nbsp;
-                                <Tooltip title="What is your username?">
+                                First Name &nbsp;
+                                <Tooltip title="What is your first name?">
                                     <Icon type="question-circle-o" />
                                 </Tooltip>
                             </span>
@@ -94,12 +94,33 @@ const SignUp = props => (
                     >
                         <Input
                             type="text"
-                            name="userName"
+                            name="firstName"
                             onChange={handleChange}
                             onBlur={handleBlur}
-                            value={values.userName}
+                            value={values.firstName}
                         />
-                        {errors.userName && touched.userName && errors.userName}
+                        {errors.firstName &&
+                            touched.firstName &&
+                            errors.firstName}
+                    </Form.Item>
+                    <Form.Item
+                        label={
+                            <span>
+                                Last Name &nbsp;
+                                <Tooltip title="What is your last name?">
+                                    <Icon type="question-circle-o" />
+                                </Tooltip>
+                            </span>
+                        }
+                    >
+                        <Input
+                            type="text"
+                            name="lastName"
+                            onChange={handleChange}
+                            onBlur={handleBlur}
+                            value={values.lastName}
+                        />
+                        {errors.lastName && touched.lastName && errors.lastName}
                     </Form.Item>
                     <Form.Item label="E-mail">
                         <Input

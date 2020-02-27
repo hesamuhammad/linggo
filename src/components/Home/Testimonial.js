@@ -21,17 +21,17 @@ class Testimonials extends Component {
     render() {
         const settings = {
             dots: false,
-            fade: true,
             infinite: true,
             speed: 3500,
             slidesToShow: 1,
             slidesToScroll: 1,
-            autoplay: true
+            autoplay: true,
+            autoplaySpeed: 500
         };
         return (
             <div
                 style={{
-                    backgroundColor: "white",
+                    backgroundColor: "#f5f5f5",
                     paddingTop: "1%",
                     paddingBottom: "1%"
                 }}
@@ -74,9 +74,9 @@ class Testimonials extends Component {
                                         >
                                             {post.userName}
                                             <br />{" "}
-                                            <a style={{ color: "red" }}>
+                                            <span style={{ color: "red" }}>
                                                 client
-                                            </a>
+                                            </span>
                                         </p>
                                         <p
                                             style={{

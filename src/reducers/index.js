@@ -1,4 +1,4 @@
 import { combineReducers } from "redux";
-import testi from "./testi";
+import users from "./users";
 
-export default combineReducers({ testi });
+export default combineReducers({ users });

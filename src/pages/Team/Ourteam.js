@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Card, CardDeck } from "react-bootstrap";
 import { Icon } from "antd";
-const { Meta } = Card;
 
 export default class Ourteam extends Component {
     constructor(props) {

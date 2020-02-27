@@ -20,16 +20,16 @@ class TestimonialsDrawer extends Component {
             <div style={{ marginTop: "15%" }}>
                 <Slider {...settings}>
                     <div>
-                        <img src={baseUrl + "/abstract01.jpg"} />
+                        <img src={baseUrl + "/abstract01.jpg"} alt="image2" />
                     </div>
                     <div>
-                        <img src={baseUrl + "/abstract02.jpg"} />
+                        <img src={baseUrl + "/abstract02.jpg"} alt="image2" />
                     </div>
                     <div>
-                        <img src={baseUrl + "/abstract03.jpg"} />
+                        <img src={baseUrl + "/abstract03.jpg"} alt="image2" />
                     </div>
                     <div>
-                        <img src={baseUrl + "/abstract04.jpg"} />
+                        <img src={baseUrl + "/abstract04.jpg"} alt="image2" />
                     </div>
                 </Slider>
             </div>

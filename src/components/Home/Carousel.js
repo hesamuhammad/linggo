@@ -141,13 +141,13 @@ export default class AdaptiveHeight extends Component {
                                         translations in the following language
                                         pairs:
                                         <br />
-                                        <a style={{ fontWeight: "bold" }}>
+                                        <span style={{ fontWeight: "bold" }}>
                                             Indonesian - English
-                                        </a>
+                                        </span>
                                         <br />
-                                        <a style={{ fontWeight: "bold" }}>
+                                        <span style={{ fontWeight: "bold" }}>
                                             Malaysian - English
-                                        </a>
+                                        </span>
                                     </p>
                                     <div
                                         style={{
