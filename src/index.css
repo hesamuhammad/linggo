@@ -78,6 +78,8 @@ code {
 
 .ant-layout-footer p {
     text-align: left;
+    font-size: 2vh;
+    font-weight: bold;
 }
 
 .ant-layout-footer hr {
@@ -104,6 +106,7 @@ ul {
 }
 li {
     text-align: left;
+    font-size: 2vh;
 }
 
 /* a { */

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Layout, Col, Row, Icon } from "antd";
 import Image from "../assets/images/logo.png";
+import Socialmedia from "./Socialmedia";
 
 const { Footer } = Layout;
 
@@ -11,10 +12,22 @@ export default class Navbar extends Component {
             <div>
                 <Layout className="layout">
                     <Footer
-                        style={{ color: "white", backgroundColor: "#3c4245" }}
+                        style={{
+                            color: "white",
+                            backgroundColor: "#3c4245",
+                            paddingLeft: "5%",
+                            paddingRight: "5%",
+                            paddingTop: "5%"
+                        }}
                     >
-                        <Row>
-                            <Col span={6}>
+                        <Row
+                            style={{
+                                paddingLeft: "5%",
+                                paddingRight: "5%",
+                                paddingBottom: "1   %"
+                            }}
+                        >
+                            <Col xs={24} md={6}>
                                 <div style={{ marginBottom: "10px" }}>
                                     <img
                                         src={Image}
@@ -24,17 +37,10 @@ export default class Navbar extends Component {
                                         }}
                                     ></img>
                                 </div>
-                                <p>BLOG</p>
-                                <div>
-                                    <Icon type="facebook" theme="filled" />
-                                    <Icon type="instagram" theme="filled" />
-                                    <Icon
-                                        type="twitter-circle"
-                                        theme="filled"
-                                    />
-                                </div>
+                                <p className="blog">BLOG</p>
+                                <Socialmedia />
                             </Col>
-                            <Col span={6}>
+                            <Col xs={24} md={6}>
                                 <div>
                                     <p>For Customers</p>
                                     <ul>
@@ -51,7 +57,7 @@ export default class Navbar extends Component {
                                     </ul>
                                 </div>
                             </Col>
-                            <Col span={6}>
+                            <Col xs={24} md={6}>
                                 <p>For Translator</p>
                                 <ul>
                                     <li>
@@ -66,7 +72,7 @@ export default class Navbar extends Component {
                                     </li>
                                 </ul>
                             </Col>
-                            <Col span={6}>
+                            <Col xs={24} md={6}>
                                 <p>Company</p>
                                 <ul>
                                     <li>
