@@ -18,7 +18,7 @@ export default class ButtonSize extends React.Component {
     render() {
         return (
             <div>
-                <Layout className="layout">
+                <Layout>
                     <Header>
                         <div className="logo" />
 

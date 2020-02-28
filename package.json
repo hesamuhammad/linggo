@@ -6,7 +6,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "antd": "^3.26.11",
+    "antd": "^3.26.12",
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
     "formik": "^2.1.4",
@@ -21,7 +21,8 @@
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "tachyons": "^4.11.1"
   },
   "scripts": {
     "start": "react-scripts start",
