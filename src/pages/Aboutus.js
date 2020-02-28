@@ -6,7 +6,6 @@ export default class Aboutus extends Component {
         return (
             <div>
                 <BreadAbout />
-                <h2>Ini About Us</h2>
             </div>
         );
     }

@@ -33,7 +33,7 @@ class DrawerButton extends Component {
                     onClose={this.onClose}
                     visible={this.state.visible}
                 >
-                    <div style={{ textAlign: "center", marginTop: "35%" }}>
+                    <div style={{ textAlign: "center", marginTop: "15%" }}>
                         <div>
                             <p style={{ fontSize: "3vh", fontWeight: "bold" }}>
                                 OUR CONTACT
@@ -48,7 +48,7 @@ class DrawerButton extends Component {
                             <p>___</p>
                             <p>+1 (844) 123 456 78</p>
                         </div>
-                        <div style={{ marginTop: "50%" }}>
+                        <div style={{ marginTop: "30%" }}>
                             <Socialmedia />
                         </div>
                     </div>

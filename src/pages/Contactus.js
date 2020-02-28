@@ -1,14 +1,14 @@
-import React, { Component } from "react";
-import BreadContact from "../components/BreadContact";
+import React from "react";
+import Gmap from "../components/Gmap";
 import FormContact from "../components/FormContact";
+import BreadContact from "../components/BreadContact";
 
-export default class Contactus extends Component {
-    render() {
-        return (
-            <div>
-                <BreadContact />
-                <FormContact />
-            </div>
-        );
-    }
+export default function ContactUs() {
+    return (
+        <div>
+            <BreadContact />
+            <Gmap />
+            <FormContact />
+        </div>
+    );
 }

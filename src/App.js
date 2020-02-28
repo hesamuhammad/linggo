@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 import Pricing from "./pages/Pricing";
 import Service from "./pages/Service";
 import Aboutus from "./pages/Aboutus";
-import Contactus from "./pages/Contactus";
+import ContactUs from "./pages/ContactUs";
 import Termsofservice from "./pages/Terms/Termsofservice";
 import Privacy from "./pages/Terms/Privacy";
 import Translatoragree from "./pages/Terms/Translatoragree";
@@ -15,6 +15,8 @@ import Signin from "./pages/Users/Signin";
 import Signup from "./pages/Users/Signup";
 import Ourteam from "./pages/Team/Ourteam";
 import Translator from "./pages/Translator/TranslatorPage";
+import Profile from "./pages/Profile";
+import Project from "./pages/Project";
 
 function App() {
     return (
@@ -34,7 +36,7 @@ function App() {
                     <Aboutus />
                 </Route>
                 <Route exact path="/contactus">
-                    <Contactus />
+                    <ContactUs />
                 </Route>
                 <Route exact path="/signin">
                     <Signin />
@@ -59,6 +61,15 @@ function App() {
                 </Route>
                 <Route exact path="/translators">
                     <Translator />
+                </Route>
+                <Route exact path="/pricing">
+                    <Pricing />
+                </Route>
+                <Route exact path="/profile">
+                    <Profile />
+                </Route>
+                <Route exact path="/project">
+                    <Project />
                 </Route>
             </Switch>
             <Footer />

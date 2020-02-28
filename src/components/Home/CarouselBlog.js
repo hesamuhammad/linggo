@@ -84,7 +84,7 @@ class Responsive extends Component {
                                 <Container key={post.id}>
                                     <Card
                                         hoverable
-                                        style={{ width: 400 }}
+                                        style={{ width: "auto" }}
                                         cover={
                                             <img
                                                 alt="example"
