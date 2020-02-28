@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Col, Row } from "antd";
+import { Card, Col, Row, Divider } from "antd";
 import "../App.css";
 
 export default function PricingCard() {
@@ -8,12 +8,13 @@ export default function PricingCard() {
       <div style={{ margin: "auto", textAlign: "center"}}>
         <Row justify="space-around" gutter={16} style={{ margin: "auto" }}>
           <Col span={8}>
-            <Card hoverable bordered={false} style={{ minHeight: "290px", maxHeight: "500px" }}>
-              <h3 className="medFont titleFont" style={{ paddingBottom: "12px" }}>
+            <Card hoverable bordered={false} style={{ height: "290px" }}>
+              <h3 className="medFont titleFont">
                 General
               </h3>
-              <hr style={{ opacity: "30%" }} />
-              <h3>$ 0.11<h5>per word</h5></h3>
+              <Divider/>
+              {/* <hr style={{ opacity: "30%" }} /> */}
+              <h3 className="medFont titleFont">$ 0.11<br/>per word</h3>
               <hr style={{ opacity: "30%" }} />
               <p className="smallFont desFont">
                 Good for internal use:
@@ -34,12 +35,12 @@ export default function PricingCard() {
             </Card>
           </Col>
           <Col span={8}>
-            <Card hoverable bordered={false} style={{ minHeight: "290px", maxHeight: "500px" }}>
-              <h3 className="medFont titleFont" style={{ paddingBottom: "12px" }}>
+            <Card hoverable bordered={false} style={{ height: "290px" }}>
+              <h3 className="medFont titleFont">
                 Specialized
               </h3>
-              <hr style={{ opacity: "30%" }} />
-              <h3>$ 0.14<h5>per word</h5></h3>
+              <Divider/>
+              <h3 className="medFont titleFont">$ 0.14<br/>per word</h3>
               <p className="smallFont desFont">
                 <hr style={{ opacity: "30%" }} />
                 Best for professional content:
@@ -56,12 +57,12 @@ export default function PricingCard() {
             </Card>
           </Col>
           <Col span={8}>
-            <Card hoverable bordered={false} style={{ minHeight: "290px", maxHeight: "500px" }}>
-              <h3 className="medFont titleFont" style={{ paddingBottom: "12px" }}>
+            <Card hoverable bordered={false} style={{ height: "290px" }}>
+              <h3 className="medFont titleFont">
                 NAATI Certified
               </h3>
-              <hr style={{ opacity: "30%" }} />
-              <h3>$ 0.17<h5>per word</h5></h3>
+              <Divider/>
+              <h3 className="medFont titleFont">$ 0.17<br/>per word</h3>
               <hr style={{ opacity: "30%" }} />
               <p className="smallFont desFont">
                 For your legal and immigration translation needs.

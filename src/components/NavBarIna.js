@@ -9,24 +9,40 @@ export default function NavBarIna() {
       <Row style={{ padding: "10px" }} className="gradientNav">
         <Col xs={0} sm={2} md={4} lg={4} xl={4}></Col>
         <Col xs={24} sm={20} md={16} lg={16} xl={16}>
-          <Row
-            type="flex"
-            justify="space-around"
-            align="middle"
-          >
-            <Button ghost type="link" className="titleFont smallFont">
+          <Row type="flex" justify="space-around" align="middle">
+            <Button ghost type="link" href="/" className="titleFont smallFont">
               <b>HOME</b>
             </Button>
-            <Button ghost type="link" className="titleFont smallFont">
+            <Button
+              ghost
+              type="link"
+              href="/pricing"
+              className="titleFont smallFont"
+            >
               <b>PRICING</b>
             </Button>
-            <Button ghost type="link" className="titleFont smallFont">
+            <Button
+              ghost
+              type="link"
+              href="/service"
+              className="titleFont smallFont"
+            >
               <b>SERVICE</b>
             </Button>
-            <Button ghost type="link" className="titleFont smallFont">
+            <Button
+              ghost
+              type="link"
+              href="/about"
+              className="titleFont smallFont"
+            >
               <b>ABOUT LINGGO</b>
             </Button>
-            <Button ghost type="link" className="titleFont smallFont">
+            <Button
+              ghost
+              type="link"
+              href="/contact"
+              className="titleFont smallFont"
+            >
               <b>CONTACT LINGGO</b>
             </Button>
           </Row>

@@ -3,7 +3,7 @@ import Gmap from '../components/Gmap'
 
 export default function ContactUs() {
     return (
-        <div>
+        <div className="paddingPage">
             <Gmap />
         </div>
     )

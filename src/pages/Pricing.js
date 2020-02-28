@@ -6,7 +6,7 @@ import { Row, Col } from "antd";
 
 export default function Pricing() {
   return (
-    <div>
+    <div className="paddingPage">
       <Row style={{padding: "10px" }}>
         <Col xs={0} sm={2} md={4} lg={4} xl={4}></Col>
         <Col xs={24} sm={20} md={16} lg={16} xl={16}>

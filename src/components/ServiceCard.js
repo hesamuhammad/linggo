@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom"
 import { Card, Col, Row } from "antd";
 import "../App.css";
 
@@ -14,17 +15,17 @@ export default function DetailPricing() {
             gutter={[16, 16]}
             style={{ margin: "0 auto", padding: "10px" }}
           >
-            <Col xs={{ span: 12 }} sm={{ span: 12 }} md={{ span: 6 }}>
-              <Card hoverable bordered={false} style={{ height: "200px" }}>
-                <h3 className="smallFont">General Translation</h3>
-                <hr style={{ opacity: "30%" }} />
-                <p className="smallFont desFont"></p>
-              </Card>
+            <Col xs={{span: 12, offset: 0}} sm={{ span: 10, offset: 1 }} md={{ span: 6, offset: 0 }}>
+              <Link to="/service#service4"><Card hoverable bordered={false} style={{ height: "200px" }}>
+                <h3 className="smallFont titleFont">General Translation</h3>
+                <hr style={{ opacity: "70%" }} />
+                <p className="smallFont desFont">We have over 25,000 certified translation professionals working in more than 120 languages to handle any project you have.</p>
+              </Card></Link>
             </Col>
-            <Col xs={{ span: 12 }} sm={{ span: 12 }} md={{ span: 6 }}>
+            <Col xs={{span: 12, offset: 0}} sm={{ span: 10, offset: 1 }} md={{ span: 6, offset: 0 }}>
               <Card hoverable bordered={false} style={{ height: "200px" }}>
-                <h3 className="smallFont">Localization & Transcreation</h3>
-                <hr style={{ opacity: "30%" }} />
+                <h3 className="smallFont titleFont">Localization & Transcreation</h3>
+                <hr style={{ opacity: "70%" }} />
                 <p className="smallFont desFont">
                   It for those clients who want to add English language to their
                   business/corporate w but are not excited by the idea of a
@@ -32,22 +33,21 @@ export default function DetailPricing() {
                 </p>
               </Card>
             </Col>
-            <Col xs={{ span: 12 }} sm={{ span: 12 }} md={{ span: 6 }}>
+            <Col xs={{span: 12, offset: 0}} sm={{ span: 10, offset: 1 }} md={{ span: 6, offset: 0 }}>
               <Card hoverable bordered={false} style={{ height: "200px" }}>
-                <h3 className="smallFont">Subtitling & Transtitling</h3>
-                <hr style={{ opacity: "30%" }} />
+                <h3 className="smallFont titleFont">Subtitling & Transtitling</h3>
+                <hr style={{ opacity: "70%" }} />
                 <p className="smallFont desFont">
-                  Movies, TV Shows, Conferences, Documentaries, Research
-                  Interviews
+                  Movies<br/>TV Shows<br/>Conferences<br/>Documentaries<br/>Research<br/>Interviews
                 </p>
               </Card>
             </Col>
-            <Col xs={{ span: 12 }} sm={{ span: 12 }} md={{ span: 6 }}>
+            <Col xs={{span: 12, offset: 0}} sm={{ span: 10, offset: 1 }} md={{ span: 6, offset: 0 }}>
               <Card hoverable bordered={false} style={{ height: "200px" }}>
-                <h3 className="smallFont">
+                <h3 className="smallFont titleFont">
                   NAATI Certified & Sworn Translations
                 </h3>
-                <hr style={{ opacity: "30%" }} />
+                <hr style={{ opacity: "70%" }} />
                 <p className="smallFont desFont">
                   Identity Documents
                   <br />

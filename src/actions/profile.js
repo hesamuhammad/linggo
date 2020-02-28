@@ -44,7 +44,7 @@ export const setProfileById = data => {
 export const getProfile = () => dispatch => {
   return axios({
     method: "GET",
-    url: `http://localhost:3002/users`,
+    url: `https://project-linggo.herokuapp.com/users/getall`,
     headers: { authorization: `Bearer ${token}` }
   })
     .then(result => {
@@ -58,7 +58,7 @@ export const getProfile = () => dispatch => {
 export const getProfileById = id => dispatch => {
   return axios({
     method: "GET",
-    url: `https://project-linggo.herokuapp.com/getone/${id}`,
+    url: `https://project-linggo.herokuapp.com/users/getone/${id}`,
     headers: { authorization: `Bearer ${token}` }
   })
     .then(result => {
@@ -72,7 +72,7 @@ export const getProfileById = id => dispatch => {
 export const updateProfile = (id, values) => dispatch => {
   return axios({
     method: "PUT",
-    url: `https://project-linggo.herokuapp.com/update/${id}`,
+    url: `https://project-linggo.herokuapp.com/users/update/${id}`,
     headers: { authorization: `Bearer ${token}`, data: values }
   }).then(response => {
     console.log("respon masuk")

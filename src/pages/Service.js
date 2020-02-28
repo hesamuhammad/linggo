@@ -14,7 +14,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 export default function Service() {
   return (
     <div className="paddingPage">
-      <Row style={{ backgroundColor: "#f5f5f5" }}>
+      <Row id="service1" name="service1" style={{ backgroundColor: "#f5f5f5" }}>
         <Col xs={1} sm={2} md={4} lg={4} xl={4}></Col>
         <Col xs={22} sm={20} md={16} lg={16} xl={16}>
           <Row gutter={16} style={{ padding: "30px 0" }}>
@@ -33,70 +33,70 @@ export default function Service() {
           </Row>
         </Col>
         <Col xs={1} sm={2} md={4} lg={4} xl={4}></Col>
-        </Row>
+      </Row>
 
-        <Row>
-          <Col xs={1} sm={2} md={4} lg={4} xl={4}></Col>
-          <Col xs={22} sm={20} md={16} lg={16} xl={16}>
-            <Row gutter={16} style={{ padding: "30px 0" }}>
-              <Col order={1} xs={{ span: 14 }} sm={{ span: 16 }}>
-                <ServiceLocalization />
-              </Col>
-              <Col order={2} xs={{ span: 10 }} sm={{ span: 8 }}>
-                <img
-                  src={Service2}
-                  alt=""
-                  className="serviceImages"
-                  width="400"
-                  height="200"
-                />
-              </Col>
-            </Row>
-          </Col>
-          <Col xs={1} sm={2} md={4} lg={4} xl={4}></Col>
-        </Row>
+      <Row id="service2" name="service2">
+        <Col xs={1} sm={2} md={4} lg={4} xl={4}></Col>
+        <Col xs={22} sm={20} md={16} lg={16} xl={16}>
+          <Row gutter={16} style={{ padding: "30px 0" }}>
+            <Col order={1} xs={{ span: 14 }} sm={{ span: 16 }}>
+              <ServiceLocalization />
+            </Col>
+            <Col order={2} xs={{ span: 10 }} sm={{ span: 8 }}>
+              <img
+                src={Service2}
+                alt=""
+                className="serviceImages"
+                width="400"
+                height="200"
+              />
+            </Col>
+          </Row>
+        </Col>
+        <Col xs={1} sm={2} md={4} lg={4} xl={4}></Col>
+      </Row>
 
-        <Row style={{ backgroundColor: "#f5f5f5" }}>
-          <Col xs={1} sm={2} md={4} lg={4} xl={4}></Col>
-          <Col xs={22} sm={20} md={16} lg={16} xl={16}>
-            <Row gutter={16} style={{ padding: "30px 0" }}>
-              <Col xs={{ span: 10 }} sm={{ span: 8 }}>
-                <img
-                  src={Service3}
-                  alt=""
-                  className="serviceImages"
-                  width="400"
-                  height="200"
-                />
-              </Col>
-              <Col xs={{ span: 14 }} sm={{ span: 16 }}>
-                <ServiceSubtitling />
-              </Col>
-            </Row>
-          </Col>
-          <Col xs={1} sm={2} md={4} lg={4} xl={4}></Col>
-        </Row>
+      <Row id="service3" name="service3" style={{ backgroundColor: "#f5f5f5" }}>
+        <Col xs={1} sm={2} md={4} lg={4} xl={4}></Col>
+        <Col xs={22} sm={20} md={16} lg={16} xl={16}>
+          <Row gutter={16} style={{ padding: "30px 0" }}>
+            <Col xs={{ span: 10 }} sm={{ span: 8 }}>
+              <img
+                src={Service3}
+                alt=""
+                className="serviceImages"
+                width="400"
+                height="200"
+              />
+            </Col>
+            <Col xs={{ span: 14 }} sm={{ span: 16 }}>
+              <ServiceSubtitling />
+            </Col>
+          </Row>
+        </Col>
+        <Col xs={1} sm={2} md={4} lg={4} xl={4}></Col>
+      </Row>
 
-        <Row>
-          <Col xs={1} sm={2} md={4} lg={4} xl={4}></Col>
-          <Col xs={22} sm={20} md={16} lg={16} xl={16}>
-            <Row gutter={16} style={{ padding: "30px 0" }}>
-              <Col order={1} xs={{ span: 14 }} sm={{ span: 16 }}>
-                <ServiceNaati />
-              </Col>
-              <Col order={2} xs={{ span: 10 }} sm={{ span: 8 }}>
-                <img
-                  src={Service4}
-                  alt=""
-                  className="serviceImages"
-                  width="400"
-                  height="200"
-                />
-              </Col>
-            </Row>
-          </Col>
-          <Col xs={1} sm={2} md={4} lg={4} xl={4}></Col>
-        </Row>
+      <Row name="service4" id="service4">
+        <Col xs={1} sm={2} md={4} lg={4} xl={4}></Col>
+        <Col xs={22} sm={20} md={16} lg={16} xl={16}>
+          <Row gutter={16} style={{ padding: "30px 0" }}>
+            <Col order={1} xs={{ span: 14 }} sm={{ span: 16 }}>
+              <ServiceNaati />
+            </Col>
+            <Col order={2} xs={{ span: 10 }} sm={{ span: 8 }}>
+              <img
+                src={Service4}
+                alt=""
+                className="serviceImages"
+                width="400"
+                height="200"
+              />
+            </Col>
+          </Row>
+        </Col>
+        <Col xs={1} sm={2} md={4} lg={4} xl={4}></Col>
+      </Row>
     </div>
   );
 }
