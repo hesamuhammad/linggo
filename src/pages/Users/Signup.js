@@ -1,22 +1,11 @@
 import React from "react";
+import { Form, Input, Tooltip, Icon, Button } from "antd";
+
+import { register } from "../../actions";
+
 import { Formik } from "formik";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
-import {
-    Form,
-    Input,
-    Tooltip,
-    Icon,
-    Cascader,
-    Select,
-    Row,
-    Col,
-    Checkbox,
-    Button,
-    AutoComplete
-} from "antd";
-
-import { register } from "../../actions";
 
 const formItemLayout = {
     labelCol: {
@@ -155,7 +144,7 @@ const SignUp = props => (
 
 const mapDispatchToProps = dispatch => {
     return {
-        signup: (values, history) => {
+        register: (values, history) => {
             dispatch(register(values, history));
         }
     };
