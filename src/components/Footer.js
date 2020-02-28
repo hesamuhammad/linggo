@@ -5,7 +5,7 @@ import Image from "../assets/images/logo.png";
 import Socialmedia from "./Socialmedia";
 
 const { Footer } = Layout;
-//tes
+
 export default class Navbar extends Component {
     render() {
         return (
