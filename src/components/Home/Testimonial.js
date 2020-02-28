@@ -10,10 +10,10 @@ class Testimonials extends Component {
 
     componentDidMount() {
         axios
-            .get("https://express-mongodb-users.herokuapp.com/users")
+            .get("http://5e3134bf576f9d0014d644c4.mockapi.io/user")
             .then(result => {
                 this.setState({
-                    post: result.data.data
+                    post: result.data
                 });
             });
     }
@@ -26,7 +26,7 @@ class Testimonials extends Component {
             slidesToShow: 1,
             slidesToScroll: 1,
             autoplay: true,
-            autoplaySpeed: 500
+            autoplaySpeed: 1000
         };
         return (
             <div
@@ -48,10 +48,10 @@ class Testimonials extends Component {
                 <Slider {...settings}>
                     {this.state.post.length > 0 &&
                         this.state.post.map(post => {
-                            console.log(post);
+                            // console.log(post);
 
                             return (
-                                <div key={post._id}>
+                                <div key={post.id}>
                                     <div style={{ textAlign: "center" }}>
                                         <div
                                             style={{
@@ -61,7 +61,7 @@ class Testimonials extends Component {
                                         >
                                             <Avatar
                                                 size={120}
-                                                src="https://pbs.twimg.com/profile_images/641008838343180289/CANkCW3I_400x400.jpg"
+                                                src={post.image}
                                                 icon="user"
                                             />
                                             {/* <Avatar size="large" /> */}
@@ -72,7 +72,7 @@ class Testimonials extends Component {
                                                 fontWeight: "bold"
                                             }}
                                         >
-                                            {post.userName}
+                                            {post.name}
                                             <br />{" "}
                                             <span style={{ color: "red" }}>
                                                 client
@@ -81,10 +81,12 @@ class Testimonials extends Component {
                                         <p
                                             style={{
                                                 fontSize: "2vh",
-                                                fontStyle: "italic"
+                                                fontStyle: "italic",
+                                                paddingRight: "10%",
+                                                paddingLeft: "10%"
                                             }}
                                         >
-                                            {post.email}
+                                            {post.phrase}
                                         </p>
                                     </div>
                                 </div>
