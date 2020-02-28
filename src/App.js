@@ -14,6 +14,7 @@ import TranslatorNDA from "./pages/Terms/TranslatorNDA";
 import Signin from "./pages/Users/Signin";
 import Signup from "./pages/Users/Signup";
 import Ourteam from "./pages/Team/Ourteam";
+import Translator from "./pages/Translator/TranslatorPage";
 
 function App() {
     return (
@@ -55,6 +56,9 @@ function App() {
                 </Route>
                 <Route exact path="/terms-of-service/translator-nda/">
                     <TranslatorNDA />
+                </Route>
+                <Route exact path="/translators">
+                    <Translator />
                 </Route>
             </Switch>
             <Footer />
