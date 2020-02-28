@@ -16,8 +16,8 @@ export default function BreadContact() {
                         letterSpacing: "1.8px",
                         fontWeight: "700"
                     }}>
-                        <Breadcrumb.Item>Home</Breadcrumb.Item>
-                        <Breadcrumb.Item><Link to="/">Contact Us</Link></Breadcrumb.Item>
+                        <Breadcrumb.Item><Link to="/">Home</Link></Breadcrumb.Item>
+                        <Breadcrumb.Item>Contact Us</Breadcrumb.Item>
                     </Breadcrumb>
                 </Col>
             </Row>

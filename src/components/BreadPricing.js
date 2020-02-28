@@ -17,7 +17,7 @@ export default function BreadPricing() {
                         fontWeight: "700"
                     }}>
                         <Breadcrumb.Item><Link to="/">Home</Link></Breadcrumb.Item>
-                        <Breadcrumb.Item><Link to="/">Pricing</Link></Breadcrumb.Item>
+                        <Breadcrumb.Item>Pricing</Breadcrumb.Item>
                     </Breadcrumb>
                 </Col>
             </Row>

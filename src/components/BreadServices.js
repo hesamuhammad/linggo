@@ -16,8 +16,8 @@ export default function BreadServices() {
                         letterSpacing: "1.8px",
                         fontWeight: "700"
                     }}>
-                        <Breadcrumb.Item>Home</Breadcrumb.Item>
-                        <Breadcrumb.Item><Link to="/">Services</Link></Breadcrumb.Item>
+                        <Breadcrumb.Item><Link to="/">Home</Link></Breadcrumb.Item>
+                        <Breadcrumb.Item>Services</Breadcrumb.Item>
                     </Breadcrumb>
                 </Col>
             </Row>

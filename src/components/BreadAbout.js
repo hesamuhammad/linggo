@@ -17,7 +17,7 @@ export default function BreadAbout() {
                         fontWeight: "700"
                     }}>
                         <Breadcrumb.Item><Link to="/">Home</Link></Breadcrumb.Item>
-                        <Breadcrumb.Item><Link to="/">About Us</Link></Breadcrumb.Item>
+                        <Breadcrumb.Item>About Us</Breadcrumb.Item>
                     </Breadcrumb>
                 </Col>
             </Row>
