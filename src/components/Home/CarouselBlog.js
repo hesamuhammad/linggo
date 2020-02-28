@@ -1,11 +1,26 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
+import axios from "axios";
 import { Container } from "react-bootstrap";
 import { Card } from "antd";
 
 const { Meta } = Card;
 
-export default class Responsive extends Component {
+class Responsive extends Component {
+    state = {
+        post: []
+    };
+
+    componentDidMount() {
+        axios
+            .get("http://5e3134bf576f9d0014d644c4.mockapi.io/blog")
+            .then(result => {
+                this.setState({
+                    post: result.data
+                });
+            });
+    }
+
     render() {
         var settings = {
             dots: false,
@@ -61,144 +76,42 @@ export default class Responsive extends Component {
                     Our Blog
                 </p>
                 <Slider {...settings}>
-                    <Container>
-                        <Card
-                            hoverable
-                            style={{ width: 400 }}
-                            cover={
-                                <img
-                                    alt="example"
-                                    src="https://www.adazing.com/wp-content/uploads/2019/02/stacked-book-clipart-11-300x300.png"
-                                />
-                            }
-                        >
-                            <Meta
-                                title="Europe Street beat"
-                                description="A book is a medium for recording information in the form of writing or images, typically composed of many pages (made of papyrus, parchment, vellum, or paper) bound together and protected by a cover.[1] The technical term for this physical arrangement is codex (plural, codices). In the history of hand-held physical supports for extended written compositions or records, the codex replaces its immediate predecessor, the scroll. A single sheet in a codex is a leaf, and each side of a leaf is a page."
-                            />
-                        </Card>
-                    </Container>
-                    <Container>
-                        <Card
-                            hoverable
-                            style={{ width: 400 }}
-                            cover={
-                                <img
-                                    alt="example"
-                                    src="https://www.adazing.com/wp-content/uploads/2019/02/stacked-book-clipart-11-300x300.png"
-                                />
-                            }
-                        >
-                            <Meta
-                                title="Europe Street beat"
-                                description="A book is a medium for recording information in the form of writing or images, typically composed of many pages (made of papyrus, parchment, vellum, or paper) bound together and protected by a cover.[1] The technical term for this physical arrangement is codex (plural, codices). In the history of hand-held physical supports for extended written compositions or records, the codex replaces its immediate predecessor, the scroll. A single sheet in a codex is a leaf, and each side of a leaf is a page."
-                            />
-                        </Card>
-                    </Container>
-                    <Container>
-                        <Card
-                            hoverable
-                            style={{ width: 400 }}
-                            cover={
-                                <img
-                                    alt="example"
-                                    src="https://www.adazing.com/wp-content/uploads/2019/02/stacked-book-clipart-11-300x300.png"
-                                />
-                            }
-                        >
-                            <Meta
-                                title="Europe Street beat"
-                                description="A book is a medium for recording information in the form of writing or images, typically composed of many pages (made of papyrus, parchment, vellum, or paper) bound together and protected by a cover.[1] The technical term for this physical arrangement is codex (plural, codices). In the history of hand-held physical supports for extended written compositions or records, the codex replaces its immediate predecessor, the scroll. A single sheet in a codex is a leaf, and each side of a leaf is a page."
-                            />
-                        </Card>
-                    </Container>
-                    <Container>
-                        <Card
-                            hoverable
-                            style={{ width: 400 }}
-                            cover={
-                                <img
-                                    alt="example"
-                                    src="https://www.adazing.com/wp-content/uploads/2019/02/stacked-book-clipart-11-300x300.png"
-                                />
-                            }
-                        >
-                            <Meta
-                                title="Europe Street beat"
-                                description="A book is a medium for recording information in the form of writing or images, typically composed of many pages (made of papyrus, parchment, vellum, or paper) bound together and protected by a cover.[1] The technical term for this physical arrangement is codex (plural, codices). In the history of hand-held physical supports for extended written compositions or records, the codex replaces its immediate predecessor, the scroll. A single sheet in a codex is a leaf, and each side of a leaf is a page."
-                            />
-                        </Card>
-                    </Container>
-                    <Container>
-                        <Card
-                            hoverable
-                            style={{ width: 400 }}
-                            cover={
-                                <img
-                                    alt="example"
-                                    src="https://www.adazing.com/wp-content/uploads/2019/02/stacked-book-clipart-11-300x300.png"
-                                />
-                            }
-                        >
-                            <Meta
-                                title="Europe Street beat"
-                                description="A book is a medium for recording information in the form of writing or images, typically composed of many pages (made of papyrus, parchment, vellum, or paper) bound together and protected by a cover.[1] The technical term for this physical arrangement is codex (plural, codices). In the history of hand-held physical supports for extended written compositions or records, the codex replaces its immediate predecessor, the scroll. A single sheet in a codex is a leaf, and each side of a leaf is a page."
-                            />
-                        </Card>
-                    </Container>
-                    <Container>
-                        <Card
-                            hoverable
-                            style={{ width: 400 }}
-                            cover={
-                                <img
-                                    alt="example"
-                                    src="https://www.adazing.com/wp-content/uploads/2019/02/stacked-book-clipart-11-300x300.png"
-                                />
-                            }
-                        >
-                            <Meta
-                                title="Europe Street beat"
-                                description="A book is a medium for recording information in the form of writing or images, typically composed of many pages (made of papyrus, parchment, vellum, or paper) bound together and protected by a cover.[1] The technical term for this physical arrangement is codex (plural, codices). In the history of hand-held physical supports for extended written compositions or records, the codex replaces its immediate predecessor, the scroll. A single sheet in a codex is a leaf, and each side of a leaf is a page."
-                            />
-                        </Card>
-                    </Container>
-                    <Container>
-                        <Card
-                            hoverable
-                            style={{ width: 400 }}
-                            cover={
-                                <img
-                                    alt="example"
-                                    src="https://www.adazing.com/wp-content/uploads/2019/02/stacked-book-clipart-11-300x300.png"
-                                />
-                            }
-                        >
-                            <Meta
-                                title="Europe Street beat"
-                                description="A book is a medium for recording information in the form of writing or images, typically composed of many pages (made of papyrus, parchment, vellum, or paper) bound together and protected by a cover.[1] The technical term for this physical arrangement is codex (plural, codices). In the history of hand-held physical supports for extended written compositions or records, the codex replaces its immediate predecessor, the scroll. A single sheet in a codex is a leaf, and each side of a leaf is a page."
-                            />
-                        </Card>
-                    </Container>
-                    <Container>
-                        <Card
-                            hoverable
-                            style={{ width: 400 }}
-                            cover={
-                                <img
-                                    alt="example"
-                                    src="https://www.adazing.com/wp-content/uploads/2019/02/stacked-book-clipart-11-300x300.png"
-                                />
-                            }
-                        >
-                            <Meta
-                                title="Europe Street beat"
-                                description="A book is a medium for recording information in the form of writing or images, typically composed of many pages (made of papyrus, parchment, vellum, or paper) bound together and protected by a cover.[1] The technical term for this physical arrangement is codex (plural, codices). In the history of hand-held physical supports for extended written compositions or records, the codex replaces its immediate predecessor, the scroll. A single sheet in a codex is a leaf, and each side of a leaf is a page."
-                            />
-                        </Card>
-                    </Container>
+                    {this.state.post.length > 0 &&
+                        this.state.post.map(post => {
+                            // console.log(post);
+
+                            return (
+                                <Container key={post.id}>
+                                    <Card
+                                        hoverable
+                                        style={{ width: 400 }}
+                                        cover={
+                                            <img
+                                                alt="example"
+                                                src={post.avatar}
+                                            />
+                                        }
+                                    >
+                                        <p>
+                                            {post.title3}
+                                            {post.title3}
+                                            {post.title3}
+                                            {post.title3}
+                                            {post.title3}
+                                            {post.title3}
+                                            {post.title3}
+                                            {post.title3}
+                                            {post.title3}
+                                            {post.title3}
+                                        </p>
+                                    </Card>
+                                </Container>
+                            );
+                        })}
                 </Slider>
             </div>
         );
     }
 }
+
+export default Responsive;
