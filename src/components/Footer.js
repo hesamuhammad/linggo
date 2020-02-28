@@ -44,12 +44,12 @@ export default class Navbar extends Component {
                                 <div>
                                     <p>For Customers</p>
                                     <ul>
-                                        <li>
+                                        <li style={{ fontSize: "2vh" }}>
                                             <Link to="/pricing" target="_blank">
                                                 Pricing
                                             </Link>
                                         </li>
-                                        <li>
+                                        <li style={{ fontSize: "2vh" }}>
                                             <Link to="/service" target="_blank">
                                                 Service
                                             </Link>
@@ -60,12 +60,12 @@ export default class Navbar extends Component {
                             <Col xs={24} md={6}>
                                 <p>For Translator</p>
                                 <ul>
-                                    <li>
+                                    <li style={{ fontSize: "2vh" }}>
                                         <Link to="/translators" target="_blank">
                                             Become a translator
                                         </Link>
                                     </li>
-                                    <li>
+                                    <li style={{ fontSize: "2vh" }}>
                                         <Link to="/resource" target="_blank">
                                             Resources
                                         </Link>
@@ -75,12 +75,12 @@ export default class Navbar extends Component {
                             <Col xs={24} md={6}>
                                 <p>Company</p>
                                 <ul>
-                                    <li>
+                                    <li style={{ fontSize: "2vh" }}>
                                         <Link to="/aboutus" target="_blank">
                                             About us
                                         </Link>
                                     </li>
-                                    <li>
+                                    <li style={{ fontSize: "2vh" }}>
                                         <Link
                                             to="/terms-of-service/privacy-policy"
                                             target="_blank"
@@ -88,7 +88,7 @@ export default class Navbar extends Component {
                                             Privacy
                                         </Link>
                                     </li>
-                                    <li>
+                                    <li style={{ fontSize: "2vh" }}>
                                         <Link
                                             to="/terms-of-service"
                                             target="_blank"
@@ -96,7 +96,7 @@ export default class Navbar extends Component {
                                             Terms of services
                                         </Link>
                                     </li>
-                                    <li>
+                                    <li style={{ fontSize: "2vh" }}>
                                         <Link to="/our-team" target="_blank">
                                             Our team
                                         </Link>
@@ -105,7 +105,7 @@ export default class Navbar extends Component {
                             </Col>
                         </Row>
                         <hr />
-                        <p style={{ textAlign: "right" }}>
+                        <p style={{ textAlign: "right", paddingRight: "10%" }}>
                             Linggo ©2020 Created by Linggo Inc.
                         </p>
                     </Footer>

@@ -48,7 +48,14 @@ class DrawerButton extends Component {
                             <p>___</p>
                             <p>+1 (844) 123 456 78</p>
                         </div>
-                        <div style={{ marginTop: "30%" }}>
+                        <div
+                            style={{
+                                marginTop: "30%",
+                                backgroundColor: "black",
+                                padding: "4% 0",
+                                borderRadius: "20px"
+                            }}
+                        >
                             <Socialmedia />
                         </div>
                     </div>

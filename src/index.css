@@ -106,14 +106,7 @@ ul {
 }
 li {
     text-align: left;
-    font-size: 2vh;
 }
-
-/* a { */
-/* color: white !important;
-  text-decoration: none;
-  background-color: transparent;
-} */
 
 .ant-card-head {
     border-style: none !important;
