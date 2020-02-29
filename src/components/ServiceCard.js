@@ -1,10 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { Card, Col, Row } from "antd";
 import "../App.css";
 
 export default function DetailPricing() {
+
   return (
     <div style={{ textAlign: "center" }}>
       <Row style={{ backgroundColor: "#f5f5f5" }}>
@@ -21,7 +21,8 @@ export default function DetailPricing() {
               sm={{ span: 10, offset: 1 }}
               md={{ span: 6, offset: 0 }}
             >
-              <HashLink smooth className="hashHover" to="/service#service1">
+              <HashLink className="hashHover" to="/service#service1" scroll={el => { el.scrollIntoView(true); window.scrollBy({top: 0 -50, behavior: 'smooth'})}}
+              >
                 <Card hoverable bordered={false} style={{ height: "200px" }}>
                   <h3 className="smallFont titleFont">General Translation</h3>
                   <hr style={{ opacity: "70%" }} />
@@ -38,7 +39,9 @@ export default function DetailPricing() {
               sm={{ span: 10, offset: 1 }}
               md={{ span: 6, offset: 0 }}
             >
-              <HashLink smooth className="hashHover" to="/service#service2">
+              <HashLink className="hashHover" to="/service#service2"
+              scroll={el => { el.scrollIntoView(true); window.scrollBy({top: 0 -50, behavior: 'smooth'})}}
+              >
                 <Card hoverable bordered={false} style={{ height: "200px" }}>
                   <h3 className="smallFont titleFont">
                     Localization & Transcreation
@@ -57,7 +60,7 @@ export default function DetailPricing() {
               sm={{ span: 10, offset: 1 }}
               md={{ span: 6, offset: 0 }}
             >
-              <HashLink smooth className="hashHover" to="/service#service3">
+              <HashLink className="hashHover" to="/service#service3" scroll={el => { el.scrollIntoView(true); window.scrollBy({top: 0 -50, behavior: 'smooth'})}}>
                 <Card hoverable bordered={false} style={{ height: "200px" }}>
                   <h3 className="smallFont titleFont">
                     Subtitling & Transtitling
@@ -84,7 +87,7 @@ export default function DetailPricing() {
               sm={{ span: 10, offset: 1 }}
               md={{ span: 6, offset: 0 }}
             >
-              <HashLink smooth className="hashHover" to="/service#service4">
+              <HashLink className="hashHover" to="/service#service4" scroll={el => { el.scrollIntoView(true); window.scrollBy({top: 0 -50, behavior: 'smooth'})}}>
                 <Card hoverable bordered={false} style={{ height: "200px" }}>
                   <h3 className="smallFont titleFont">
                     NAATI Certified & Sworn Translations

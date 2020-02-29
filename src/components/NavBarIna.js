@@ -6,7 +6,7 @@ import { Col, Row } from "antd";
 export default function NavBarIna() {
   return (
     <div>
-      <Row style={{ padding: "10px" }} className="gradientNav">
+      <Row style={{ padding: "7px" }} className="gradientNav">
         <Col xs={0} sm={2} md={4} lg={4} xl={4}></Col>
         <Col xs={24} sm={20} md={16} lg={16} xl={16}>
           <Row type="flex" justify="space-around" align="middle">
