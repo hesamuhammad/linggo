@@ -4,12 +4,18 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import "antd/dist/antd.css";
-import {Provider} from "react-redux"
-import allStore from "./store"
+import "bootstrap/dist/css/bootstrap.min.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { Provider } from "react-redux";
+import allStore from "./store";
 
 ReactDOM.render(
-<Provider store={allStore}><App />
-</Provider>, document.getElementById("root"));
+    <Provider store={allStore}>
+        <App />
+    </Provider>,
+    document.getElementById("root")
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

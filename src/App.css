@@ -15,39 +15,47 @@
   /* border-bottom-style: solid;
   border-bottom-width: 1px;
   border-color: rgb(92, 92, 92); */
-  z-index: 9999;
+    z-index: 9999;
 }
 
 .smallFont {
-  font-size: 10px;
+    font-size: 10px;
 }
 
 .medFont {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 .bigFont {
-  font-size: 18px;
+    font-size: 18px;
 }
 
 .titleFont {
-  font-family: "Montserrat";
-  font-weight: bold;
+    font-family: "Montserrat";
+    font-weight: bold;
 }
 
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
 .desFont {
-  font-family: "PT Serif";
+    font-family: "PT Serif";
 }
 
 .serviceImages {
-  object-fit: cover;
-  display: inline-block;
-  width: 100%;
+    object-fit: cover;
+    display: inline-block;
+    width: 100%;
 }
 
 .flexCol {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .hashHover:hover {
