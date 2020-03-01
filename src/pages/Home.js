@@ -4,14 +4,15 @@ import Testimonial from "../components/Home/Testimonial";
 import Pros from "../components/Home/Pros";
 import CaroselBlog from "../components/Home/CarouselBlog";
 import WhyUs from "./WhyUs";
+import ServiceCard from "../components/ServiceCard";
 
 export default class Home extends Component {
     render() {
         return (
             <div>
                 <Carousel />
+                <ServiceCard />
                 <Pros />
-                <WhyUs />
                 <Testimonial />
                 <CaroselBlog />
             </div>

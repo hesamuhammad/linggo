@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Layout, Col, Row, Icon } from "antd";
 import Image from "../assets/images/logo.png";
+import Socialmedia from "./Socialmedia";
 
 const { Footer } = Layout;
 
@@ -10,55 +11,103 @@ export default class Navbar extends Component {
         return (
             <div>
                 <Layout className="layout">
-                    <Footer style={{ color: "white", backgroundColor: "#3c4245"}}>
-                        <Row>
+                    <Footer
+                        style={{
+                            color: "white",
+                            backgroundColor: "#3c4245",
+                            paddingLeft: "5%",
+                            paddingRight: "5%",
+                            paddingTop: "5%"
+                        }}
+                    >
+                        <Row
+                            style={{
+                                paddingLeft: "5%",
+                                paddingRight: "5%",
+                                paddingBottom: "1   %"
+                            }}
+                        >
                             <Col xs={24} md={6}>
-                                <div style={{marginBottom: "10px"}}>
+                                <div style={{ marginBottom: "10px" }}>
                                     <img
                                         src={Image}
                                         alt="linggo"
                                         style={{
-                                        width: "35%"
+                                            width: "35%"
                                         }}
                                     ></img>
                                 </div>
-                                <p>BLOG</p>
-                                <div>
-                                    <Icon type="facebook" theme="filled" />
-                                    <Icon type="instagram" theme="filled" />
-                                    <Icon type="twitter-circle" theme="filled" />
-                                </div>
-                                
+                                <p className="blog">BLOG</p>
+                                <Socialmedia />
                             </Col>
                             <Col xs={24} md={6}>
                                 <div>
-                                <p>For Customers</p>
-                                <ul>
-                                    <li><Link to="/pricing">Pricing</Link></li>
-                                    <li><Link to="/service">Service</Link></li>
-                                </ul>
+                                    <p>For Customers</p>
+                                    <ul>
+                                        <li style={{ fontSize: "2vh" }}>
+                                            <Link to="/pricing" target="_blank">
+                                                Pricing
+                                            </Link>
+                                        </li>
+                                        <li style={{ fontSize: "2vh" }}>
+                                            <Link to="/service" target="_blank">
+                                                Service
+                                            </Link>
+                                        </li>
+                                    </ul>
                                 </div>
-                                
                             </Col>
                             <Col xs={24} md={6}>
                                 <p>For Translator</p>
                                 <ul>
-                                    <li>Become a translator</li>
-                                    <li><Link to="/resource">Resources</Link></li>
+                                    <li style={{ fontSize: "2vh" }}>
+                                        <Link to="/translators" target="_blank">
+                                            Become a translator
+                                        </Link>
+                                    </li>
+                                    <li style={{ fontSize: "2vh" }}>
+                                        <Link to="/resource" target="_blank">
+                                            Resources
+                                        </Link>
+                                    </li>
                                 </ul>
                             </Col>
                             <Col xs={24} md={6}>
                                 <p>Company</p>
                                 <ul>
-                                    <li><Link to="/aboutus">About us</Link></li>
-                                    <li><Link to="/terms-of-service/privacy-policy">Privacy</Link></li>
-                                    <li><Link to="/terms-of-service">Terms of services</Link></li>
-                                    <li><Link to="/our-team">Our team</Link></li>
+                                    <li style={{ fontSize: "2vh" }}>
+                                        <Link to="/aboutus" target="_blank">
+                                            About us
+                                        </Link>
+                                    </li>
+                                    <li style={{ fontSize: "2vh" }}>
+                                        <Link
+                                            to="/terms-of-service/privacy-policy"
+                                            target="_blank"
+                                        >
+                                            Privacy
+                                        </Link>
+                                    </li>
+                                    <li style={{ fontSize: "2vh" }}>
+                                        <Link
+                                            to="/terms-of-service"
+                                            target="_blank"
+                                        >
+                                            Terms of services
+                                        </Link>
+                                    </li>
+                                    <li style={{ fontSize: "2vh" }}>
+                                        <Link to="/our-team" target="_blank">
+                                            Our team
+                                        </Link>
+                                    </li>
                                 </ul>
                             </Col>
                         </Row>
-                        <hr/>
-                        <p style={{textAlign: "right"}}>Linggo ©2020 Created by Linggo Inc.</p>
+                        <hr />
+                        <p style={{ textAlign: "right", paddingRight: "10%" }}>
+                            Linggo ©2020 Created by Linggo Inc.
+                        </p>
                     </Footer>
                 </Layout>
             </div>

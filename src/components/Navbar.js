@@ -25,19 +25,24 @@ export default class ButtonSize extends React.Component {
                         <Menu
                             theme="dark"
                             mode="horizontal"
-                            defaultSelectedKeys={["2"]}
-                            style={{ lineHeight: "64px" }}
+                            defaultSelectedKeys={["1"]}
+                            style={{
+                                lineHeight: "64px",
+                                justifyItems: "center"
+                            }}
                         >
-                            <Menu.Item key="0">
+                            <Menu.Item
+                                key="0"
+                                style={{
+                                    width: "7%"
+                                }}
+                            >
                                 <Link to="/">
                                     <img
                                         src={Image}
                                         alt="linggo"
-                                        style={{
-                                            width: "10%"
-                                            // backgroundColor: "white"
-                                        }}
-                                    ></img>
+                                        style={{ width: "100%" }}
+                                    />
                                 </Link>
                             </Menu.Item>
                             <Menu.Item key="1" href="/pricing">

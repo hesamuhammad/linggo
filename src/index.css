@@ -13,97 +13,99 @@ code {
 }
 
 .bread {
-  font-size: 11px;
-  line-height: 19px;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 1.8px;
-  font-weight: 700;
+    font-size: 11px;
+    line-height: 19px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    font-weight: 700;
 }
 
 .ant-layout {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex: auto;
-  flex: auto;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  min-height: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex: auto;
+    flex: auto;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-height: 0;
 }
 
 .BreadHeader {
-  background: url(./images/header-page.jpg);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  height: 20rem;
+    background: url(./images/header-page.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 20rem;
 }
 
 .BreadHeader p {
-  margin: 0;
-  color: white;
-  font-family: "Muli", sans-serif;
-  font-size: 40px;
-  text-shadow: 6px 5px 10px rgba(0, 0, 0, 0.3);
-  text-align: center;
-  vertical-align: middle;
-  padding-top: 6.5rem;
+    margin: 0;
+    color: white;
+    font-family: "Muli", sans-serif;
+    font-size: 40px;
+    text-shadow: 6px 5px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 6.5rem;
 }
 
 .gutter-box {
-  padding: 5px 0;
-  text-align: center;
+    padding: 5px 0;
+    text-align: center;
 }
 
 .layout-footer {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex: auto;
-  flex: auto;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  min-height: 0;
-  background: #3c4245 !important;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex: auto;
+    flex: auto;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-height: 0;
+    background: #3c4245 !important;
 }
 
 .ant-row h6 {
-  color: white;
-  text-align: left;
+    color: white;
+    text-align: left;
 }
 
 .ant-row h5 {
-  color: white;
-  text-align: left;
+    color: white;
+    text-align: left;
 }
 
 .ant-layout-footer p {
-  text-align: left;
+    text-align: left;
+    font-size: 2vh;
+    font-weight: bold;
 }
 
 .ant-layout-footer hr {
-  border: 1px solid;
-  color: white;
+    border: 1px solid;
+    color: white;
 }
 
 .anticon svg {
-  width: 25px;
-  height: 25px;
+    width: 25px;
+    height: 25px;
 }
 
 .sosmed-btn li {
-  display: inline-block;
-  vertical-align: top;
-  margin: 2px;
-  min-width: 10px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 2px;
+    min-width: 10px;
 }
 
 ul {
-  list-style: none;
-  margin: 0px 0px 0px;
-  padding: 0px 0px 0px 0px;
+    list-style: none;
+    margin: 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
 }
 li {
-  text-align: left;
+    text-align: left;
 }
 
 /* a { */
@@ -117,9 +119,28 @@ li {
 }
 
 .content-about {
-  margin-right: 0px !important;
+  width: 50%;
+  height: calc(100% + 120px);
+  left: 0;
+  top: -60px;
   background-image: url(./assets/images/trans.jpg) !important;
-  background-position: top left !important;
+  /* background-position: top left !important; */
   background-repeat: no-repeat !important;
-  background-size: contain !important;
+  background-size: cover !important;
+}
+
+.about-area {
+	display: inline;
+	justify-content: left;
+	padding: 100px 0;
+}
+
+.about-right {
+	display: inline;
+	justify-content: left;
+	margin-top: 15px;
+	background-color: #fff;
+	padding: 20px !important;
+	margin-left: -100px;
+	box-shadow: 3px 1px 18px -9px #000;
 }
