@@ -12,7 +12,7 @@ export default class Navbar extends Component {
                 <Layout className="layout">
                     <Footer style={{ color: "white", backgroundColor: "#3c4245"}}>
                         <Row>
-                            <Col span={6}>
+                            <Col xs={24} md={6}>
                                 <div style={{marginBottom: "10px"}}>
                                     <img
                                         src={Image}
@@ -30,7 +30,7 @@ export default class Navbar extends Component {
                                 </div>
                                 
                             </Col>
-                            <Col span={6}>
+                            <Col xs={24} md={6}>
                                 <div>
                                 <p>For Customers</p>
                                 <ul>
@@ -40,14 +40,14 @@ export default class Navbar extends Component {
                                 </div>
                                 
                             </Col>
-                            <Col span={6}>
+                            <Col xs={24} md={6}>
                                 <p>For Translator</p>
                                 <ul>
                                     <li>Become a translator</li>
                                     <li><Link to="/resource">Resources</Link></li>
                                 </ul>
                             </Col>
-                            <Col span={6}>
+                            <Col xs={24} md={6}>
                                 <p>Company</p>
                                 <ul>
                                     <li><Link to="/aboutus">About us</Link></li>

@@ -111,3 +111,15 @@ li {
   text-decoration: none;
   background-color: transparent;
 } */
+
+.ant-card-head {
+  border-bottom: none !important;
+}
+
+.content-about {
+  margin-right: 0px !important;
+  background-image: url(./assets/images/trans.jpg) !important;
+  background-position: top left !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+}

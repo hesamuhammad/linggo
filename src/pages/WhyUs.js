@@ -10,8 +10,8 @@ export default class WhyUs extends Component {
         return (
             <div>
                 <Row gutter={16}>
-                    <Col span={6}>
-                        <div className="gutter-box">
+                    <Col xs={24} md={6}>
+                        <div className="gutter-box" style={{border: "none"}}>
                             <Card title="Documents Translation" bordered={false}
                                 cover={
                                     <img src={Why1} 
@@ -24,7 +24,7 @@ export default class WhyUs extends Component {
                             </Card>
                         </div>
                     </Col>
-                    <Col span={6}>
+                    <Col xs={24} md={6}>
                         <div className="gutter-box">
                             <Card title="Apostile & Legalization" bordered={false}
                                 cover={
@@ -37,7 +37,7 @@ export default class WhyUs extends Component {
                             </Card>
                         </div>
                     </Col>
-                    <Col span={6}>
+                    <Col xs={24} md={6}>
                         <div className="gutter-box">
                             <Card title="Localization Services" bordered={false}
                                 cover={
@@ -51,7 +51,7 @@ export default class WhyUs extends Component {
                             </Card>
                         </div>
                     </Col>
-                    <Col span={6}>
+                    <Col xs={24} md={6}>
                         <div className="gutter-box">
                             <Card title="Website Translation" bordered={false}
                                 cover={
