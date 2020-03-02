@@ -1,7 +1,10 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { getProjectById } from "../actions";
-import Progress from './Progress';
+import { Steps } from "antd";
+
+
+const { Step } = Steps;
 
 function UsersProject(props) {
   useEffect(() => {
@@ -10,17 +13,22 @@ function UsersProject(props) {
 
   return (
     <div>
-      {props.project !== undefined &&
+      {/* {props.project !== undefined &&
         props.project.map((item, key) => {
           console.log(item);
-          return (
+          return ( */}
             <div>
-              {item.fileProjectName}
-              {item.fileProjectType}
-              <Progress/>
+              {/* {item.fileProjectName}
+              {item.fileProjectType} */}
+              <Steps size="small" current={2}>
+                <Step title="Verification" />
+                <Step title="Pay" />
+                <Step title="In Progress" />
+                <Step title="Done" />
+              </Steps>
             </div>
-          );
-        })}
+          {/* );
+        })} */}
     </div>
   );
 }

@@ -17,23 +17,25 @@ function Profile(props) {
 
   return (
     <div className="paddingPage">
-      {props.users !== undefined &&
+      {/* {props.users !== undefined &&
         props.users.map((item, key) => {
           console.log(item);
-          return (
-            <Row style={{ padding: "10px" }}>
+          return ( */}
+            <Row style={{ padding: "10px"}}>
               <Col
                 xs={{ span: 22, offset: 1 }}
                 sm={{ span: 20, offset: 2 }}
-                md={{ span: 16, offset: 4 }}
+                md={{ span: 16, offset: 4 }} 
                 lg={{ span: 16, offset: 4 }}
                 xl={{ span: 16, offset: 4 }}
               >
                 <div
                   className="medFont desFont"
-                  style={{ display: "flex", justifyContent: "space-between" }}
+                  style={{ display: "flex", justifyContent: "space-between", alignItems: "center"  }}
                 >
-                  <h1 className="titleFont">Hello {item.firstName}!</h1>
+                  <h1 className="titleFont">Hello
+                   {/* {item.firstName} */}
+                   !</h1>
 
                   <Button size="small" type="ghost" className="smallFont">
                     Edit Profile
@@ -61,18 +63,18 @@ function Profile(props) {
                     </Col>
                     <Col span={10}>
                       <p>
-                        : {item.firstName}
+                        {/* : {item.firstName}
                         <br />: {item.lastName}
                         <br />: {item.email}
-                        <br />: {item.password}
+                        <br />: {item.password} */}
                       </p>
                     </Col>
                   </Row>
                 </div>
               </Col>
             </Row>
-          );
-        })}
+          {/* );
+        })} */}
     </div>
   );
 }
