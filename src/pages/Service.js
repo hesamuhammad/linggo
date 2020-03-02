@@ -10,10 +10,12 @@ import ServiceLocalization from "../components/ServiceLocalization";
 import ServiceNaati from "../components/ServiceNaati";
 import ServiceSubtitling from "../components/ServiceSubtitling";
 import "bootstrap/dist/css/bootstrap.min.css";
+import BreadServices from "../components/BreadServices";
 
 export default function Service() {
   return (
     <div className="paddingPage">
+      <BreadServices/>
       <Row id="service1" name="service1" style={{ backgroundColor: "#f5f5f5" }}>
         <Col xs={{span: 22, offset: 1}} sm={{span: 20, offset: 2}} md={{span: 16, offset: 4}} lg={{span: 16, offset: 4}} xl={{span: 16, offset: 4}}>
           <Row gutter={16} style={{ padding: "30px 0" }}>

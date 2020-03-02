@@ -17,10 +17,10 @@ function Profile(props) {
 
   return (
     <div className="paddingPage">
-      {/* {props.users !== undefined &&
+      {props.users !== undefined &&
         props.users.map((item, key) => {
           console.log(item);
-          return ( */}
+          return (
             <Row style={{ padding: "10px"}}>
               <Col
                 xs={{ span: 22, offset: 1 }}
@@ -34,7 +34,7 @@ function Profile(props) {
                   style={{ display: "flex", justifyContent: "space-between", alignItems: "center"  }}
                 >
                   <h1 className="titleFont">Hello
-                   {/* {item.firstName} */}
+                   {item.firstName}
                    !</h1>
 
                   <Button size="small" type="ghost" className="smallFont">
@@ -63,18 +63,18 @@ function Profile(props) {
                     </Col>
                     <Col span={10}>
                       <p>
-                        {/* : {item.firstName}
+                        : {item.firstName}
                         <br />: {item.lastName}
                         <br />: {item.email}
-                        <br />: {item.password} */}
+                        <br />: {item.password}
                       </p>
                     </Col>
                   </Row>
                 </div>
               </Col>
             </Row>
-          {/* );
-        })} */}
+          );
+        })}
     </div>
   );
 }

@@ -13,22 +13,22 @@ function UsersProject(props) {
 
   return (
     <div>
-      {/* {props.project !== undefined &&
+      {props.project !== undefined &&
         props.project.map((item, key) => {
           console.log(item);
-          return ( */}
+          return (
             <div>
-              {/* {item.fileProjectName}
-              {item.fileProjectType} */}
-              <Steps size="small" current={2}>
+              {item.fileProjectName}
+              {item.fileProjectType}
+              <Steps size="small" current={item.progress}>
                 <Step title="Verification" />
                 <Step title="Pay" />
                 <Step title="In Progress" />
                 <Step title="Done" />
               </Steps>
             </div>
-          {/* );
-        })} */}
+          );
+        })}
     </div>
   );
 }

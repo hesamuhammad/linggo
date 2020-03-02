@@ -26,7 +26,7 @@ export default function DetailPricing() {
               sm={{ span: 10, offset: 1 }}
               md={{ span: 6, offset: 0 }}
             >
-              <HashLink className="hashHover" to="/service#service1">
+              <HashLink className="hashHover" to="/service#service1" scroll={el => { el.scrollIntoView(true); window.scrollBy({top: 0 -50, behavior: 'smooth'})}} >
                 <Card hoverable bordered={false} style={{ height: "300px" }}>
                   <p
                     style={{
@@ -55,7 +55,7 @@ export default function DetailPricing() {
               sm={{ span: 10, offset: 1 }}
               md={{ span: 6, offset: 0 }}
             >
-              <HashLink className="hashHover" to="/service#service2">
+              <HashLink className="hashHover" to="/service#service2" scroll={el => { el.scrollIntoView(true); window.scrollBy({top: 0 -50, behavior: 'smooth'})}}>
                 <Card hoverable bordered={false} style={{ height: "300px" }}>
                   <p
                     style={{
@@ -84,7 +84,7 @@ export default function DetailPricing() {
               sm={{ span: 10, offset: 1 }}
               md={{ span: 6, offset: 0 }}
             >
-              <HashLink className="hashHover" to="/service#service3">
+              <HashLink className="hashHover" to="/service#service3" scroll={el => { el.scrollIntoView(true); window.scrollBy({top: 0 -50, behavior: 'smooth'})}}>
                 <Card hoverable bordered={false} style={{ height: "300px" }}>
                   <p
                     style={{
@@ -121,7 +121,7 @@ export default function DetailPricing() {
               sm={{ span: 10, offset: 1 }}
               md={{ span: 6, offset: 0 }}
             >
-              <HashLink className="hashHover" to="/service#service4">
+              <HashLink className="hashHover" to="/service#service4" scroll={el => { el.scrollIntoView(true); window.scrollBy({top: 0 -50, behavior: 'smooth'})}}>
                 <Card hoverable bordered={false} style={{ height: "300px" }}>
                   <p
                     style={{

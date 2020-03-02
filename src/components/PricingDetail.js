@@ -4,7 +4,7 @@ import "../App.css";
 export default function PricingDetail() {
     return (
         <div>
-            <h1
+            {/* <h1
                 className="titleFont"
                 style={{
                     textAlign: "center",
@@ -14,12 +14,12 @@ export default function PricingDetail() {
                 }}
             >
                 Pricing
-            </h1>
+            </h1> */}
             <p
                 style={{
+                    padding: "50px 0",
                     margin: "0 auto",
                     textAlign: "center",
-                    paddingBottom: "20px"
                 }}
                 className="desFont medFont"
             >

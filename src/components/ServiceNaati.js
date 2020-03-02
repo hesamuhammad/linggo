@@ -15,7 +15,7 @@ export default function ServiceNaati() {
             >
                 NAATI Certified & Sworn Translations
             </h3>
-            <p className="smallFont desFont" style={{ textAlign: "right" }}>
+            <p className="medFont desFont" style={{ textAlign: "right" }}>
                 NAATI certified translations are highly regarded throughout the
                 world. NAATI certified translations are usually required for
                 foreign government departments, immigration and other legal
