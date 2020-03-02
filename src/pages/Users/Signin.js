@@ -1,6 +1,6 @@
 import React from "react";
 import { Form, Icon, Input, Button } from "antd";
-import { checkUsers } from "../../actions";
+import { login } from "../../actions";
 
 import { Formik } from "formik";
 import { connect } from "react-redux";
@@ -46,7 +46,7 @@ function SignIn(props) {
                             timerProgressBar: true,
                             timer: 1000
                         });
-                        props.checkUsers(values);
+                        props.login(values);
                     }, 400);
                 }}
             >
@@ -111,7 +111,7 @@ function SignIn(props) {
 
 const mapDispatchToProps = dispatch => {
     return {
-        checkUsers: data => dispatch(checkUsers(data))
+        login: data => dispatch(login(data))
     };
 };
 

@@ -30,11 +30,11 @@ export const myData = data => {
     };
 };
 
-export const checkUsers = data => dispatch => {
+export const login = data => dispatch => {
     return axios
         .post(`https://project-linggo.herokuapp.com/users/login`, data)
         .then(res => {
-            if (res.data !== "gagal") {
+            if (res.data !== "failed") {
                 localStorage.setItem("token", res.data.token);
                 dispatch(loggedIn(data));
                 Swal.fire({
@@ -60,7 +60,7 @@ export const checkUsers = data => dispatch => {
 
 export const register = data => {
     return axios
-        .post("https://project-linggo.herokuapp.com/users/register", data)
+        .post(`https://project-linggo.herokuapp.com/users/register`, data)
         .then(res => {
             Swal.fire({
                 title: "Registration Success !",
@@ -73,21 +73,21 @@ export const register = data => {
         });
 };
 
-export const getData = () => async dispatch => {
-    const token = localStorage.getItem("token");
-    let decode = "";
-    if (token) {
-        decode = jwt(token);
-    }
+// export const getData = () => async dispatch => {
+//     const token = localStorage.getItem("token");
+//     let decode = "";
+//     if (token) {
+//         decode = jwt(token);
+//     }
 
-    return await axios
-        .get(`https://project-linggo.herokuapp.com/users/${decode._id}`, {
-            headers: { authorization: `Bearer ${token}` }
-        })
-        .then(res => {
-            dispatch(myData(res.data.data));
-        })
-        .catch(err => {
-            console.log(err);
-        });
-};
+//     return await axios
+//         .get(`https://project-linggo.herokuapp.com/users/${decode._id}`, {
+//             headers: { authorization: `Bearer ${token}` }
+//         })
+//         .then(res => {
+//             dispatch(myData(res.data.data));
+//         })
+//         .catch(err => {
+//             console.log(err);
+//         });
+// };
