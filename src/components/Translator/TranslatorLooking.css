@@ -1,0 +1,7 @@
+.leftside {
+    background-image: url("https://gengo.com/wp-content/uploads/2018/05/trans_fold_desktop.jpg");
+    /* height: 100%; */
+    background-size: cover;
+    background-position: 30%;
+    background-repeat: no-repeat;
+}

@@ -2,6 +2,8 @@ import React from "react";
 import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
+import NavbarIna from "./components/NavBarIna";
+
 import Footer from "./components/Footer";
 import Pricing from "./pages/Pricing";
 import Service from "./pages/Service";
@@ -17,11 +19,14 @@ import Ourteam from "./pages/Team/Ourteam";
 import Translator from "./pages/Translator/TranslatorPage";
 import Profile from "./pages/Profile";
 import Project from "./pages/Project";
+import NavbarNew from "./components/NavbarNew";
 
 function App() {
     return (
         <Router>
-            <Navbar />
+            {/* <Navbar /> */}
+            {/* <NavbarIna /> */}
+            <NavbarNew />
             <Switch>
                 <Route exact path="/">
                     <Home />

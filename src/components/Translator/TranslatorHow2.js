@@ -4,17 +4,8 @@ import { Row, Col, Card } from "react-bootstrap";
 export default class TranslatorWhy extends Component {
     render() {
         return (
-            <div style={{ textAlign: "center" }}>
-                <p
-                    style={{
-                        fontWeight: "bold",
-                        fontSize: "4vh",
-                        paddingBottom: "2%"
-                    }}
-                >
-                    Why translate with us?
-                </p>
-                <Row style={{ paddingLeft: "10%", paddingRight: "10%" }}>
+            <div style={{ textAlign: "left", paddingTop: "1%" }}>
+                <Row style={{ paddingLeft: "15%", paddingRight: "15%" }}>
                     <Col
                         sm
                         style={{
@@ -25,20 +16,22 @@ export default class TranslatorWhy extends Component {
                     >
                         <Card
                             style={{
-                                width: "18rem",
+                                width: "16rem",
                                 borderStyle: "none"
                             }}
                         >
                             <Card.Img
                                 variant="top"
-                                src="https://gengo.com/wp-content/uploads/2017/07/translator_th01.png"
+                                src="https://gengo.com/wp-content/themes/gengo_theme/images/new_translator/Group_30.png"
                             />
                             <Card.Body>
-                                <Card.Title>Flexible schedule</Card.Title>
+                                <Card.Title>
+                                    Sign up and get approved
+                                </Card.Title>
                                 <Card.Text>
-                                    Our global platform is active 24/7 so you
-                                    can set your own schedule and work whenever
-                                    you want, from wherever you want.
+                                    Create a free account and take our two-part
+                                    test. Check out our translator resources for
+                                    tips on how to prepare.
                                 </Card.Text>
                             </Card.Body>
                         </Card>
@@ -51,17 +44,17 @@ export default class TranslatorWhy extends Component {
                             padding: 0
                         }}
                     >
-                        <Card style={{ width: "18rem", borderStyle: "none" }}>
+                        <Card style={{ width: "16rem", borderStyle: "none" }}>
                             <Card.Img
                                 variant="top"
-                                src="https://gengo.com/wp-content/uploads/2017/07/translator_th02.png"
+                                src="https://gengo.com/wp-content/themes/gengo_theme/images/new_translator/Group_29.png"
                             />
                             <Card.Body>
-                                <Card.Title>Pick and choose</Card.Title>
+                                <Card.Title>Start translating</Card.Title>
                                 <Card.Text>
-                                    With thousands of projects available each
-                                    day, you can find and work on translations
-                                    that interest you.
+                                    Once approved, familiarize yourself with our
+                                    style guide and workbench. When you feel
+                                    ready, start translating!
                                 </Card.Text>
                             </Card.Body>
                         </Card>
@@ -74,17 +67,17 @@ export default class TranslatorWhy extends Component {
                             padding: 0
                         }}
                     >
-                        <Card style={{ width: "18rem", borderStyle: "none" }}>
+                        <Card style={{ width: "16rem", borderStyle: "none" }}>
                             <Card.Img
                                 variant="top"
-                                src="https://gengo.com/wp-content/uploads/2017/07/translator_th03.png"
+                                src="https://gengo.com/wp-content/themes/gengo_theme/images/new_translator/Group_28.png"
                             />
                             <Card.Body>
-                                <Card.Title>Supportive community</Card.Title>
+                                <Card.Title>Get paid</Card.Title>
                                 <Card.Text>
-                                    Get feedback from professionals, connect
-                                    with other language lovers, give advice on
-                                    translations and share ideas on our forums.
+                                    Invoicing is a thing of the past. At Gengo,
+                                    translation payments are automatically added
+                                    to your account.
                                 </Card.Text>
                             </Card.Body>
                         </Card>
@@ -97,17 +90,22 @@ export default class TranslatorWhy extends Component {
                             padding: 0
                         }}
                     >
-                        <Card style={{ width: "18rem", borderStyle: "none" }}>
+                        <Card style={{ width: "16rem", borderStyle: "none" }}>
                             <Card.Img
                                 variant="top"
-                                src="https://gengo.com/wp-content/uploads/2017/07/translator_th04.png"
+                                src="https://gengo.com/wp-content/themes/gengo_theme/images/new_translator/Group_27.png"
+                                style={{ width: "5rem" }}
                             />
                             <Card.Body>
-                                <Card.Title>Latest technology</Card.Title>
+                                <Card.Title>
+                                    Pass our Pro qualification test to unlock
+                                    access to more challenging projects at
+                                    higher reward rates.
+                                </Card.Title>
                                 <Card.Text>
-                                    Our state-of-the-art workbench makes working
-                                    on a PC, tablet or smartphone fun for both
-                                    professionals and beginners.
+                                    Pass our Pro qualification test to unlock
+                                    access to more challenging projects at
+                                    higher reward rates.
                                 </Card.Text>
                             </Card.Body>
                         </Card>
