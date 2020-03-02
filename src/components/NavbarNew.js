@@ -38,9 +38,9 @@ const NavbarNew = props => {
     };
 
     const token = localStorage.getItem("token");
-    let decode = "";
+    // let decode = "";
     if (token) {
-        decode = jwt(token);
+        let decode = jwt(token);
     }
 
     console.log(props);

@@ -23,7 +23,7 @@ export default class TranslatorLooking extends Component {
                                 within hours.
                             </p>
                             <a
-                                href="#"
+                                href="/"
                                 class="btn btn-primary"
                                 style={{
                                     paddingLeft: "15%",
