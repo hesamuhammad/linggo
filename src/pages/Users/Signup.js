@@ -1,35 +1,11 @@
 import React from "react";
 import { Form, Input, Tooltip, Icon, Button } from "antd";
 
-import { register } from "../../actions";
-
 import { Formik } from "formik";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 
-const formItemLayout = {
-    labelCol: {
-        xs: { span: 24 },
-        sm: { span: 8 }
-    },
-    wrapperCol: {
-        xs: { span: 24 },
-        sm: { span: 16 }
-    }
-};
-
-const tailFormItemLayout = {
-    wrapperCol: {
-        xs: {
-            span: 24,
-            offset: 0
-        },
-        sm: {
-            span: 16,
-            offset: 8
-        }
-    }
-};
+import { register } from "../../actions/users";
 
 function SignUp(props) {
     return (
@@ -70,7 +46,7 @@ function SignUp(props) {
                     isSubmitting
                     /* and other goodies */
                 }) => (
-                    <Form {...formItemLayout} onSubmit={handleSubmit}>
+                    <Form onSubmit={handleSubmit}>
                         <Form.Item
                             label={
                                 <span>
@@ -135,7 +111,7 @@ function SignUp(props) {
                                 touched.password &&
                                 errors.password}
                         </Form.Item>
-                        <Form.Item {...tailFormItemLayout}>
+                        <Form.Item>
                             <Button type="primary" disabled={isSubmitting}>
                                 Submit
                             </Button>
