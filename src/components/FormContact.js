@@ -1,82 +1,75 @@
-import React from "react";
-import { connect } from "react-redux";
-import { Formik } from "formik";
-import { Form, Input, Button, Row } from "antd";
-import { postContact } from "../actions";
+import React from 'react';
+import { Form, Input, Button, Row,Col } from 'antd';
+import {connect} from 'react-redux';
+import { addContact } from '../actions/contact';
 
-function Contact(props) {
-    const formItemLayout = {
-        labelCol: {
-            xs: { span: 24 },
-            sm: { span: 8 }
-        },
-        wrapperCol: {
-            xs: { span: 24 },
-            sm: { span: 16 }
+class Contact extends React.Component {
+
+    state = {
+            name:'',
+            email:'',
+            phone:'',
+            message:''
+    }
+
+    handleChange = e => {
+        let name = e.target.name;
+        let val = e.target.value;
+        if(name === 'name'){
+            this.setState({name:val});
+        }else if(name === 'email'){
+            this.setState({email:val});
+        }else if(name === 'subject'){
+            this.setState({phone:val});
+        }else if(name === 'message'){
+            this.setState({message:val});
         }
-    };
+        
+    }
+
+    handleSubmit = e => {
+        e.preventDefault();
+        const {name,email,phone,message} = this.state;
+        this.props.sendContact({name: name,email:email,phone:phone,message:message});
+
+    }
     
-    return (
+    render() {
+        const { TextArea } = Input;
+
+        return (
         <div>
-            <h1>Send a Message</h1>
             <Row>
-            <Formik
-                initialValues={{ name: "", email: "", brand: "" }}
-                onSubmit={values => {
-                    props.postContact(values);
-                }}
-            >
-                {props => {
-                    return (
-                        <Form {...formItemLayout} onSubmit={props.handleSubmit}>
-                            <Form.Item label="Name">
-                                <Input
-                                    name="name"
-                                    onChange={props.handleChange}
-                                    value={props.values.name}
-                                />
-                            </Form.Item>
-                            <Form.Item label="Email">
-                                <Input
-                                    name="email"
-                                    onChange={props.handleChange}
-                                    value={props.values.email}
-                                />
-                            </Form.Item>
-                            <Form.Item label="Phone">
-                                <Input
-                                    name="phone"
-                                    onChange={props.handleChange}
-                                    value={props.values.phone}
-                                />
-                            </Form.Item>
-                            <Form.Item label="Message">
-                                <Input
-                                    name="message"
-                                    onChange={props.handleChange}
-                                    value={props.values.message}
-                                />
-                            </Form.Item>
-                            <Form.Item>
-                                <Button type="primary" htmlType="submit">
-                                    Submit
-                                </Button>
-                            </Form.Item>
-                        </Form>
-                    );
-                }}
-            </Formik>
+                <Col xs={24} md={24} style={{paddingLeft:"20px"}}>
+                    <h2 style={{ textAlign: "center" }}>Send a Message</h2>
+                    <Form layout="vertical" onSubmit={this.handleSubmit}>
+                        <Form.Item  >
+                            <Input name='name' onChange={this.handleChange} placeholder="Full Name" />
+                        </Form.Item>
+                        <Form.Item>
+                            <Input name='email' onChange={this.handleChange} placeholder="Email Address" />
+                        </Form.Item>
+                        <Form.Item>
+                            <Input name='phone' onChange={this.handleChange} placeholder="Phone Number" />
+                        </Form.Item>
+                        <Form.Item>
+                            <TextArea name='message' onChange={this.handleChange} rows={4} placeholder="Your Message"></TextArea>
+                        </Form.Item>
+                        <Form.Item >
+                            <Button htmlType='submit' size='large' type="danger" >SEND</Button>
+                        </Form.Item>
+                    </Form>
+                </Col>
             </Row>
         </div>
-    );
+        );
+    }
 }
 
-const mapDispatchToProps = dispatch => {
-    return {
-        postContact: values => {
-            dispatch(postContact(values));
-        }
-    };
-};
+const mapDispatchToProps = dispatch =>{
+    return{
+        sendContact:(data) => dispatch(addContact(data))
+    }
+}
 
-export default connect(null, mapDispatchToProps)(Contact);
+export default connect(null,mapDispatchToProps)(Contact);
