@@ -14,51 +14,65 @@ function Profile(props) {
     props.getProfileById(id);
   }, []);
   console.log(props);
+
   return (
     <div className="paddingPage">
-      <Row style={{ padding: "10px" }}>
-        <Col xs={0} sm={2} md={4} lg={4} xl={4}></Col>
-        <Col xs={24} sm={20} md={16} lg={16} xl={16}>
-          <div
-            className="medFont desFont"
-            style={{ display: "flex", justifyContent: "space-between"}}
-          >
-            <h1 className="titleFont">Hello {props.firstName}!</h1>
-            {/* ISI */}
+      {props.users !== undefined &&
+        props.users.map((item, key) => {
+          console.log(item);
+          return (
+            <Row style={{ padding: "10px" }}>
+              <Col
+                xs={{ span: 22, offset: 1 }}
+                sm={{ span: 20, offset: 2 }}
+                md={{ span: 16, offset: 4 }}
+                lg={{ span: 16, offset: 4 }}
+                xl={{ span: 16, offset: 4 }}
+              >
+                <div
+                  className="medFont desFont"
+                  style={{ display: "flex", justifyContent: "space-between" }}
+                >
+                  <h1 className="titleFont">Hello {item.firstName}!</h1>
 
-            <Button size="small" type="ghost" className="smallFont">
-              Edit Profile
-            </Button>
-          </div>
-          <div>
-            <Row justify="center" className="smallFont desFont">
-              <Col span={4}>
-              <Avatar shape="square" size={96} icon="user" /></Col>
-              <Col span={4} offset={1}>
-                <p>
-                  First Name <br />
-                  Last Name <br />
-                  Email <br />
-                  Password
-                </p>
-              </Col>
-              <Col span={10}>
-                <p>
-                  : namadepan{props.firstName}
-                  <br />
-                  : namabelakang{props.lastName}
-                  <br />
-                  : email{props.email}
-                  <br />
-                  : password{props.password}
-                </p>
+                  <Button size="small" type="ghost" className="smallFont">
+                    Edit Profile
+                  </Button>
+                </div>
+                <div>
+                  <Row justify="center" className="smallFont desFont">
+                    <Col span={5}>
+                      <Avatar
+                        className="serviceImage"
+                        width="200"
+                        height="200"
+                        shape="square"
+                        size={96}
+                        icon="user"
+                      />
+                    </Col>
+                    <Col span={5} offset={1}>
+                      <p>
+                        First Name <br />
+                        Last Name <br />
+                        Email <br />
+                        Password
+                      </p>
+                    </Col>
+                    <Col span={10}>
+                      <p>
+                        : {item.firstName}
+                        <br />: {item.lastName}
+                        <br />: {item.email}
+                        <br />: {item.password}
+                      </p>
+                    </Col>
+                  </Row>
+                </div>
               </Col>
             </Row>
-          </div>
-          {/* END OF ISI */}
-        </Col>
-        <Col xs={0} sm={2} md={4} lg={4} xl={4}></Col>
-      </Row>
+          );
+        })}
     </div>
   );
 }
