@@ -1,8 +1,8 @@
 import React from "react";
 import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
+import history from "./history";
+
 import Home from "./pages/Home";
-import Navbar from "./components/Navbar";
-import NavbarIna from "./components/NavBarIna";
 
 import Footer from "./components/Footer";
 import Pricing from "./pages/Pricing";
@@ -17,14 +17,13 @@ import Signin from "./pages/Users/Signin";
 import Signup from "./pages/Users/Signup";
 import Ourteam from "./pages/Team/Ourteam";
 import Translator from "./pages/Translator/TranslatorPage";
-import Profile from "./pages/Profile";
-import Project from "./pages/Project";
 import NavbarNew from "./components/NavbarNew";
+import MyProfile from "./pages/MyProfile";
+import MyProject from "./pages/MyProject";
 
 function App() {
     return (
-        <Router>
-            {/* <Navbar /> */}
+        <Router history={history}>
             {/* <NavbarIna /> */}
             <NavbarNew />
             <Switch>
@@ -71,10 +70,10 @@ function App() {
                     <Pricing />
                 </Route>
                 <Route exact path="/profile">
-                    <Profile />
+                    <MyProfile />
                 </Route>
                 <Route exact path="/project">
-                    <Project />
+                    <MyProject />
                 </Route>
             </Switch>
             <Footer />

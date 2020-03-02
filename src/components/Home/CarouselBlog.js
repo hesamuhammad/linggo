@@ -4,8 +4,6 @@ import axios from "axios";
 import { Container } from "react-bootstrap";
 import { Card } from "antd";
 
-const { Meta } = Card;
-
 class Responsive extends Component {
     state = {
         post: []
