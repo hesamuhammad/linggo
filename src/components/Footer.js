@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Layout, Col, Row, Icon } from "antd";
-import Image from "../assets/images/logo.png";
+import Image from "../assets/images/logo_transparent.png";
 import Socialmedia from "./Socialmedia";
 
 const { Footer } = Layout;
@@ -27,20 +27,29 @@ export default class Navbar extends Component {
                                 paddingBottom: "1   %"
                             }}
                         >
-                            <Col xs={24} md={6}>
-                                <div style={{ marginBottom: "10px" }}>
-                                    <img
-                                        src={Image}
-                                        alt="linggo"
+                            <hr />
+                            <Col xs={24} md={3}></Col>
+                            <Col xs={24} md={5}>
+                                <Link to="/">
+                                    <div
                                         style={{
-                                            width: "35%"
+                                            maxWidth: "18vh",
+                                            marginBottom: "3%"
                                         }}
-                                    ></img>
+                                    >
+                                        <img
+                                            src={Image}
+                                            alt="linggo"
+                                            style={{ width: "100%" }}
+                                        />
+                                    </div>
+                                </Link>
+                                <div>
+                                    <Socialmedia />
                                 </div>
-                                <p className="blog">BLOG</p>
-                                <Socialmedia />
                             </Col>
-                            <Col xs={24} md={6}>
+                            <Col xs={24} md={2}></Col>
+                            <Col xs={24} md={4}>
                                 <div>
                                     <p>For Customers</p>
                                     <ul>
@@ -57,7 +66,7 @@ export default class Navbar extends Component {
                                     </ul>
                                 </div>
                             </Col>
-                            <Col xs={24} md={6}>
+                            <Col xs={24} md={4}>
                                 <p>For Translator</p>
                                 <ul>
                                     <li style={{ fontSize: "2vh" }}>
@@ -72,7 +81,7 @@ export default class Navbar extends Component {
                                     </li>
                                 </ul>
                             </Col>
-                            <Col xs={24} md={6}>
+                            <Col xs={24} md={4}>
                                 <p>Company</p>
                                 <ul>
                                     <li style={{ fontSize: "2vh" }}>
@@ -101,13 +110,19 @@ export default class Navbar extends Component {
                                             Our team
                                         </Link>
                                     </li>
+                                    <p
+                                        style={{
+                                            // textAlign: "right",
+                                            fontSize: "1.5vh",
+                                            paddingTop: "5%"
+                                        }}
+                                    >
+                                        © Linggo Inc.
+                                    </p>
                                 </ul>
                             </Col>
+                            <Col xs={24} md={2}></Col>
                         </Row>
-                        <hr />
-                        <p style={{ textAlign: "right", paddingRight: "10%" }}>
-                            Linggo ©2020 Created by Linggo Inc.
-                        </p>
                     </Footer>
                 </Layout>
             </div>

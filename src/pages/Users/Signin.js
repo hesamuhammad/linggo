@@ -4,7 +4,7 @@ import { login } from "../../actions";
 
 import { Formik } from "formik";
 import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
+import { withRouter, Link } from "react-router-dom";
 
 function SignIn(props) {
     return (
@@ -15,7 +15,7 @@ function SignIn(props) {
                 alignItems: "center"
             }}
         >
-            <h1 style={{ textAlign: "center" }}>Sign In</h1>
+            <p style={{ textAlign: "center" }}>Sign In</p>
             <Formik
                 initialValues={{
                     email: "",
@@ -67,6 +67,7 @@ function SignIn(props) {
                         >
                             Submit
                         </Button>
+                        <Link to="/signup">Sign Up</Link>
                     </Form>
                 )}
             </Formik>
