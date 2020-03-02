@@ -5,6 +5,7 @@ import { login } from "../../actions";
 import { Formik } from "formik";
 import { connect } from "react-redux";
 import { withRouter, Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 function SignIn(props) {
     return (
@@ -21,12 +22,45 @@ function SignIn(props) {
                     email: "",
                     password: ""
                 }}
-                onSubmit={(values, actions) => {
-                    props.login(values, props.history);
+                validate={values => {
+                    const errors = {};
+                    if (!values.email) {
+                        errors.email = "Email Required";
+                    } else if (
+                        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(
+                            values.email
+                        )
+                    ) {
+                        errors.email = "Invalid email address";
+                    }
+                    return errors;
+                }}
+                onSubmit={(values, { setSubmitting }) => {
+                    setTimeout(() => {
+                        setSubmitting(false);
+                        Swal.fire({
+                            position: "top-center",
+                            icon: "info",
+                            title: "Loading",
+                            showConfirmButton: false,
+                            timerProgressBar: true,
+                            timer: 1000
+                        });
+                        props.login(values);
+                    }, 400);
                 }}
             >
-                {props => (
-                    <Form className="login-form" onSubmit={props.handleSubmit}>
+                {({
+                    values,
+                    errors,
+                    touched,
+                    handleChange,
+                    handleBlur,
+                    handleSubmit,
+                    isSubmitting
+                    /* and other goodies */
+                }) => (
+                    <Form className="login-form" onSubmit={handleSubmit}>
                         <Form.Item>
                             <Input
                                 prefix={
@@ -38,9 +72,9 @@ function SignIn(props) {
                                 type="email"
                                 placeholder="Email"
                                 name="email"
-                                onChange={props.handleChange}
-                                onBlur={props.handleBlur}
-                                value={props.values.email}
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                value={values.email}
                             />
                         </Form.Item>
                         <Form.Item>
@@ -54,16 +88,16 @@ function SignIn(props) {
                                 type="password"
                                 placeholder="Password"
                                 name="password"
-                                onChange={props.handleChange}
-                                onBlur={props.handleBlur}
-                                value={props.values.password}
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                value={values.password}
                             />
                         </Form.Item>
                         <Button
                             type="primary"
                             htmlType="submit"
                             className="login-form-button"
-                            disabled={props.isSubmitting}
+                            disabled={isSubmitting}
                         >
                             Submit
                         </Button>
@@ -77,9 +111,7 @@ function SignIn(props) {
 
 const mapDispatchToProps = dispatch => {
     return {
-        login: (values, history) => {
-            dispatch(login(values, history));
-        }
+        login: data => dispatch(login(data))
     };
 };
 

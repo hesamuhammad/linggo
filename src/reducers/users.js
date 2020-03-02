@@ -1,17 +1,31 @@
-import { SET_LOGIN } from "../actions";
+const loginstatus = localStorage.getItem("token");
+const initialState = loginstatus
+    ? {
+          isLogin: true,
+          user: {}
+      }
+    : {
+          isLogin: false,
+          user: {}
+      };
 
-const initialState = {
-    isLogin: false
-};
-
-export default (state = initialState, action) => {
+const usersReducer = (state = initialState, action) => {
     switch (action.type) {
-        case SET_LOGIN:
+        case "LOGGED_IN":
             return {
-                ...state,
-                ...action.payload
+                isLogin: true
+            };
+        case "LOGGED_OUT":
+            return {
+                isLogin: false
+            };
+        case "GET_BY_ID":
+            return {
+                user: action.payload
             };
         default:
             return state;
     }
 };
+
+export default usersReducer;

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { Layout, Col, Row, Icon } from "antd";
+import { Layout, Col, Row } from "antd";
 import Image from "../assets/images/logo_transparent.png";
 import Socialmedia from "./Socialmedia";
 
