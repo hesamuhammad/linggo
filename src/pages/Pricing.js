@@ -4,7 +4,6 @@ import PricingCard from "../components/PricingCard";
 import { Row, Col } from "antd";
 
 export default function Pricing() {
-<<<<<<< HEAD
     return (
         <div className="paddingPage">
             <Row style={{ padding: "1%" }}>
@@ -24,33 +23,4 @@ export default function Pricing() {
             </Row>
         </div>
     );
-=======
-  return (
-    <div className="paddingPage">
-      <Row style={{ padding: "10px" }}>
-        <Col
-          xs={{ span: 22, offset: 1 }}
-          sm={{ span: 20, offset: 2 }}
-          md={{ span: 16, offset: 4 }}
-          lg={{ span: 16, offset: 4 }}
-          xl={{ span: 16, offset: 4 }}
-        >
-          <PricingDetail />
-        </Col>
-      </Row>
-
-      <Row style={{ background: "#ECECEC", padding: "15px 0" }}>
-        <Col
-          xs={{ span: 22, offset: 1 }}
-          sm={{ span: 20, offset: 2 }}
-          md={{ span: 16, offset: 4 }}
-          lg={{ span: 16, offset: 4 }}
-          xl={{ span: 16, offset: 4 }}
-        >
-          <PricingCard />
-        </Col>
-      </Row>
-    </div>
-  );
->>>>>>> dd87772556134d0f7c076e60e2540ed8f5942790
 }

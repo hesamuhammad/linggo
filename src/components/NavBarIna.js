@@ -5,7 +5,6 @@ import { Col, Row } from "antd";
 import Drawer from "./Drawer/Drawer";
 
 export default function NavBarIna() {
-<<<<<<< HEAD
     return (
         <div>
             <Row style={{ padding: "10px" }} className="gradientNav">
@@ -66,53 +65,4 @@ export default function NavBarIna() {
             </Row>
         </div>
     );
-=======
-  return (
-    <div>
-      <Row style={{ padding: "7px" }} className="gradientNav">
-        <Col xs={0} sm={2} md={4} lg={4} xl={4}></Col>
-        <Col xs={24} sm={20} md={16} lg={16} xl={16}>
-          <Row type="flex" justify="space-around" align="middle">
-            <Button ghost type="link" href="/" className="titleFont smallFont">
-              <b>HOME</b>
-            </Button>
-            <Button
-              ghost
-              type="link"
-              href="/pricing"
-              className="titleFont smallFont"
-            >
-              <b>PRICING</b>
-            </Button>
-            <Button
-              ghost
-              type="link"
-              href="/service"
-              className="titleFont smallFont"
-            >
-              <b>SERVICE</b>
-            </Button>
-            <Button
-              ghost
-              type="link"
-              href="/about"
-              className="titleFont smallFont"
-            >
-              <b>ABOUT LINGGO</b>
-            </Button>
-            <Button
-              ghost
-              type="link"
-              href="/contact"
-              className="titleFont smallFont"
-            >
-              <b>CONTACT LINGGO</b>
-            </Button>
-          </Row>
-        </Col>
-        <Col xs={0} sm={2} md={4} lg={4} xl={4}></Col>
-      </Row>
-    </div>
-  );
->>>>>>> dd87772556134d0f7c076e60e2540ed8f5942790
 }
