@@ -1,53 +1,93 @@
 import axios from "axios";
+import history from "../history";
+import jwt from "jwt-decode";
+import Swal from "sweetalert2";
 
-export const SET_LOGIN = "SET_LOGIN";
-
+export const LOGGED_IN = "LOGGED_IN";
+export const LOGGED_OUT = "LOGGED_OUT";
+export const GET_BY_ID = "GET_BY_ID";
 // const heroku = process.env.REACT_APP_API;
 
-export const isLogin = () => dispatch => {
-    const token = localStorage.getItem("token");
+// import history from
 
-    if (token) {
-        dispatch(
-            setLogin({
-                isLogin: true
-            })
-        );
-    } else {
-        dispatch(setLogin());
-    }
-};
-
-export const setLogin = data => {
+export const loggedIn = data => {
     return {
-        type: SET_LOGIN,
+        type: LOGGED_IN,
         payload: data
     };
 };
 
-export const login = (values, history) => dispatch => {
-    return axios({
-        method: "POST",
-        url: `https://project-linggo.herokuapp.com/users/login`,
-        data: values
-    }).then(response => {
-        if (response.status === 200) {
-            localStorage.setItem("token", response.data.token);
-            dispatch(isLogin());
-            history.push("/home");
-        }
-    });
+export const loggedOut = () => {
+    return {
+        type: LOGGED_OUT
+    };
 };
 
-export const register = (values, history) => dispatch => {
-    return axios({
-        method: "POST",
-        url: `https://project-linggo.herokuapp.com/users/register`,
-        data: values
-    }).then(response => {
-        if (response.status === 200) {
-            alert("Registration Succeded");
-            history.push("/signin");
-        }
-    });
+export const myData = data => {
+    return {
+        type: GET_BY_ID,
+        payload: data
+    };
 };
+
+export const login = data => dispatch => {
+    return axios
+        .post(`https://project-linggo.herokuapp.com/users/login`, data)
+        .then(res => {
+            if (res.data !== "failed") {
+                localStorage.setItem("token", res.data.token);
+                dispatch(loggedIn(data));
+                Swal.fire({
+                    title: "Login Success !",
+                    position: "center",
+                    icon: "success",
+                    timer: 2000,
+                    showConfirmButton: false
+                });
+                history.push("/profile");
+            } else {
+                Swal.fire({
+                    title: "Email or Password is wrong !",
+                    position: "center",
+                    icon: "error"
+                });
+            }
+        })
+        .then(res => {
+            history.push("/profile");
+        });
+};
+
+export const register = data => {
+    return axios
+        .post(`https://project-linggo.herokuapp.com/users/register`, data)
+        .then(res => {
+            Swal.fire({
+                title: "Registration Success !",
+                position: "center",
+                icon: "success",
+                timer: 2000,
+                showConfirmButton: false
+            });
+            history.push("/signin");
+        });
+};
+
+// export const getData = () => async dispatch => {
+//     const token = localStorage.getItem("token");
+//     let decode = "";
+//     if (token) {
+//         decode = jwt(token);
+//     }
+
+//     return await axios
+//         .get(`https://project-linggo.herokuapp.com/users/${decode._id}`, {
+//             headers: { authorization: `Bearer ${token}` }
+//         })
+//         .then(res => {
+//             dispatch(myData(res.data.data));
+//         })
+//         .catch(err => {
+//             console.log(err);
+//         });
+// };

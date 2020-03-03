@@ -13,7 +13,6 @@ function UsersProject(props) {
       {props.project !== undefined &&
         props.project.map((item, key) => {
           console.log(item);
-
           return (
             <div>
               {item.fileProjectName}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Form, Input, Button, Row,Col } from 'antd';
 import {connect} from 'react-redux';
-import { addContact } from '../actions/contact';
+import { setContact } from '../actions/contact';
 
 class Contact extends React.Component {
 
@@ -85,7 +85,7 @@ class Contact extends React.Component {
 
 const mapDispatchToProps = dispatch =>{
     return{
-        sendContact:(data) => dispatch(addContact(data))
+        sendContact:(data) => dispatch(setContact(data))
     }
 }
 

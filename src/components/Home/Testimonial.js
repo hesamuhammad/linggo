@@ -51,8 +51,11 @@ class Testimonials extends Component {
                             // console.log(post);
 
                             return (
-                                <div key={post.id}>
-                                    <div style={{ textAlign: "center" }}>
+                                <div>
+                                    <div
+                                        key={post.id}
+                                        style={{ textAlign: "center" }}
+                                    >
                                         <div
                                             style={{
                                                 display: "flex",

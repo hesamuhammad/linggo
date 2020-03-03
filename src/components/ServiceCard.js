@@ -1,172 +1,128 @@
-import React from "react";
+import React, { Component } from "react";
+import { Row, Col, Card } from "antd";
 import { Link } from "react-router-dom";
-import { Card, Col, Row } from "antd";
-import "../App.css";
 
-export default function DetailPricing() {
-    return (
-        <div style={{ textAlign: "center" }}>
-            <Row
-                style={{
-                    backgroundColor: "#f5f5f5",
-                    paddingTop: "2%",
-                    paddingBottom: "2%"
-                }}
-            >
-                <Col xs={1} sm={2} md={4} lg={4} xl={4}></Col>
-                <Col xs={22} sm={20} md={16} lg={16} xl={16}>
-                    <Row
-                        align="middle"
-                        justify="space-around"
-                        gutter={[16, 16]}
-                        style={{ margin: "0 auto", padding: "10px" }}
-                    >
-                        <Col
-                            xs={{ span: 12, offset: 0 }}
-                            sm={{ span: 10, offset: 1 }}
-                            md={{ span: 6, offset: 0 }}
-                        >
-                            <Link to="/service#service4">
-                                <Card
-                                    hoverable
-                                    bordered={false}
-                                    style={{ height: "300px" }}
-                                >
-                                    <p
-                                        style={{
-                                            fontSize: "2.5vh",
-                                            fontWeight: "bold"
-                                        }}
-                                    >
-                                        General Translation
-                                    </p>
-                                    <hr style={{ opacity: "70%" }} />
-                                    <p
-                                        style={{
-                                            fontSize: "1.5vh",
-                                            fontSize: "bold"
-                                        }}
-                                    >
-                                        We have over 25,000 certified
-                                        translation professionals working in
-                                        more than 120 languages to handle any
-                                        project you have.
-                                    </p>
-                                </Card>
-                            </Link>
-                        </Col>
-                        <Col
-                            xs={{ span: 12, offset: 0 }}
-                            sm={{ span: 10, offset: 1 }}
-                            md={{ span: 6, offset: 0 }}
-                        >
+export default class ServiceCard2 extends Component {
+    render() {
+        return (
+            <div style={{ textAlign: "center" }}>
+                <Row
+                    align="middle"
+                    justify="space-around"
+                    gutter={[16, 16]}
+                    style={{
+                        margin: "0 auto",
+                        padding: "1% 10%",
+                        backgroundColor: "#f5f5f5"
+                    }}
+                >
+                    <Col xs={24} sm={24} md={24} lg={12} xl={6}>
+                        <Link to="/service#service4">
                             <Card
-                                hoverable
                                 bordered={false}
-                                style={{ height: "300px" }}
+                                style={{ width: 300, minHeight: "280px" }}
+                                hoverable
                             >
                                 <p
                                     style={{
-                                        fontSize: "2.5vh",
-                                        fontWeight: "bold"
+                                        fontWeight: "bold",
+                                        fontSize: "2.5vh"
                                     }}
                                 >
-                                    Localization & Transcreation
+                                    General <br />
+                                    Translation{" "}
                                 </p>
                                 <hr style={{ opacity: "70%" }} />
-                                <p
-                                    style={{
-                                        fontSize: "1.5vh",
-                                        fontSize: "bold"
-                                    }}
-                                >
-                                    It for those clients who want to add English
-                                    language to their business/corporate w but
-                                    are not excited by the idea of a literal
-                                    translation.
+                                <p>
+                                    We have over 25,000 certified translation
+                                    professionals working in more than 120
+                                    languages to handle any project you have.
                                 </p>
                             </Card>
-                        </Col>
-                        <Col
-                            xs={{ span: 12, offset: 0 }}
-                            sm={{ span: 10, offset: 1 }}
-                            md={{ span: 6, offset: 0 }}
+                        </Link>
+                    </Col>
+                    <Col xs={24} sm={24} md={24} lg={12} xl={6}>
+                        <Card
+                            bordered={false}
+                            style={{ width: 300, minHeight: "280px" }}
+                            hoverable
                         >
-                            <Card
-                                hoverable
-                                bordered={false}
-                                style={{ height: "300px" }}
+                            <p
+                                style={{
+                                    fontWeight: "bold",
+                                    fontSize: "2.5vh"
+                                }}
                             >
-                                <p
-                                    style={{
-                                        fontSize: "2.5vh",
-                                        fontWeight: "bold"
-                                    }}
-                                >
-                                    Subtitling & Transtitling
-                                </p>
-                                <hr style={{ opacity: "70%" }} />
-                                <p
-                                    style={{
-                                        fontSize: "1.5vh",
-                                        fontSize: "bold"
-                                    }}
-                                >
-                                    Movies
-                                    <br />
-                                    TV Shows
-                                    <br />
-                                    Conferences
-                                    <br />
-                                    Documentaries
-                                    <br />
-                                    Research
-                                    <br />
-                                    Interviews
-                                </p>
-                            </Card>
-                        </Col>
-                        <Col
-                            xs={{ span: 12, offset: 0 }}
-                            sm={{ span: 10, offset: 1 }}
-                            md={{ span: 6, offset: 0 }}
+                                Localization & Transcreation
+                            </p>
+                            <hr style={{ opacity: "70%" }} />
+                            <p>
+                                It for those clients who want to add English
+                                language to their business/corporate w but are
+                                not excited by the idea of a literal
+                                translation.
+                            </p>
+                        </Card>
+                    </Col>
+                    <Col xs={24} sm={24} md={24} lg={12} xl={6}>
+                        <Card
+                            bordered={false}
+                            style={{ width: 300, minHeight: "280px" }}
+                            hoverable
                         >
-                            <Card
-                                hoverable
-                                bordered={false}
-                                style={{ height: "300px" }}
+                            <p
+                                style={{
+                                    fontWeight: "bold",
+                                    fontSize: "2.5vh"
+                                }}
                             >
-                                <p
-                                    style={{
-                                        fontSize: "2.5vh",
-                                        fontWeight: "bold"
-                                    }}
-                                >
-                                    NAATI Certified & Sworn Translations
-                                </p>
-                                <hr style={{ opacity: "70%" }} />
-                                <p
-                                    style={{
-                                        fontSize: "1.5vh",
-                                        fontSize: "bold"
-                                    }}
-                                >
-                                    Identity Documents
-                                    <br />
-                                    Educational Transcripts
-                                    <br />
-                                    Affidavits & Sworn Testimonies
-                                    <br />
-                                    Notarized Deeds
-                                    <br />
-                                    Judicial Decisions
-                                </p>
-                            </Card>
-                        </Col>
-                    </Row>
-                </Col>
-                <Col xs={1} sm={2} md={4} lg={4} xl={4}></Col>
-            </Row>
-        </div>
-    );
+                                Subtitling & Transtitling
+                            </p>
+                            <hr style={{ opacity: "70%" }} />
+                            <p>
+                                Movies
+                                <br />
+                                TV Shows
+                                <br />
+                                Conferences
+                                <br />
+                                Documentaries
+                                <br />
+                                Research
+                                <br />
+                                Interviews
+                            </p>
+                        </Card>
+                    </Col>
+                    <Col xs={24} sm={24} md={24} lg={12} xl={6}>
+                        <Card
+                            bordered={false}
+                            style={{ width: 300, minHeight: "280px" }}
+                            hoverable
+                        >
+                            <p
+                                style={{
+                                    fontWeight: "bold",
+                                    fontSize: "2.5vh"
+                                }}
+                            >
+                                NAATI Certified & Sworn Translations
+                            </p>
+                            <hr style={{ opacity: "70%" }} />
+                            <p>
+                                Identity Documents
+                                <br />
+                                Educational Transcripts <br />
+                                Affidavits & Sworn Testimonies
+                                <br />
+                                Notarized Deeds
+                                <br />
+                                Judicial Decisions
+                            </p>
+                        </Card>
+                    </Col>
+                </Row>
+            </div>
+        );
+    }
 }
