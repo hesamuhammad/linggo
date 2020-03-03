@@ -3,20 +3,27 @@
 /*--------------------*/
 
 @media (max-width: 1199px) {
+	.about-left img {
+		max-width: none;
+		width: 43rem;
+	}
 	.about-right {
 		margin-top: 20px;
-		width: 140%;
+		width: 130%;
 		padding: 25px;
-		margin-left: -190px;
 	}		
 }
 
-@media (max-width: 991px) {	
+@media (max-width: 991px) {
+	.about-left img {
+		max-width: none;
+		width: 32rem;
+	}
 	.about-right {
-		margin-top: 75px;
-		width: 160%;
+		margin-top: 20px;
+		width: 128%;
 		padding: 20px;
-		margin-left: -190px;
+		margin-left: -70px;
 	}
 
 	.about-right p {
@@ -25,6 +32,10 @@
 }
 
 @media (max-width: 767px) {
+	.about-left img {
+		max-width: 100%;
+		width: auto;
+	}
 	.about-right {
 		margin-top: 30px;
 		width: 100%;
