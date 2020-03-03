@@ -48,7 +48,7 @@ export default class ServiceCard2 extends Component {
                                     Translation{" "}
                                 </p>
                                 <hr style={{ opacity: "70%" }} />
-                                <p>
+                                <p style={{ fontSize: "1.5vh" }}>
                                     We have over 25,000 certified translation
                                     professionals working in more than 120
                                     languages to handle any project you have.

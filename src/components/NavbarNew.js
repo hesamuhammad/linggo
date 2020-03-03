@@ -82,7 +82,7 @@ const NavbarNew = props => {
                                     <Nav.Link href="/contactus">
                                         CONTACT US
                                     </Nav.Link>
-                                    <Nav.Link href="/profile">
+                                    <Nav.Link href="/profile/">
                                         MY PROFILE
                                     </Nav.Link>
                                     <Nav.Link href="/project">

@@ -27,7 +27,7 @@
 }
 
 .medFont {
-    font-size: 2vh;
+    font-size: 1.5vh;
 }
 
 .bigFont {
@@ -37,6 +37,10 @@
 .titleFont {
     font-family: "Montserrat";
     font-weight: bold;
+}
+
+.pricecard {
+    font-family: "Archivo Black", sans-serif;
 }
 
 @keyframes App-logo-spin {

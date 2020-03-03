@@ -46,13 +46,16 @@ export default function PricingCard() {
                             General
                         </p>
                         <Divider />
-                        {/* <hr style={{ opacity: "30%" }} /> */}
-                        <h3 className="medFont titleFont">
+
+                        <p
+                            className="titleFont pricecard"
+                            style={{ fontSize: "2vh" }}
+                        >
                             $ 0.11
                             <br />
                             per word
-                        </h3>
-                        <hr style={{ opacity: "30%" }} />
+                        </p>
+
                         <p className="desFont" style={{ fontSize: "2vh" }}>
                             Good for internal use:
                             <br />
@@ -90,13 +93,15 @@ export default function PricingCard() {
                             Specialized
                         </p>
                         <Divider />
-                        <h3 className="medFont titleFont">
+                        <p
+                            className="titleFont pricecard"
+                            style={{ fontSize: "2vh" }}
+                        >
                             $ 0.14
                             <br />
                             per word
-                        </h3>
+                        </p>
                         <p className="desFont" style={{ fontSize: "2vh" }}>
-                            <hr style={{ opacity: "30%" }} />
                             Best for professional content:
                             <br />
                             Training manuals
@@ -129,12 +134,15 @@ export default function PricingCard() {
                             NAATI Certified
                         </p>
                         <Divider />
-                        <h3 className="medFont titleFont">
+                        <p
+                            className="titleFont pricecard"
+                            style={{ fontSize: "2vh" }}
+                        >
                             $ 0.17
                             <br />
                             per word
-                        </h3>
-                        <hr style={{ opacity: "30%" }} />
+                        </p>
+
                         <p className="desFont" style={{ fontSize: "2vh" }}>
                             For your legal and immigration translation needs.
                         </p>

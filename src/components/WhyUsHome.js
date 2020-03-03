@@ -95,69 +95,8 @@ export default class WhyUs extends Component {
                             ></Card>
                         </div>
                     </Col>
-          
-          <Col span={6}>
-            <div className="gutter-box">
-              <Card
-                title="Apostile & Legalization"
-                bordered={false}
-                cover={
-                  <img
-                    src={Why2}
-                    alt="legalisasi"
-                    style={{
-                      width: "80px",
-                      display: "inline"
-                    }}
-                  />
-                }
-              >
-                Card content
-              </Card>
+                </Row>
             </div>
-          </Col>
-          <Col span={6}>
-            <div className="gutter-box">
-              <Card
-                title="Localization Services"
-                bordered={false}
-                cover={
-                  <img
-                    src={Why3}
-                    alt="servis lokal"
-                    style={{
-                      width: "80px",
-                      display: "inline"
-                    }}
-                  />
-                }
-              >
-                Card content
-              </Card>
-            </div>
-          </Col>
-          <Col span={6}>
-            <div className="gutter-box">
-              <Card
-                title="Website Translation"
-                bordered={false}
-                cover={
-                  <img
-                    src={Why4}
-                    alt="terjemah website"
-                    style={{
-                      width: "80px",
-                      display: "inline"
-                    }}
-                  />
-                }
-              >
-                Card content
-              </Card>
-            </div>
-          </Col>
-        </Row>
-      </div>
-    );
-  }
+        );
+    }
 }
