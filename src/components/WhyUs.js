@@ -39,18 +39,12 @@ export default class WhyUs extends Component {
                                     />
                                 }
                             >
-                                <p>
+                                <p style={{ fontWeight: "bold" }}>
                                     letter translations
-                                    <br />
-                                    -
                                     <br />
                                     commercial documents translations
                                     <br />
-                                    -
-                                    <br />
                                     marketing materials translations
-                                    <br />
-                                    -
                                     <br />
                                     legal documents translations
                                 </p>
@@ -73,18 +67,12 @@ export default class WhyUs extends Component {
                                     />
                                 }
                             >
-                                <p>
+                                <p style={{ fontWeight: "bold" }}>
                                     authentication of documents
-                                    <br />
-                                    -
                                     <br />
                                     certify the signature identify the seal
                                     <br />
-                                    -
-                                    <br />
                                     involves several entities legalization
-                                    <br />
-                                    -
                                     <br />
                                     higher government authority
                                 </p>
@@ -107,19 +95,13 @@ export default class WhyUs extends Component {
                                     />
                                 }
                             >
-                                <p>
+                                <p style={{ fontWeight: "bold" }}>
                                     penetrate foreign markets
-                                    <br />
-                                    -
                                     <br />
                                     reach new clients or consumer groups
                                     <br />
-                                    -
-                                    <br />
                                     increase international sales gain a
                                     competitive
-                                    <br />
-                                    -
                                     <br />
                                     advantage over regional rivals
                                 </p>
@@ -142,18 +124,12 @@ export default class WhyUs extends Component {
                                     />
                                 }
                             >
-                                <p>
+                                <p style={{ fontWeight: "bold" }}>
                                     software applications
-                                    <br />
-                                    -
                                     <br />
                                     html, PHP, javascript and flash files
                                     <br />
-                                    -
-                                    <br />
                                     open source andproprietary CMS systems
-                                    <br />
-                                    -
                                     <br />
                                     multimedia files
                                 </p>

@@ -10,7 +10,8 @@ export default function PricingDetail() {
                     textAlign: "center",
                     fontSize: "6vh",
                     fontWeight: "bold",
-                    paddingBottom: "2%"
+                    marginBottom: "2%",
+                    marginTop: "2%"
                 }}
             >
                 Pricing

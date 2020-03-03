@@ -42,11 +42,11 @@ class DrawerButton extends Component {
                         <TestimonialsDrawer />
                         <div>
                             <p style={{ marginTop: "40%" }}>
-                                523 Sylvan Ave, 5th Floor Mountain View, CA
-                                94041 USA
+                                Jl. Kemang Raya No.10, Bangka, Kec. Mampang
+                                Prapatan
                             </p>
                             <p>___</p>
-                            <p>+1 (844) 123 456 78</p>
+                            <p>+62 (878) 0010 8080</p>
                         </div>
                         <div
                             style={{

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Row, Col, Card } from "antd";
+import { Card } from "antd";
+import { Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 export default class ServiceCard2 extends Component {
@@ -8,8 +9,10 @@ export default class ServiceCard2 extends Component {
             <div
                 style={{
                     textAlign: "center",
-                    marginLeft: "5%",
-                    marginRight: "5%"
+                    marginLeft: "10%",
+                    marginRight: "10%",
+                    paddingRight: "4%",
+                    paddingLeft: "4%"
                 }}
             >
                 <Row
@@ -17,16 +20,22 @@ export default class ServiceCard2 extends Component {
                     justify="space-around"
                     gutter={[16, 16]}
                     style={{
-                        margin: "0 auto",
-                        padding: "1% 10%",
-                        backgroundColor: "#ACBFAD"
+                        paddingLeft: "5%",
+                        paddingRight: "5%",
+                        backgroundColor: "#ACBFAD",
+                        paddingTop: "4%",
+                        paddingBottom: "4%"
                     }}
                 >
-                    <Col xs={24} sm={12} md={24} lg={12} xl={6}>
+                    <Col xs={12} md={3}>
                         <Link to="/service#service4">
                             <Card
                                 bordered={false}
-                                style={{ maxWidth: 250, minHeight: "280px" }}
+                                style={{
+                                    maxWidth: 250,
+                                    minHeight: "300px",
+                                    marginTop: "3%"
+                                }}
                                 hoverable
                             >
                                 <p
@@ -47,10 +56,14 @@ export default class ServiceCard2 extends Component {
                             </Card>
                         </Link>
                     </Col>
-                    <Col xs={24} sm={12} md={24} lg={12} xl={6}>
+                    <Col xs={12} md={3}>
                         <Card
                             bordered={false}
-                            style={{ maxWidth: 250, minHeight: "280px" }}
+                            style={{
+                                maxWidth: 250,
+                                minHeight: "300px",
+                                marginTop: "3%"
+                            }}
                             hoverable
                         >
                             <p
@@ -70,10 +83,14 @@ export default class ServiceCard2 extends Component {
                             </p>
                         </Card>
                     </Col>
-                    <Col xs={24} sm={12} md={24} lg={12} xl={6}>
+                    <Col xs={12} md={3}>
                         <Card
                             bordered={false}
-                            style={{ maxWidth: 250, minHeight: "280px" }}
+                            style={{
+                                maxWidth: 250,
+                                minHeight: "300px",
+                                marginTop: "3%"
+                            }}
                             hoverable
                         >
                             <p
@@ -100,10 +117,14 @@ export default class ServiceCard2 extends Component {
                             </p>
                         </Card>
                     </Col>
-                    <Col xs={24} sm={12} md={24} lg={12} xl={6}>
+                    <Col xs={12} md={3}>
                         <Card
                             bordered={false}
-                            style={{ maxWidth: 250, minHeight: "280px" }}
+                            style={{
+                                maxWidth: 250,
+                                minHeight: "300px",
+                                marginTop: "3%"
+                            }}
                             hoverable
                         >
                             <p
