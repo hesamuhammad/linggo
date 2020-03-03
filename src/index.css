@@ -136,7 +136,6 @@ li {
 }
 
 .about-right {
-<<<<<<< HEAD
     display: inline;
     justify-content: left;
     margin-top: 15px;
@@ -145,18 +144,3 @@ li {
     margin-left: -100px;
     box-shadow: 3px 1px 18px -9px #000;
 }
-=======
-	display: inline;
-	justify-content: left;
-	margin-top: 10px;
-	background-color: #fff;
-	padding: 14px !important;
-	margin-left: -100px;
-	box-shadow: 3px 1px 18px -9px #000;
-}
-
-.sticky-top {
-    z-index: 1 !important;
-    background-color: #283e2e;
-}
->>>>>>> a79332ff48ae2b77f01ab4dc5f57eb639e2bd770
