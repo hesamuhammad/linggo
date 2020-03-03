@@ -144,5 +144,7 @@ export default function Service() {
                 </Col>
             </Row>
         </div>
+      </div>
+        
     );
 }

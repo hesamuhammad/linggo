@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import BreadAbout from "../components/BreadAbout";
-import WhyUs from "./WhyUs";
+import WhyUs from "../components/WhyUs";
 import About from "../components/About";
 import { Row, Col } from "antd";
-import Trans from "../assets/images/trans.jpg";
 
 export default class Aboutus extends Component {
     render() {
