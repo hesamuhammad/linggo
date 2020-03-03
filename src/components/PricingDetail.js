@@ -16,15 +16,14 @@ export default function PricingDetail() {
             >
                 Pricing
             </h1>{" "}
-            */}
             <p
                 style={{
-                    padding: "50px 0",
                     margin: "0 auto",
                     textAlign: "center",
-                    paddingBottom: "2%"
+                    paddingBottom: "2%",
+                    fontSize: "2vh"
                 }}
-                className="desFont medFont"
+                className="desFont"
             >
                 Our rates depend on what level the source language is at,
                 ranging from standard to business language, but most of our work
