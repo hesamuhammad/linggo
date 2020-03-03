@@ -3,13 +3,8 @@ import "../App.css";
 
 export default function PricingDetail() {
     return (
-<<<<<<< HEAD
         <div style={{ paddingLeft: "5%", paddingRight: "5%" }}>
             <h1
-=======
-        <div>
-            {/* <h1
->>>>>>> 31bf3ea20851efd6160b40a2065eaaefa357aef0
                 className="titleFont"
                 style={{
                     textAlign: "center",
@@ -20,16 +15,14 @@ export default function PricingDetail() {
                 }}
             >
                 Pricing
-            </h1> */}
+            </h1>{" "}
+            */}
             <p
                 style={{
                     padding: "50px 0",
                     margin: "0 auto",
                     textAlign: "center",
-<<<<<<< HEAD
                     paddingBottom: "2%"
-=======
->>>>>>> 31bf3ea20851efd6160b40a2065eaaefa357aef0
                 }}
                 className="desFont medFont"
             >

@@ -6,7 +6,6 @@ import Why3 from "../images/sharing.svg";
 import Why4 from "../images/transfer.svg";
 
 export default class WhyUs extends Component {
-<<<<<<< HEAD:src/components/WhyUsHome.js
     render() {
         return (
             <div
@@ -97,36 +96,6 @@ export default class WhyUs extends Component {
                         </div>
                     </Col>
                 </Row>
-=======
-  render() {
-    return (
-      <div
-        style={{
-          paddingLeft: "7%",
-          paddingRight: "7%",
-          paddingTop: "4%"
-        }}
-      >
-        <Row gutter={16}>
-          <Col span={6}>
-            <div className="gutter-box">
-              <Card
-                title="Documents Translation"
-                bordered={false}
-                cover={
-                  <img
-                    src={Why1}
-                    alt="terjemah dokumen"
-                    style={{
-                      width: "80px",
-                      display: "inline"
-                    }}
-                  />
-                }
-              >
-                <p>letter translations</p>
-              </Card>
->>>>>>> 31bf3ea20851efd6160b40a2065eaaefa357aef0:src/pages/WhyUs.js
             </div>
           </Col>
           <Col span={6}>

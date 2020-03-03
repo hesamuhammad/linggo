@@ -13,7 +13,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import BreadServices from "../components/BreadServices";
 
 export default function Service() {
-<<<<<<< HEAD
     return (
         <div style={{ marginBottom: "2%" }}>
             <BreadServices />
@@ -45,29 +44,6 @@ export default function Service() {
                     </Row>
                 </Col>
             </Row>
-=======
-  return (
-    <div>
-      <BreadServices/>
-      <Row id="service1" name="service1" style={{ backgroundColor: "#f5f5f5" }}>
-        <Col xs={{span: 22, offset: 1}} sm={{span: 20, offset: 2}} md={{span: 16, offset: 4}} lg={{span: 16, offset: 4}} xl={{span: 16, offset: 4}}>
-          <Row gutter={16} style={{ padding: "30px 0" }}>
-            <Col span={12}>
-              <img
-                src={Service1}
-                alt=""
-                className="serviceImages"
-                width="400"
-                height="200"
-              />
-            </Col>
-            <Col span={12}>
-              <ServiceGeneral />
-            </Col>
-          </Row>
-        </Col>
-      </Row>
->>>>>>> 31bf3ea20851efd6160b40a2065eaaefa357aef0
 
             <Row
                 id="service2"
