@@ -2,6 +2,7 @@ import React from "react";
 import PricingDetail from "../components/PricingDetail";
 import PricingCard from "../components/PricingCard";
 import { Row, Col } from "antd";
+import BreadPricing from "../components/BreadPricing";
 
 export default function Pricing() {
     return (

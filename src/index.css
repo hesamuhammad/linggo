@@ -108,6 +108,39 @@ li {
     text-align: left;
 }
 
+/* a { */
+  /* color: white !important;
+  text-decoration: none;
+  background-color: transparent;
+} */
+
 .ant-card-head {
-    border-style: none !important;
+  border-bottom: none !important;
+}
+
+.content-about {
+  width: 50%;
+  height: calc(100% + 120px);
+  left: 0;
+  top: -60px;
+  background-image: url(./assets/images/trans.jpg) !important;
+  /* background-position: top left !important; */
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+.about-area {
+	display: inline;
+	justify-content: left;
+	padding: 100px 0;
+}
+
+.about-right {
+	display: inline;
+	justify-content: left;
+	margin-top: 15px;
+	background-color: #fff;
+	padding: 20px !important;
+	margin-left: -100px;
+	box-shadow: 3px 1px 18px -9px #000;
 }
