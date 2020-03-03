@@ -16,7 +16,7 @@ export default class ServiceCard2 extends Component {
                         backgroundColor: "#f5f5f5"
                     }}
                 >
-                    <Col xs={24} sm={24} md={24} lg={12} xl={6}>
+                    <Col xs={24} sm={12} md={24} lg={12} xl={6}>
                         <Link to="/service#service4">
                             <Card
                                 bordered={false}
@@ -41,7 +41,7 @@ export default class ServiceCard2 extends Component {
                             </Card>
                         </Link>
                     </Col>
-                    <Col xs={24} sm={24} md={24} lg={12} xl={6}>
+                    <Col xs={24} sm={12} md={24} lg={12} xl={6}>
                         <Card
                             bordered={false}
                             style={{ width: 300, minHeight: "280px" }}
@@ -64,7 +64,7 @@ export default class ServiceCard2 extends Component {
                             </p>
                         </Card>
                     </Col>
-                    <Col xs={24} sm={24} md={24} lg={12} xl={6}>
+                    <Col xs={24} sm={12} md={24} lg={12} xl={6}>
                         <Card
                             bordered={false}
                             style={{ width: 300, minHeight: "280px" }}
@@ -94,7 +94,7 @@ export default class ServiceCard2 extends Component {
                             </p>
                         </Card>
                     </Col>
-                    <Col xs={24} sm={24} md={24} lg={12} xl={6}>
+                    <Col xs={24} sm={12} md={24} lg={12} xl={6}>
                         <Card
                             bordered={false}
                             style={{ width: 300, minHeight: "280px" }}

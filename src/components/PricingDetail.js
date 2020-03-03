@@ -3,12 +3,12 @@ import "../App.css";
 
 export default function PricingDetail() {
     return (
-        <div>
+        <div style={{ paddingLeft: "5%", paddingRight: "5%" }}>
             <h1
                 className="titleFont"
                 style={{
                     textAlign: "center",
-                    fontSize: "40px",
+                    fontSize: "6vh",
                     fontWeight: "bold",
                     paddingBottom: "2%"
                 }}
@@ -19,7 +19,7 @@ export default function PricingDetail() {
                 style={{
                     margin: "0 auto",
                     textAlign: "center",
-                    paddingBottom: "20px"
+                    paddingBottom: "2%"
                 }}
                 className="desFont medFont"
             >
@@ -31,9 +31,10 @@ export default function PricingDetail() {
                 Compared to other translation agencies out there, our rates are
                 more than competitive- we at LINGGO Translation beat our
                 competition (who claim to offer the quality we do) by more than
-                25%. We are able to do this because we choose to: we love what
-                we do, and importantly for you, there are no project managers in
-                the way of getting what you want.
+                25%. <br />
+                We are able to do this because we choose to: we love what we do,
+                and importantly for you, there are no project managers in the
+                way of getting what you want.
                 <br />
                 <br />
                 You pay for OUR service- we deliver our exceptional quality and
