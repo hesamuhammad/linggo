@@ -10,9 +10,10 @@ export default class WhyUs extends Component {
         return (
             <div
                 style={{
-                    paddingLeft: "7%",
-                    paddingRight: "7%",
-                    paddingTop: "4%"
+                    paddingLeft: "10%",
+                    paddingRight: "10%",
+                    paddingTop: "4%",
+                    paddingBottom: "2%"
                 }}
             >
                 <Row gutter={16}>

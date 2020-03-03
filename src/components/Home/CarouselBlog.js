@@ -24,8 +24,8 @@ class Responsive extends Component {
             dots: false,
             infinite: false,
             speed: 3500,
-            slidesToShow: 4,
-            slidesToScroll: 4,
+            slidesToShow: 3,
+            slidesToScroll: 3,
             initialSlide: 0,
             autoplay: true,
             autoplaySpeed: 500,
@@ -63,50 +63,77 @@ class Responsive extends Component {
             ]
         };
         return (
-            <div>
+            <div
+                style={{
+                    backgroundColor: "#f5f5f5",
+                    paddingTop: "2%",
+                    paddingBottom: "2%"
+                }}
+            >
                 <p
                     style={{
                         fontSize: "5vh",
                         fontWeight: "bold",
-                        textAlign: "center"
+                        textAlign: "center",
+                        paddingBottom: "1%"
                     }}
                 >
                     Our Blog
                 </p>
-                <Slider {...settings}>
-                    {this.state.post.length > 0 &&
-                        this.state.post.map(post => {
-                            // console.log(post);
+                <div
+                    style={{
+                        paddingLeft: "10%",
+                        paddingRight: "10%"
+                    }}
+                >
+                    <Slider {...settings}>
+                        {this.state.post.length > 0 &&
+                            this.state.post.map(post => {
+                                // console.log(post);
 
-                            return (
-                                <Container key={post.id}>
-                                    <Card
-                                        hoverable
-                                        style={{ width: "auto" }}
-                                        cover={
-                                            <img
-                                                alt="example"
-                                                src={post.avatar}
-                                            />
-                                        }
-                                    >
-                                        <p>
-                                            {post.title3}
-                                            {post.title3}
-                                            {post.title3}
-                                            {post.title3}
-                                            {post.title3}
-                                            {post.title3}
-                                            {post.title3}
-                                            {post.title3}
-                                            {post.title3}
-                                            {post.title3}
-                                        </p>
-                                    </Card>
-                                </Container>
-                            );
-                        })}
-                </Slider>
+                                return (
+                                    <Container key={post.id}>
+                                        <div
+                                            style={{
+                                                display: "flex",
+                                                justifyContent: "center"
+                                            }}
+                                        >
+                                            <Card
+                                                hoverable
+                                                style={{
+                                                    maxWidth: "350px",
+                                                    backgroundColor: "#f5f5f5",
+                                                    borderStyle: "none"
+                                                }}
+                                                cover={
+                                                    <img
+                                                        alt="example"
+                                                        src={post.avatar}
+                                                        style={{
+                                                            backgroundColor:
+                                                                "#f5f5f5"
+                                                        }}
+                                                    />
+                                                }
+                                            >
+                                                <p
+                                                    style={{
+                                                        textAlign: "center"
+                                                    }}
+                                                >
+                                                    {post.title3}
+                                                    {post.title3}
+                                                    {post.title3}
+                                                    {post.title3}
+                                                </p>
+                                            </Card>
+                                        </div>
+                                    </Container>
+                                );
+                            })}
+                    </Slider>
+                </div>
             </div>
         );
     }
