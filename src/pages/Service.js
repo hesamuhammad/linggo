@@ -14,16 +14,8 @@ import BreadServices from "../components/BreadServices";
 
 export default function Service() {
     return (
-<<<<<<< HEAD
-      <div>
-        <div>
-          <BreadServices />
-        </div>
-        <div className="paddingPage">
-=======
         <div style={{ marginBottom: "2%" }}>
             <BreadServices />
->>>>>>> b783581387abbc6856c3ea81c4e168ac692daee2
             <Row
                 id="service1"
                 name="service1"
@@ -152,6 +144,5 @@ export default function Service() {
                 </Col>
             </Row>
         </div>
-      </div>
     );
 }
