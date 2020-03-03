@@ -19,15 +19,15 @@ export default function DetailPricing() {
             align="middle"
             justify="space-around"
             gutter={[16, 16]}
-            style={{ margin: "0 auto", padding: "10px" }}
+            style={{ margin: "0 auto", padding: "10px" }} type="flex" 
           >
             <Col
               xs={{ span: 12, offset: 0 }}
               sm={{ span: 10, offset: 1 }}
               md={{ span: 6, offset: 0 }}
             >
-              <HashLink className="hashHover" to="/service#service1" scroll={el => { el.scrollIntoView(true); window.scrollBy({top: 0 -50, behavior: 'smooth'})}} >
-                <Card hoverable bordered={false} style={{ height: "300px" }}>
+              {/* <HashLink className="hashHover" to="/service#service1" scroll={el => { el.scrollIntoView(true); window.scrollBy({top: 0 -50, behavior: 'smooth'})}} > */}
+                <Card hoverable bordered={false} height= "100%">
                   <p
                     style={{
                       fontSize: "2.5vh",
@@ -37,7 +37,7 @@ export default function DetailPricing() {
                     General Translation
                   </p>
                   <hr style={{ opacity: "70%" }} />
-                  <p
+                  <p className="desFont"
                     style={{
                       fontSize: "1.2vh",
                       fontSize: "bold"
@@ -48,7 +48,7 @@ export default function DetailPricing() {
                     have.
                   </p>
                 </Card>
-              </HashLink>
+              {/* </HashLink> */}
             </Col>
             <Col
               xs={{ span: 12, offset: 0 }}
@@ -56,7 +56,7 @@ export default function DetailPricing() {
               md={{ span: 6, offset: 0 }}
             >
               <HashLink className="hashHover" to="/service#service2" scroll={el => { el.scrollIntoView(true); window.scrollBy({top: 0 -50, behavior: 'smooth'})}}>
-                <Card hoverable bordered={false} style={{ height: "300px" }}>
+                <Card hoverable bordered={false} height= "100%">
                   <p
                     style={{
                       fontSize: "2.5vh",
@@ -66,7 +66,7 @@ export default function DetailPricing() {
                     Localization & Transcreation
                   </p>
                   <hr style={{ opacity: "70%" }} />
-                  <p
+                  <p className="desFont"
                     style={{
                       fontSize: "1.2vh",
                       fontSize: "bold"
@@ -85,7 +85,7 @@ export default function DetailPricing() {
               md={{ span: 6, offset: 0 }}
             >
               <HashLink className="hashHover" to="/service#service3" scroll={el => { el.scrollIntoView(true); window.scrollBy({top: 0 -50, behavior: 'smooth'})}}>
-                <Card hoverable bordered={false} style={{ height: "300px" }}>
+                <Card hoverable bordered={false} height= "100%">
                   <p
                     style={{
                       fontSize: "2.5vh",
@@ -95,7 +95,7 @@ export default function DetailPricing() {
                     Subtitling & Transtitling
                   </p>
                   <hr style={{ opacity: "70%" }} />
-                  <p
+                  <p className="desFont"
                     style={{
                       fontSize: "1.2vh",
                       fontSize: "bold"
@@ -122,7 +122,7 @@ export default function DetailPricing() {
               md={{ span: 6, offset: 0 }}
             >
               <HashLink className="hashHover" to="/service#service4" scroll={el => { el.scrollIntoView(true); window.scrollBy({top: 0 -50, behavior: 'smooth'})}}>
-                <Card hoverable bordered={false} style={{ height: "300px" }}>
+                <Card hoverable bordered={false} height= "100%">
                   <p
                     style={{
                       fontSize: "2.5vh",
@@ -132,7 +132,7 @@ export default function DetailPricing() {
                     NAATI Certified & Sworn Translations
                   </p>
                   <hr style={{ opacity: "70%" }} />
-                  <p
+                  <p className="desFont"
                     style={{
                       fontSize: "1.2vh",
                       fontSize: "bold"

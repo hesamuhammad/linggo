@@ -14,7 +14,7 @@ import BreadServices from "../components/BreadServices";
 
 export default function Service() {
   return (
-    <div className="paddingPage">
+    <div>
       <BreadServices/>
       <Row id="service1" name="service1" style={{ backgroundColor: "#f5f5f5" }}>
         <Col xs={{span: 22, offset: 1}} sm={{span: 20, offset: 2}} md={{span: 16, offset: 4}} lg={{span: 16, offset: 4}} xl={{span: 16, offset: 4}}>
