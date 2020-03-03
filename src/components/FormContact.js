@@ -44,16 +44,33 @@ class Contact extends React.Component {
                     <h2 style={{ textAlign: "center" }}>Send a Message</h2>
                     <Form layout="vertical" onSubmit={this.handleSubmit}>
                         <Form.Item  >
-                            <Input name='name' onChange={this.handleChange} placeholder="Full Name" />
+                            <Input 
+                                name='name' 
+                                onChange={this.handleChange} 
+                                placeholder="Full Name" 
+                            />
                         </Form.Item>
                         <Form.Item>
-                            <Input name='email' onChange={this.handleChange} placeholder="Email Address" />
+                            <Input 
+                                name='email' 
+                                onChange={this.handleChange} 
+                                placeholder="Email Address" 
+                            />
                         </Form.Item>
                         <Form.Item>
-                            <Input name='phone' onChange={this.handleChange} placeholder="Phone Number" />
+                            <Input 
+                                name='phone' 
+                                onChange={this.handleChange} 
+                                placeholder="Phone Number" 
+                            />
                         </Form.Item>
                         <Form.Item>
-                            <TextArea name='message' onChange={this.handleChange} rows={4} placeholder="Your Message"></TextArea>
+                            <TextArea 
+                                name='message' 
+                                onChange={this.handleChange} 
+                                rows={4} 
+                                placeholder="Your Message">
+                            </TextArea>
                         </Form.Item>
                         <Form.Item >
                             <Button htmlType='submit' size='large' type="danger" >SEND</Button>
