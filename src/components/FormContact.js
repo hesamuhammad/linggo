@@ -107,7 +107,11 @@ class Contact extends React.Component {
                                 <Button
                                     htmlType="submit"
                                     size="large"
-                                    type="danger"
+                                    style={{
+                                        backgroundColor: "#283e2e",
+                                        borderColor: "#283e2e",
+                                        color: "white"
+                                    }}
                                 >
                                     SEND
                                 </Button>
