@@ -65,7 +65,7 @@ class Responsive extends Component {
         return (
             <div
                 style={{
-                    backgroundColor: "#f5f5f5",
+                    backgroundColor: "#93d5a4",
                     paddingTop: "2%",
                     paddingBottom: "2%"
                 }}
@@ -103,7 +103,7 @@ class Responsive extends Component {
                                                 hoverable
                                                 style={{
                                                     maxWidth: "350px",
-                                                    backgroundColor: "#f5f5f5",
+                                                    backgroundColor: "white",
                                                     borderStyle: "none"
                                                 }}
                                                 cover={
@@ -112,14 +112,15 @@ class Responsive extends Component {
                                                         src={post.avatar}
                                                         style={{
                                                             backgroundColor:
-                                                                "#f5f5f5"
+                                                                "white"
                                                         }}
                                                     />
                                                 }
                                             >
                                                 <p
                                                     style={{
-                                                        textAlign: "center"
+                                                        textAlign: "center",
+                                                        fontWeight: "bold"
                                                     }}
                                                 >
                                                     {post.title3}

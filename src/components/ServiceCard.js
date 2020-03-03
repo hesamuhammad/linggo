@@ -13,7 +13,7 @@ export default class ServiceCard2 extends Component {
                     style={{
                         margin: "0 auto",
                         padding: "1% 10%",
-                        backgroundColor: "#f5f5f5"
+                        backgroundColor: "#93d5a4"
                     }}
                 >
                     <Col xs={24} sm={12} md={24} lg={12} xl={6}>

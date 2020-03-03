@@ -18,7 +18,7 @@ export default function Service() {
             <Row
                 id="service1"
                 name="service1"
-                style={{ backgroundColor: "#f5f5f5" }}
+                style={{ backgroundColor: "#93d5a4" }}
             >
                 <Col
                     xs={{ span: 22, offset: 1 }}
@@ -72,7 +72,7 @@ export default function Service() {
             <Row
                 id="service3"
                 name="service3"
-                style={{ backgroundColor: "#f5f5f5" }}
+                style={{ backgroundColor: "#93d5a4" }}
             >
                 <Col
                     xs={{ span: 22, offset: 1 }}

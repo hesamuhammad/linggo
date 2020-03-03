@@ -31,7 +31,7 @@ class Testimonials extends Component {
         return (
             <div
                 style={{
-                    backgroundColor: "#f5f5f5",
+                    backgroundColor: "#93d5a4",
                     paddingTop: "2%",
                     paddingBottom: "2%"
                 }}
