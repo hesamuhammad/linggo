@@ -14,6 +14,10 @@ import BreadServices from "../components/BreadServices";
 
 export default function Service() {
     return (
+      <div>
+        <div>
+          <BreadServices />
+        </div>
         <div className="paddingPage">
             <Row
                 id="service1"
@@ -123,5 +127,6 @@ export default function Service() {
                 </Col>
             </Row>
         </div>
+      </div>
     );
 }
