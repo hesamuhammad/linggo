@@ -14,7 +14,7 @@ export default class Navbar extends Component {
                     <Footer
                         style={{
                             color: "#c4c4c4",
-                            backgroundColor: "#3c4245",
+                            backgroundColor: "#283e2e",
                             paddingLeft: "5%",
                             paddingRight: "5%",
                             paddingTop: "5%"

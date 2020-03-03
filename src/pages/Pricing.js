@@ -16,7 +16,7 @@ export default function Pricing() {
                 <Col xs={0} sm={2} md={5} lg={5} xl={5}></Col>
             </Row>
 
-            <Row style={{ background: "#93d5a4", padding: "15px 0" }}>
+            <Row style={{ background: "#ACBFAD", padding: "15px 0" }}>
                 <Col xs={2} sm={4} md={4} lg={4} xl={4}></Col>
                 <Col xs={20} sm={16} md={16} lg={16} xl={16}>
                     <PricingCard />

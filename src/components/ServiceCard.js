@@ -5,7 +5,13 @@ import { Link } from "react-router-dom";
 export default class ServiceCard2 extends Component {
     render() {
         return (
-            <div style={{ textAlign: "center" }}>
+            <div
+                style={{
+                    textAlign: "center",
+                    marginLeft: "5%",
+                    marginRight: "5%"
+                }}
+            >
                 <Row
                     align="middle"
                     justify="space-around"
@@ -13,14 +19,14 @@ export default class ServiceCard2 extends Component {
                     style={{
                         margin: "0 auto",
                         padding: "1% 10%",
-                        backgroundColor: "#93d5a4"
+                        backgroundColor: "#ACBFAD"
                     }}
                 >
                     <Col xs={24} sm={12} md={24} lg={12} xl={6}>
                         <Link to="/service#service4">
                             <Card
                                 bordered={false}
-                                style={{ width: 300, minHeight: "280px" }}
+                                style={{ maxWidth: 250, minHeight: "280px" }}
                                 hoverable
                             >
                                 <p
@@ -44,7 +50,7 @@ export default class ServiceCard2 extends Component {
                     <Col xs={24} sm={12} md={24} lg={12} xl={6}>
                         <Card
                             bordered={false}
-                            style={{ width: 300, minHeight: "280px" }}
+                            style={{ maxWidth: 250, minHeight: "280px" }}
                             hoverable
                         >
                             <p
@@ -67,7 +73,7 @@ export default class ServiceCard2 extends Component {
                     <Col xs={24} sm={12} md={24} lg={12} xl={6}>
                         <Card
                             bordered={false}
-                            style={{ width: 300, minHeight: "280px" }}
+                            style={{ maxWidth: 250, minHeight: "280px" }}
                             hoverable
                         >
                             <p
@@ -97,7 +103,7 @@ export default class ServiceCard2 extends Component {
                     <Col xs={24} sm={12} md={24} lg={12} xl={6}>
                         <Card
                             bordered={false}
-                            style={{ width: 300, minHeight: "280px" }}
+                            style={{ maxWidth: 250, minHeight: "280px" }}
                             hoverable
                         >
                             <p

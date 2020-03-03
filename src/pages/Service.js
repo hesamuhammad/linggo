@@ -14,11 +14,12 @@ import BreadServices from "../components/BreadServices";
 
 export default function Service() {
     return (
-        <div className="paddingPage">
+        <div style={{ marginBottom: "2%" }}>
+            <BreadServices />
             <Row
                 id="service1"
                 name="service1"
-                style={{ backgroundColor: "#93d5a4" }}
+                style={{ backgroundColor: "white", paddingTop: "2%" }}
             >
                 <Col
                     xs={{ span: 22, offset: 1 }}
@@ -44,7 +45,11 @@ export default function Service() {
                 </Col>
             </Row>
 
-            <Row id="service2" name="service2">
+            <Row
+                id="service2"
+                name="service2"
+                style={{ backgroundColor: "white" }}
+            >
                 <Col
                     xs={{ span: 22, offset: 1 }}
                     sm={{ span: 20, offset: 2 }}
@@ -52,7 +57,13 @@ export default function Service() {
                     lg={{ span: 16, offset: 4 }}
                     xl={{ span: 16, offset: 4 }}
                 >
-                    <Row gutter={16} style={{ padding: "30px 0" }}>
+                    <Row
+                        gutter={16}
+                        style={{
+                            padding: "30px 0",
+                            backgroundColor: "#ACBFAD"
+                        }}
+                    >
                         <Col order={1} span={12}>
                             <ServiceLocalization />
                         </Col>
@@ -72,7 +83,7 @@ export default function Service() {
             <Row
                 id="service3"
                 name="service3"
-                style={{ backgroundColor: "#93d5a4" }}
+                style={{ backgroundColor: "white" }}
             >
                 <Col
                     xs={{ span: 22, offset: 1 }}
@@ -98,7 +109,11 @@ export default function Service() {
                 </Col>
             </Row>
 
-            <Row name="service4" id="service4">
+            <Row
+                name="service4"
+                id="service4"
+                style={{ backgroundColor: "white" }}
+            >
                 <Col
                     xs={{ span: 22, offset: 1 }}
                     sm={{ span: 20, offset: 2 }}
@@ -106,7 +121,13 @@ export default function Service() {
                     lg={{ span: 16, offset: 4 }}
                     xl={{ span: 16, offset: 4 }}
                 >
-                    <Row gutter={16} style={{ padding: "30px 0" }}>
+                    <Row
+                        gutter={16}
+                        style={{
+                            padding: "30px 0",
+                            backgroundColor: "#ACBFAD"
+                        }}
+                    >
                         <Col order={1} span={12}>
                             <ServiceNaati />
                         </Col>
