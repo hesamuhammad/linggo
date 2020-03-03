@@ -95,9 +95,7 @@ export default class WhyUs extends Component {
                             ></Card>
                         </div>
                     </Col>
-                </Row>
-            </div>
-          </Col>
+          
           <Col span={6}>
             <div className="gutter-box">
               <Card

@@ -33,13 +33,13 @@ function MyProfile(props) {
                   className="medFont desFont"
                   style={{ display: "flex", justifyContent: "space-between", alignItems: "center"  }}
                 >
-                  <h1 className="titleFont">Hello, 
+                  <h1 className="titleFont">Hello,<span> </span>
                    {item.firstName}
                    !</h1>
 
-                  <Button size="small" type="ghost" className="medFont">
+                  {/* <Button size="small" type="ghost" className="medFont">
                     Edit Profile
-                  </Button>
+                  </Button> */}
                 </div>
                 <div>
                   <Row justify="center" className="medFont desFont">
