@@ -15,7 +15,7 @@ export default class WhyUs extends Component {
                     paddingLeft: "10%",
                     paddingRight: "10%",
                     marginTop: "3%",
-                    marginBottom: "1%"
+                    marginBottom: "3%"
                 }}
             >
                 <Row
@@ -28,6 +28,7 @@ export default class WhyUs extends Component {
                             <Card
                                 title="Documents Translation"
                                 bordered={false}
+                                style={{ backgroundColor: "#d8d8d8" }}
                                 cover={
                                     <img
                                         src={Why1}
@@ -40,6 +41,7 @@ export default class WhyUs extends Component {
                                 }
                             >
                                 <p style={{ fontWeight: "bold" }}>
+                                    <br />
                                     letter translations
                                     <br />
                                     commercial documents translations
@@ -56,6 +58,7 @@ export default class WhyUs extends Component {
                             <Card
                                 title="Apostile & Legalization"
                                 bordered={false}
+                                style={{ backgroundColor: "#ACBFAD" }}
                                 cover={
                                     <img
                                         src={Why2}
@@ -84,6 +87,7 @@ export default class WhyUs extends Component {
                             <Card
                                 title="Localization Services"
                                 bordered={false}
+                                style={{ backgroundColor: "#d8d8d8" }}
                                 cover={
                                     <img
                                         src={Why3}
@@ -113,6 +117,7 @@ export default class WhyUs extends Component {
                             <Card
                                 title="Website Translation"
                                 bordered={false}
+                                style={{ backgroundColor: "#ACBFAD" }}
                                 cover={
                                     <img
                                         src={Why4}
