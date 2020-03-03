@@ -4,8 +4,6 @@ export default function Gmap() {
     return (
         <div
             style={{
-                paddingLeft: "6%",
-                paddingRight: "6%",
                 paddingBottom: "3%",
                 paddingTop: "3%"
             }}

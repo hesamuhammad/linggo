@@ -18,11 +18,11 @@ export default class Aboutus extends Component {
                     <Col xs={0} sm={2} md={4} lg={4} xl={2}></Col>
                 </Row>
                 <Row>
-                    <Col xs={1} sm={2} md={4} lg={4} xl={2}></Col>
-                    <Col xs={22} sm={20} md={16} lg={16} xl={20}>
-                        <About />
-                    </Col>
-                    <Col xs={1} sm={2} md={4} lg={4} xl={2}></Col>
+                    {/* <Col xs={1} sm={2} md={4} lg={4} xl={2}></Col> */}
+                    {/* <Col xs={22} sm={20} md={16} lg={16} xl={20}> */}
+                    <About />
+                    {/* </Col> */}n
+                    {/* <Col xs={1} sm={2} md={4} lg={4} xl={2}></Col> */}
                 </Row>
             </div>
         );

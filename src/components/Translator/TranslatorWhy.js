@@ -4,7 +4,7 @@ import { Row, Col, Card } from "react-bootstrap";
 export default class TranslatorWhy extends Component {
     render() {
         return (
-            <div style={{ textAlign: "center" }}>
+            <div style={{ textAlign: "center", paddingTop: "2%" }}>
                 <p
                     style={{
                         fontWeight: "bold",

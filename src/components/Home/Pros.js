@@ -5,7 +5,7 @@ import { Icon } from "antd";
 export default class Pros extends Component {
     render() {
         return (
-            <div>
+            <div style={{ paddingTop: "2%", paddingBottom: "1%" }}>
                 <p
                     style={{
                         textAlign: "center",

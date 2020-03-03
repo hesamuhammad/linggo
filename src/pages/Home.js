@@ -14,6 +14,7 @@ export default class Home extends Component {
                 <ServiceCard />
                 <Pros />
                 <Testimonial />
+                <WhyUs />
                 <CaroselBlog />
             </div>
         );

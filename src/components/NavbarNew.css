@@ -1,3 +1,18 @@
 .MenuNav {
     color: red;
 }
+
+.sticky-top {
+    z-index: 1 !important;
+    background-color: #283e2e;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+    font-family: "Anton", sans-serif;
+    font-weight: bold;
+}
+
+.navbar-light .navbar-nav .nav-link :hover {
+    color: white;
+}
