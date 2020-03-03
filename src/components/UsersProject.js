@@ -1,7 +1,10 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { getProjectById } from "../actions";
-import Progress from './Progress';
+import { Steps } from "antd";
+
+
+const { Step } = Steps;
 
 function UsersProject(props) {
   useEffect(() => {
@@ -17,7 +20,12 @@ function UsersProject(props) {
             <div>
               {item.fileProjectName}
               {item.fileProjectType}
-              <Progress/>
+              <Steps size="small" current={item.progress}>
+                <Step title="Verification" />
+                <Step title="Pay" />
+                <Step title="In Progress" />
+                <Step title="Done" />
+              </Steps>
             </div>
           );
         })}

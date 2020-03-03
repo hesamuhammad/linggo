@@ -7,7 +7,11 @@ import BreadPricing from "../components/BreadPricing";
 export default function Pricing() {
     return (
         <div>
+<<<<<<< HEAD
             <BreadPricing />
+=======
+           <BreadPricing/>
+>>>>>>> 31bf3ea20851efd6160b40a2065eaaefa357aef0
             <Row style={{ padding: "1%" }}>
                 <Col xs={0} sm={2} md={5} lg={5} xl={5}></Col>
                 <Col xs={24} sm={20} md={14} lg={14} xl={14}>

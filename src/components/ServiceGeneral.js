@@ -15,7 +15,7 @@ export default function ServiceGeneral() {
             >
                 General Translation
             </h3>
-            <p className="smallFont desFont">
+            <p className="medFont desFont">
                 Whether it’s a few paragraphs that need to be translated from
                 one language to another, or a website and marketing plan that
                 needs a complex localization treatment, we have the experience,

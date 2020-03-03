@@ -15,7 +15,7 @@ export default function ServiceSubtitling() {
             >
                 Subtitling & Transtitling
             </h3>
-            <p className="smallFont desFont">
+            <p className="medFont desFont">
                 Transtitling TM (steal info from other sites) <br />
                 Subtitling (steal info from other sites) <br />
                 Movies, TV Shows, Conferences, Documentaries, Research

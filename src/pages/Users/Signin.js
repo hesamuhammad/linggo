@@ -46,7 +46,7 @@ function SignIn(props) {
                             timerProgressBar: true,
                             timer: 1000
                         });
-                        props.login(values);
+                        props.login(values, props.history);
                     }, 400);
                 }}
             >
@@ -111,7 +111,7 @@ function SignIn(props) {
 
 const mapDispatchToProps = dispatch => {
     return {
-        login: data => dispatch(login(data))
+        login: (data, history) => dispatch(login(data, history))
     };
 };
 
