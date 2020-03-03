@@ -34,21 +34,21 @@ export default class ServiceCard2 extends Component {
                                 style={{
                                     maxWidth: 250,
                                     minHeight: "300px",
-                                    marginTop: "3%"
+                                    marginTop: "8%"
                                 }}
                                 hoverable
                             >
                                 <p
                                     style={{
                                         fontWeight: "bold",
-                                        fontSize: "2.5vh"
+                                        fontSize: "3vh"
                                     }}
                                 >
                                     General <br />
                                     Translation{" "}
                                 </p>
                                 <hr style={{ opacity: "70%" }} />
-                                <p style={{ fontSize: "1.5vh" }}>
+                                <p style={{ fontSize: "2vh" }}>
                                     We have over 25,000 certified translation
                                     professionals working in more than 120
                                     languages to handle any project you have.
@@ -62,20 +62,20 @@ export default class ServiceCard2 extends Component {
                             style={{
                                 maxWidth: 250,
                                 minHeight: "300px",
-                                marginTop: "3%"
+                                marginTop: "8%"
                             }}
                             hoverable
                         >
                             <p
                                 style={{
                                     fontWeight: "bold",
-                                    fontSize: "2.5vh"
+                                    fontSize: "3vh"
                                 }}
                             >
                                 Localization & Transcreation
                             </p>
                             <hr style={{ opacity: "70%" }} />
-                            <p>
+                            <p style={{ fontSize: "2vh" }}>
                                 It for those clients who want to add English
                                 language to their business/corporate w but are
                                 not excited by the idea of a literal
@@ -89,20 +89,20 @@ export default class ServiceCard2 extends Component {
                             style={{
                                 maxWidth: 250,
                                 minHeight: "300px",
-                                marginTop: "3%"
+                                marginTop: "8%"
                             }}
                             hoverable
                         >
                             <p
                                 style={{
                                     fontWeight: "bold",
-                                    fontSize: "2.5vh"
+                                    fontSize: "3vh"
                                 }}
                             >
                                 Subtitling & Transtitling
                             </p>
                             <hr style={{ opacity: "70%" }} />
-                            <p>
+                            <p style={{ fontSize: "2vh" }}>
                                 Movies
                                 <br />
                                 TV Shows
@@ -123,7 +123,7 @@ export default class ServiceCard2 extends Component {
                             style={{
                                 maxWidth: 250,
                                 minHeight: "300px",
-                                marginTop: "3%"
+                                marginTop: "8%"
                             }}
                             hoverable
                         >
@@ -136,13 +136,11 @@ export default class ServiceCard2 extends Component {
                                 NAATI Certified & Sworn Translations
                             </p>
                             <hr style={{ opacity: "70%" }} />
-                            <p>
+                            <p style={{ fontSize: "2vh" }}>
                                 Identity Documents
                                 <br />
                                 Educational Transcripts <br />
                                 Affidavits & Sworn Testimonies
-                                <br />
-                                Notarized Deeds
                                 <br />
                                 Judicial Decisions
                             </p>
