@@ -115,18 +115,18 @@ li {
 } */
 
 .ant-card-head {
-  border-bottom: none !important;
+    border-bottom: none !important;
 }
 
 .content-about {
-  width: 50%;
-  height: calc(100% + 120px);
-  left: 0;
-  top: -60px;
-  background-image: url(./assets/images/trans.jpg) !important;
-  /* background-position: top left !important; */
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
+    width: 50%;
+    height: calc(100% + 120px);
+    left: 0;
+    top: -60px;
+    background-image: url(./assets/images/trans.jpg) !important;
+    /* background-position: top left !important; */
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
 }
 
 .about-area {
@@ -138,9 +138,14 @@ li {
 .about-right {
 	display: inline;
 	justify-content: left;
-	margin-top: 15px;
+	margin-top: 10px;
 	background-color: #fff;
-	padding: 20px !important;
+	padding: 14px !important;
 	margin-left: -100px;
 	box-shadow: 3px 1px 18px -9px #000;
+}
+
+.sticky-top {
+    z-index: 1 !important;
+    background-color: #283e2e;
 }

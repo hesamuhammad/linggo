@@ -49,8 +49,8 @@ const NavbarNew = props => {
         <Navbar
             collapseOnSelect
             expand="lg"
-            bg="dark"
-            variant="dark"
+            // bg="dark"
+            // variant="dark"
             sticky="top"
         >
             <Container>

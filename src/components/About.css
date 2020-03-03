@@ -1,0 +1,78 @@
+/*--------------------*/
+/* RESPONSIVE STYLE ABOUT*/
+/*--------------------*/
+
+@media (max-width: 1199px) {
+	.about-right {
+		margin-top: 20px;
+		width: 140%;
+		padding: 25px;
+		margin-left: -190px;
+	}		
+}
+
+@media (max-width: 991px) {	
+	.about-right {
+		margin-top: 75px;
+		width: 160%;
+		padding: 20px;
+		margin-left: -190px;
+	}
+
+	.about-right p {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 767px) {
+	.about-right {
+		margin-top: 30px;
+		width: 100%;
+		padding: 0;
+		margin-left: 0;
+		box-shadow: none;
+	}
+
+	.about-right p {
+		font-size: 15px;
+	}
+}
+
+
+@media (max-width: 640px){
+	
+}
+
+
+@media (max-width: 480px) {
+	body {
+		font-size: 14px;
+    }
+    
+	h2 {
+		font-size: 28px;
+	}
+
+	h3 {
+		font-size: 24px;
+	}
+
+	h4 {
+		font-size: 20px;
+	}
+}
+
+
+@media (max-width: 360px) {
+	h2 {
+		font-size: 25px;
+	}
+}
+
+
+
+@media (max-width: 320px) {
+	h2 {
+		font-size: 22px;
+	}
+}
