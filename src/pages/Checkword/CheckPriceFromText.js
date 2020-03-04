@@ -6,6 +6,7 @@ function CheckPriceFromText(props) {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const handleShows = () => setShow(true);
 
   const mystyle = {
     boxCount: {
