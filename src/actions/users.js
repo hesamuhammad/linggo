@@ -1,6 +1,5 @@
 import axios from "axios";
 import history from "../history";
-import jwt from "jwt-decode";
 import Swal from "sweetalert2";
 
 export const LOGGED_IN = "LOGGED_IN";
@@ -44,10 +43,10 @@ export const login = (data, routerHistory) => dispatch => {
                     timer: 2000,
                     showConfirmButton: false
                 });
-                const JWT = require('jsonwebtoken');
-                const decoded = JWT.verify(res.data.token, 'INISECRET');
+                const JWT = require("jsonwebtoken");
+                const decoded = JWT.verify(res.data.token, "INISECRET");
                 const _id = decoded._id;
-                console.log(_id)
+                console.log(_id);
                 routerHistory.push(`/profile/${_id}`);
             } else {
                 Swal.fire({
@@ -56,9 +55,6 @@ export const login = (data, routerHistory) => dispatch => {
                     icon: "error"
                 });
             }
-        })
-        .then(res => {
-            history.push("/profile");
         });
 };
 
