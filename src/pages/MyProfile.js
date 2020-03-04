@@ -29,9 +29,7 @@ function MyProfile(props) {
                 lg={{ span: 16, offset: 4 }}
                 xl={{ span: 16, offset: 4 }}
               >
-                <div
-                  className="medFont desFont"
-                  style={{ display: "flex", justifyContent: "space-between", alignItems: "center"  }}
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center"  }}
                 >
                   <h1 className="titleFont">Hello,<span> </span>
                    {item.firstName}
@@ -54,7 +52,7 @@ function MyProfile(props) {
                       />
                     </Col>
                     <Col span={5} offset={1}>
-                      <p>
+                      <p className="medFont desFont">
                         First Name <br />
                         Last Name <br />
                         Email <br />
@@ -62,7 +60,7 @@ function MyProfile(props) {
                       </p>
                     </Col>
                     <Col span={10}>
-                      <p>
+                      <p className="medFont desFont">
                         : {item.firstName}
                         <br />: {item.lastName}
                         <br />: {item.email}
