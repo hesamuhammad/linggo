@@ -22,11 +22,11 @@ class Responsive extends Component {
     render() {
         var settings = {
             dots: false,
-            infinite: false,
+            infinite: true,
             speed: 3500,
             slidesToShow: 3,
             slidesToScroll: 3,
-            initialSlide: 0,
+            initialSlide: 1,
             autoplay: true,
             autoplaySpeed: 500,
             responsive: [

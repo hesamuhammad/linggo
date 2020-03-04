@@ -5,7 +5,7 @@ import { Icon } from "antd";
 export default class Pros extends Component {
     render() {
         return (
-            <div style={{ paddingTop: "2%", paddingBottom: "1%" }}>
+            <div style={{ marginTop: "3%", marginBottom: "2%" }}>
                 <Fragment>
                     <p
                         style={{
@@ -18,7 +18,7 @@ export default class Pros extends Component {
                     </p>
                     <img
                         src="https://gengo.com/wp-content/uploads/2017/07/how-gengo-works.jpg"
-                        style={{ width: "100%" }}
+                        style={{ width: "100%", marginTop: "10px" }}
                         alt="linggo"
                     />
                 </Fragment>
@@ -26,7 +26,6 @@ export default class Pros extends Component {
                     <div
                         style={{
                             background: "white",
-                            // padding: "30px",
                             display: "flex",
                             justifyContent: "center",
                             paddingLeft: "12%",

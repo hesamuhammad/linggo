@@ -27,7 +27,6 @@
         "redux-thunk": "^2.3.0",
         "slick-carousel": "^1.8.1",
         "sweetalert2": "^9.8.2",
-        "tachyons": "^4.11.1",
         "yarn": "^1.22.0"
     },
     "scripts": {
@@ -51,7 +50,5 @@
             "last 1 safari version"
         ]
     },
-    "devDependencies": {
-        "tachyons": "^4.10.0"
-    }
+    "devDependencies": {}
 }
