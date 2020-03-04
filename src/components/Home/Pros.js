@@ -33,7 +33,12 @@ export default class Pros extends Component {
                         }}
                     >
                         <CardGroup>
-                            <Card style={{ borderStyle: "none", margin: "2%" }}>
+                            <Card
+                                style={{
+                                    borderStyle: "none",
+                                    margin: "2%"
+                                }}
+                            >
                                 <Card.Body>
                                     <Card.Title style={{ fontWeight: "bold" }}>
                                         Fast turnaround
@@ -78,7 +83,12 @@ export default class Pros extends Component {
                                     </p>
                                 </Card.Footer>
                             </Card>
-                            <Card style={{ borderStyle: "none", margin: "2%" }}>
+                            <Card
+                                style={{
+                                    borderStyle: "none",
+                                    margin: "2%"
+                                }}
+                            >
                                 <Card.Body>
                                     <Card.Title style={{ fontWeight: "bold" }}>
                                         Efficiency
@@ -123,7 +133,12 @@ export default class Pros extends Component {
                                     </p>
                                 </Card.Footer>
                             </Card>
-                            <Card style={{ borderStyle: "none", margin: "2%" }}>
+                            <Card
+                                style={{
+                                    borderStyle: "none",
+                                    margin: "2%"
+                                }}
+                            >
                                 <Card.Body>
                                     <Card.Title style={{ fontWeight: "bold" }}>
                                         Human quality

@@ -9,10 +9,10 @@ export default class ServiceCard2 extends Component {
             <div
                 style={{
                     textAlign: "center",
-                    marginLeft: "10%",
-                    marginRight: "10%",
-                    paddingRight: "4%",
-                    paddingLeft: "4%"
+                    marginLeft: "8%",
+                    marginRight: "8%",
+                    paddingRight: "3%",
+                    paddingLeft: "3%"
                 }}
             >
                 <Row
@@ -23,17 +23,17 @@ export default class ServiceCard2 extends Component {
                         paddingLeft: "5%",
                         paddingRight: "5%",
                         backgroundColor: "#ACBFAD",
-                        paddingTop: "4%",
-                        paddingBottom: "4%"
+                        paddingTop: "1%",
+                        paddingBottom: "5%"
                     }}
                 >
-                    <Col xs={12} md={3}>
+                    <Col xs={12} md={3} style={{ marginTop: "2%" }}>
                         <Link to="/service#service4">
                             <Card
                                 bordered={false}
                                 style={{
-                                    maxWidth: 250,
-                                    minHeight: "300px",
+                                    maxWidth: 350,
+                                    height: "100%",
                                     marginTop: "8%"
                                 }}
                                 hoverable
@@ -56,12 +56,12 @@ export default class ServiceCard2 extends Component {
                             </Card>
                         </Link>
                     </Col>
-                    <Col xs={12} md={3}>
+                    <Col xs={12} md={3} style={{ marginTop: "2%" }}>
                         <Card
                             bordered={false}
                             style={{
-                                maxWidth: 250,
-                                minHeight: "300px",
+                                maxWidth: 300,
+                                height: "100%",
                                 marginTop: "8%"
                             }}
                             hoverable
@@ -72,7 +72,7 @@ export default class ServiceCard2 extends Component {
                                     fontSize: "3vh"
                                 }}
                             >
-                                Localization & Transcreation
+                                Localization Transcreation
                             </p>
                             <hr style={{ opacity: "70%" }} />
                             <p style={{ fontSize: "2vh" }}>
@@ -83,12 +83,12 @@ export default class ServiceCard2 extends Component {
                             </p>
                         </Card>
                     </Col>
-                    <Col xs={12} md={3}>
+                    <Col xs={12} md={3} style={{ marginTop: "2%" }}>
                         <Card
                             bordered={false}
                             style={{
-                                maxWidth: 250,
-                                minHeight: "300px",
+                                maxWidth: 300,
+                                height: "100%",
                                 marginTop: "8%"
                             }}
                             hoverable
@@ -99,7 +99,7 @@ export default class ServiceCard2 extends Component {
                                     fontSize: "3vh"
                                 }}
                             >
-                                Subtitling & Transtitling
+                                Subtitling Transtitling
                             </p>
                             <hr style={{ opacity: "70%" }} />
                             <p style={{ fontSize: "2vh" }}>
@@ -117,12 +117,12 @@ export default class ServiceCard2 extends Component {
                             </p>
                         </Card>
                     </Col>
-                    <Col xs={12} md={3}>
+                    <Col xs={12} md={3} style={{ marginTop: "2%" }}>
                         <Card
                             bordered={false}
                             style={{
-                                maxWidth: 250,
-                                minHeight: "300px",
+                                maxWidth: 300,
+                                height: "100%",
                                 marginTop: "8%"
                             }}
                             hoverable

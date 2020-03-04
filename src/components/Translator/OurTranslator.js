@@ -114,10 +114,6 @@ export default class OurTranslator extends Component {
                                 </Card.Body>
                             </Card>
                         </Col>
-                    </Row>
-                </div>
-                <div>
-                    <Row>
                         <Col
                             sm
                             style={{

@@ -15,7 +15,6 @@ export default function Pricing() {
                 </Col>
                 <Col xs={0} sm={2} md={5} lg={5} xl={5}></Col>
             </Row>
-
             <Row>
                 <PricingCard />
             </Row>
