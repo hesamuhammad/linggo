@@ -27,8 +27,10 @@ export default class WhyUs extends Component {
                 >
                     <Col xs={24} sm={24} md={6} lg={6} xl={6}>
                         <div className="gutter-box">
+                        <h6 
+                            style={{color:"black", textAlign: "center"}}>
+                                Documents <br />Translation</h6>
                             <Card
-                                title="Documents Translation"
                                 bordered={false}
                                 cover={
                                     <img
@@ -45,8 +47,10 @@ export default class WhyUs extends Component {
                     </Col>
                     <Col xs={24} sm={24} md={6} lg={6} xl={6}>
                         <div className="gutter-box">
+                        <h6 
+                            style={{color:"black", textAlign: "center"}}>
+                                Apostile & <br />Legalization</h6>
                             <Card
-                                title="Apostile & Legalization"
                                 bordered={false}
                                 cover={
                                     <img
@@ -63,8 +67,10 @@ export default class WhyUs extends Component {
                     </Col>
                     <Col xs={24} sm={24} md={6} lg={6} xl={6}>
                         <div className="gutter-box">
+                        <h6 
+                            style={{color:"black", textAlign: "center"}}>
+                                Localization <br />Services</h6>
                             <Card
-                                title="Localization Services"
                                 bordered={false}
                                 cover={
                                     <img
@@ -81,8 +87,10 @@ export default class WhyUs extends Component {
                     </Col>
                     <Col xs={24} sm={24} md={6} lg={6} xl={6}>
                         <div className="gutter-box">
+                        <h6 
+                            style={{color:"black", textAlign: "center"}}>
+                                Website <br />Translation</h6>
                             <Card
-                                title="Website Translation"
                                 bordered={false}
                                 cover={
                                     <img

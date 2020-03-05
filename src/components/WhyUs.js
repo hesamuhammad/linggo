@@ -32,9 +32,13 @@ export default class WhyUs extends Component {
                         data-aos="fade-right"
                         data-aos-duration="2500"
                     >
-                        <div className="gutter-box">
+                        <div className="gutter-box" style={{
+                                    backgroundColor: "#d8d8d8"
+                                }}>
+                        <h6 
+                            style={{color:"black", textAlign: "center", }}>
+                                Documents Translation</h6>
                             <Card
-                                title="Documents Translation"
                                 bordered={false}
                                 style={{
                                     backgroundColor: "#d8d8d8",
@@ -70,9 +74,12 @@ export default class WhyUs extends Component {
                         data-aos="fade-right"
                         data-aos-duration="2500"
                     >
-                        <div className="gutter-box">
+                        <div className="gutter-box" style={{
+                                    backgroundColor: "#ACBFAD"
+                                }}>
+                        <h6 style={{color:"black", textAlign: "center"}}>
+                            Apostile & Legalization</h6>
                             <Card
-                                title="Apostile & Legalization"
                                 bordered={false}
                                 style={{
                                     backgroundColor: "#ACBFAD",
@@ -107,9 +114,12 @@ export default class WhyUs extends Component {
                         data-aos="fade-left"
                         data-aos-duration="2500"
                     >
-                        <div className="gutter-box">
+                        <div className="gutter-box" style={{
+                                    backgroundColor: "#d8d8d8"
+                                }}>
+                        <h6 style={{color:"black", textAlign: "center"}}>
+                            Localization Services</h6>
                             <Card
-                                title="Localization Services"
                                 bordered={false}
                                 style={{
                                     backgroundColor: "#d8d8d8",
@@ -144,9 +154,12 @@ export default class WhyUs extends Component {
                         data-aos="fade-left"
                         data-aos-duration="2500"
                     >
-                        <div className="gutter-box">
+                        <div className="gutter-box" style={{
+                                    backgroundColor: "#ACBFAD"
+                                }}>
+                        <h6 style={{color:"black", textAlign: "center"}}>
+                            Website Translation</h6>
                             <Card
-                                title="Website Translation"
                                 bordered={false}
                                 style={{
                                     backgroundColor: "#ACBFAD",
