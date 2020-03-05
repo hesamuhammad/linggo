@@ -10,7 +10,7 @@ class Testimonials extends Component {
 
     componentDidMount() {
         axios
-            .get("http://5e3134bf576f9d0014d644c4.mockapi.io/user")
+            .get("https://5e3134bf576f9d0014d644c4.mockapi.io/user")
             .then(result => {
                 this.setState({
                     post: result.data

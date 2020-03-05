@@ -11,7 +11,7 @@ class Responsive extends Component {
 
     componentDidMount() {
         axios
-            .get("http://5e3134bf576f9d0014d644c4.mockapi.io/blog")
+            .get("https://5e3134bf576f9d0014d644c4.mockapi.io/blog")
             .then(result => {
                 this.setState({
                     post: result.data
