@@ -41,9 +41,9 @@ export default function CountWord() {
         <Col
           xs={{ span: 8, offset: 1 }}
           sm={{ span: 8, offset: 2 }}
-          md={{ span: 6, offset: 4 }}
-          lg={{ span: 6, offset: 4 }}
-          xl={{ span: 6, offset: 4 }}
+          md={{ span: 4, offset: 4 }}
+          lg={{ span: 4, offset: 4 }}
+          xl={{ span: 4, offset: 4 }}
         >
              <Form onSubmit={handleSubmit} className="desFont">
             <Form.Item label="Input your total words:">
@@ -62,9 +62,9 @@ export default function CountWord() {
         <Col
           xs={{ span: 12, offset: 1 }}
           sm={{ span: 8, offset: 2 }}
-          md={{ span: 6, offset: 4 }}
-          lg={{ span: 6, offset: 4 }}
-          xl={{ span: 6, offset: 4 }}
+          md={{ span: 8, offset: 4 }}
+          lg={{ span: 8, offset: 4 }}
+          xl={{ span: 8, offset: 4 }}
         >
           <Col span={10}>
             <p className="desFont medFont">
