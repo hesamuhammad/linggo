@@ -1,124 +1,148 @@
 import React from "react";
-import { Form, Input, Tooltip, Icon, Button } from "antd";
-
 import { Formik } from "formik";
 import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
-
 import { register } from "../../actions/users";
+import { withRouter } from "react-router";
 
-function SignUp(props) {
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
+
+function Register(props) {
     return (
-        <div
-            style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center"
-            }}
-        >
-            <h1>Register</h1>
-            <Formik
-                initialValues={{ email: "", password: "" }}
-                validate={values => {
-                    const errors = {};
-                    if (!values.email) {
-                        errors.email = "Required";
-                    } else if (
-                        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(
-                            values.email
-                        )
-                    ) {
-                        errors.email = "Invalid email address";
-                    }
-                    return errors;
-                }}
-                onSubmit={(values, { setSubmitting }) => {
-                    props.register(values);
-                }}
-            >
-                {({
-                    values,
-                    errors,
-                    touched,
-                    handleChange,
-                    handleBlur,
-                    handleSubmit,
-                    isSubmitting
-                    /* and other goodies */
-                }) => (
-                    <Form onSubmit={handleSubmit}>
-                        <Form.Item
-                            label={
-                                <span>
-                                    First Name &nbsp;
-                                    <Tooltip title="What is your first name?">
-                                        <Icon type="question-circle-o" />
-                                    </Tooltip>
-                                </span>
-                            }
+        <div className="myBg2 py-5">
+            <Container>
+                <Row>
+                    <Col xs={3} md={4}></Col>
+                    <Col
+                        xs={6}
+                        md={4}
+                        style={{
+                            backgroundColor: "#ACBFAD",
+                            borderRadius: "20px",
+                            paddingLeft: "5%",
+                            paddingRight: "5%",
+                            paddingTop: "5%",
+                            paddingBottom: "4%"
+                        }}
+                    >
+                        <h3 className="text-center">Registration Form</h3>
+                        <Formik
+                            initialValues={{
+                                firstName: "",
+                                lastName: "",
+                                email: "",
+                                password: ""
+                            }}
+                            validate={values => {
+                                const errors = {};
+                                if (!values.email) {
+                                    errors.email = "Email Required";
+                                } else if (
+                                    !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(
+                                        values.email
+                                    )
+                                ) {
+                                    errors.email = "Invalid email address";
+                                }
+                                return errors;
+                            }}
+                            onSubmit={(values, { setSubmitting }) => {
+                                props.register(values);
+                            }}
                         >
-                            <Input
-                                type="text"
-                                name="firstName"
-                                onChange={handleChange}
-                                onBlur={handleBlur}
-                                value={values.firstName}
-                            />
-                            {errors.firstName &&
-                                touched.firstName &&
-                                errors.firstName}
-                        </Form.Item>
-                        <Form.Item
-                            label={
-                                <span>
-                                    Last Name &nbsp;
-                                    <Tooltip title="What is your last name?">
-                                        <Icon type="question-circle-o" />
-                                    </Tooltip>
-                                </span>
-                            }
-                        >
-                            <Input
-                                type="text"
-                                name="lastName"
-                                onChange={handleChange}
-                                onBlur={handleBlur}
-                                value={values.lastName}
-                            />
-                            {errors.lastName &&
-                                touched.lastName &&
-                                errors.lastName}
-                        </Form.Item>
-                        <Form.Item label="E-mail">
-                            <Input
-                                type="email"
-                                name="email"
-                                onChange={handleChange}
-                                onBlur={handleBlur}
-                                value={values.email}
-                            />
-                            {errors.email && touched.email && errors.email}
-                        </Form.Item>
-                        <Form.Item label="Password" hasFeedback>
-                            <Input
-                                type="password"
-                                name="password"
-                                onChange={handleChange}
-                                onBlur={handleBlur}
-                                value={values.password}
-                            />
-                            {errors.password &&
-                                touched.password &&
-                                errors.password}
-                        </Form.Item>
-                        <Form.Item>
-                            <Button type="primary" disabled={isSubmitting}>
-                                Submit
-                            </Button>
-                        </Form.Item>
-                    </Form>
-                )}
-            </Formik>
+                            {({
+                                values,
+                                errors,
+                                touched,
+                                handleChange,
+                                handleBlur,
+                                handleSubmit,
+                                isSubmitting
+                                /* and other goodies */
+                            }) => (
+                                <Form onSubmit={handleSubmit}>
+                                    <Form.Group>
+                                        <Form.Label for="exampleEmail">
+                                            First Name
+                                        </Form.Label>
+                                        {errors.firstName &&
+                                            touched.firstName &&
+                                            errors.firstName}
+                                        <Form.Control
+                                            type="text"
+                                            name="firstName"
+                                            onChange={handleChange}
+                                            onBlur={handleBlur}
+                                            value={values.firstName}
+                                        />
+                                    </Form.Group>
+                                    <Form.Group>
+                                        <Form.Label for="exampleEmail">
+                                            Last Name
+                                        </Form.Label>
+                                        {errors.lastName &&
+                                            touched.lastName &&
+                                            errors.lastName}
+                                        <Form.Control
+                                            type="text"
+                                            name="lastName"
+                                            onChange={handleChange}
+                                            onBlur={handleBlur}
+                                            value={values.lastName}
+                                        />
+                                    </Form.Group>
+                                    <Form.Group>
+                                        <Form.Label for="exampleEmail">
+                                            Email
+                                        </Form.Label>
+                                        <br />
+                                        {errors.email ? (
+                                            <small style={{ color: "red" }}>
+                                                {errors.email &&
+                                                    touched.email &&
+                                                    errors.email}
+                                            </small>
+                                        ) : (
+                                            ""
+                                        )}
+                                        <Form.Control
+                                            type="email"
+                                            name="email"
+                                            onChange={handleChange}
+                                            onBlur={handleBlur}
+                                            value={values.email}
+                                        />
+                                    </Form.Group>
+                                    <Form.Group>
+                                        <Form.Label for="exampleEmail">
+                                            Password
+                                        </Form.Label>
+                                        {errors.password &&
+                                            touched.password &&
+                                            errors.password}
+                                        <Form.Control
+                                            type="password"
+                                            name="password"
+                                            onChange={handleChange}
+                                            onBlur={handleBlur}
+                                            value={values.password}
+                                        />
+                                    </Form.Group>
+                                    <Button
+                                        type="submit"
+                                        color="primary"
+                                        size="md"
+                                        block
+                                        disabled={isSubmitting}
+                                    >
+                                        Submit
+                                    </Button>
+                                </Form>
+                            )}
+                        </Formik>
+                    </Col>
+                    <Col xs={3} md={4}></Col>
+                </Row>
+            </Container>
         </div>
     );
 }
@@ -129,4 +153,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default withRouter(connect(null, mapDispatchToProps)(SignUp));
+export default withRouter(connect(null, mapDispatchToProps)(Register));

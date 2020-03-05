@@ -15,11 +15,15 @@ export default function ServiceSubtitling() {
             >
                 Subtitling & Transtitling
             </h3>
-            <p className="medFont desFont">
+            <p
+                className="desFont"
+                style={{ fontSize: "2vh", maxWidth: "300px" }}
+            >
                 Transtitling TM (steal info from other sites) <br />
                 Subtitling (steal info from other sites) <br />
                 Movies, TV Shows, Conferences, Documentaries, Research
                 Interviews
+                <p className="desFont" style={{ fontSize: "2vh" }}></p>
             </p>
         </div>
     );
