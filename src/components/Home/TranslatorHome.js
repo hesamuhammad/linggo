@@ -14,8 +14,17 @@ export default class TranslatorLooking extends Component {
             >
                 <Container>
                     <Row>
-                        <Col xs={6} className="leftside"></Col>
-                        <Col xs={6}>
+                        <Col
+                            xs={6}
+                            className="leftside"
+                            data-aos="fade-right"
+                            data-aos-duration="2500"
+                        ></Col>
+                        <Col
+                            xs={6}
+                            data-aos="fade-left"
+                            data-aos-duration="2500"
+                        >
                             <div
                                 class="card-body"
                                 style={{ backgroundColor: "#d8d8d8" }}
