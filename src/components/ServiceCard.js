@@ -60,7 +60,7 @@ export default class ServiceCard2 extends Component {
             </HashLink>
           </Col>
           <Col xs={12} md={3} style={{ marginTop: "2%" }}>
-          <HashLink className="hashHover" to="/service#service1" scroll={el => { el.scrollIntoView(true); window.scrollBy({top: 0 -50, behavior: 'smooth'})}}
+          <HashLink className="hashHover" to="/service#service2" scroll={el => { el.scrollIntoView(true); window.scrollBy({top: 0 -50, behavior: 'smooth'})}}
               >
             <Card
               bordered={false}
@@ -91,7 +91,7 @@ export default class ServiceCard2 extends Component {
             </HashLink>
           </Col>
           <Col xs={12} md={3} style={{ marginTop: "2%" }}>
-          <HashLink className="hashHover" to="/service#service1" scroll={el => { el.scrollIntoView(true); window.scrollBy({top: 0 -50, behavior: 'smooth'})}}
+          <HashLink className="hashHover" to="/service#service3" scroll={el => { el.scrollIntoView(true); window.scrollBy({top: 0 -50, behavior: 'smooth'})}}
               >
             <Card
               bordered={false}
@@ -130,7 +130,7 @@ export default class ServiceCard2 extends Component {
             </HashLink>
           </Col>
           <Col xs={12} md={3} style={{ marginTop: "2%" }}>
-          <HashLink className="hashHover" to="/service#service1" scroll={el => { el.scrollIntoView(true); window.scrollBy({top: 0 -50, behavior: 'smooth'})}}
+          <HashLink className="hashHover" to="/service#service4" scroll={el => { el.scrollIntoView(true); window.scrollBy({top: 0 -50, behavior: 'smooth'})}}
               >
             <Card
               bordered={false}
