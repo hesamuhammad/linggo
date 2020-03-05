@@ -3,6 +3,7 @@ import PricingDetail from "../components/PricingDetail";
 import PricingCard from "../components/PricingCard";
 import { Row, Col } from "antd";
 import BreadPricing from "../components/BreadPricing";
+import CheckPriceFromText from "./Checkword/CheckPriceFromText";
 
 export default function Pricing() {
     return (
@@ -14,6 +15,9 @@ export default function Pricing() {
                     <PricingDetail />
                 </Col>
                 <Col xs={0} sm={2} md={5} lg={5} xl={5}></Col>
+            </Row>
+            <Row>
+                <CheckPriceFromText />
             </Row>
             <Row>
                 <PricingCard />
