@@ -42,7 +42,7 @@ export default class ServiceCard2 extends Component {
                 <p
                   style={{
                     fontWeight: "bold",
-                    fontSize: "3vh"
+                    fontSize: "2.5vh"
                   }}
                 >
                   General <br />
@@ -72,7 +72,7 @@ export default class ServiceCard2 extends Component {
               <p
                 style={{
                   fontWeight: "bold",
-                  fontSize: "3vh"
+                  fontSize: "2.5vh"
                 }}
               >
                 Localization & Transcreation
@@ -101,7 +101,7 @@ export default class ServiceCard2 extends Component {
               <p
                 style={{
                   fontWeight: "bold",
-                  fontSize: "3vh"
+                  fontSize: "2.5vh"
                 }}
               >
                 Subtitling & Transtitling
