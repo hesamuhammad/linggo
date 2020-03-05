@@ -27,7 +27,9 @@ export default class TranslatorLooking extends Component {
                         >
                             <div
                                 class="card-body"
-                                style={{ backgroundColor: "#d8d8d8" }}
+                                style={{
+                                    backgroundColor: "#d8d8d8"
+                                }}
                             >
                                 <p
                                     class="card-title"
