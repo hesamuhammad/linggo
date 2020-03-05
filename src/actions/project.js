@@ -86,18 +86,23 @@ export const deleteByid = id => dispatch => {
     })
     .then(res => {
       dispatch(getByIdUsers());
-    });
+      window.location.reload();
+    }, 5000);
 };
 
 export const startProject = id => dispatch => {
-  return axios({
-    method: "put",
-    url: `${API}project/start/${id}`,
-    headers: { authorization: `Bearer ${token}` }
-  })
+  return axios(
+    {
+      method: "put",
+      url: `${API}project/start/${id}`,
+      headers: { authorization: `Bearer ${token}` }
+    },
+    3000
+  )
     .then(result => {
       dispatch(setProjectById());
-    })
+      window.location.reload();
+    }, 3000)
     .catch(error => {
       console.log(error);
     });
@@ -106,9 +111,7 @@ export const startProject = id => dispatch => {
 export const inputProject = (data, history) => dispatch => {
   return axios.post(`${API}project/addlocal`, data).then(res => {
     if (res.status === 200) {
-      // console.log("data setelah upload", res);
-      // console.log("data setelah upload", res.data.data._id);
-      // history.push("/project");
+      window.location.reload();
     }
   });
 };

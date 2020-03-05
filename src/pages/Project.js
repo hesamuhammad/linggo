@@ -79,6 +79,14 @@ function MyProfile(props) {
     setUplodFile(event.target.files[0].name);
   };
 
+  const formatRp = params => {
+    const rp = parseInt(params).toLocaleString("id", {
+      style: "currency",
+      currency: "IDR"
+    });
+    return rp;
+  };
+
   console.log("propsssssss", props);
 
   return (
@@ -143,8 +151,8 @@ function MyProfile(props) {
                                     )}{" "}
                                     MB
                                   </td>
-                                  <td>Total Word</td>
-                                  <td>Price</td>
+                                  <td>{item.jumlahKata}</td>
+                                  <td>{formatRp(item.hargaTotal)}</td>
                                   <td>{item.status}</td>
                                   <td>{formatDate(item.dateStart)}</td>
                                   <td>
