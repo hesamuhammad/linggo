@@ -20,6 +20,7 @@ export default function Service() {
                 id="service1"
                 name="service1"
                 style={{ backgroundColor: "white", paddingTop: "2%" }}
+                data-aos="fade-left"
             >
                 <Col
                     xs={{ span: 22, offset: 1 }}
@@ -55,6 +56,7 @@ export default function Service() {
                 id="service2"
                 name="service2"
                 style={{ backgroundColor: "white", marginTop: "2%" }}
+                data-aos="fade-right"
             >
                 <Col
                     xs={{ span: 22, offset: 1 }}
@@ -90,6 +92,7 @@ export default function Service() {
                 id="service3"
                 name="service3"
                 style={{ backgroundColor: "white", marginTop: "2%" }}
+                data-aos="fade-left"
             >
                 <Col
                     xs={{ span: 22, offset: 1 }}
@@ -125,6 +128,7 @@ export default function Service() {
                 name="service4"
                 id="service4"
                 style={{ backgroundColor: "white", marginTop: "2%" }}
+                data-aos="fade-right"
             >
                 <Col
                     xs={{ span: 22, offset: 1 }}

@@ -37,6 +37,7 @@ export default class ServiceCard2 extends Component {
                                     marginTop: "8%"
                                 }}
                                 hoverable
+                                data-aos="fade-up"
                             >
                                 <p
                                     style={{
@@ -65,6 +66,7 @@ export default class ServiceCard2 extends Component {
                                 marginTop: "8%"
                             }}
                             hoverable
+                            data-aos="fade-up"
                         >
                             <p
                                 style={{
@@ -92,6 +94,7 @@ export default class ServiceCard2 extends Component {
                                 marginTop: "8%"
                             }}
                             hoverable
+                            data-aos="fade-up"
                         >
                             <p
                                 style={{
@@ -126,6 +129,7 @@ export default class ServiceCard2 extends Component {
                                 marginTop: "8%"
                             }}
                             hoverable
+                            data-aos="fade-up"
                         >
                             <p
                                 style={{
