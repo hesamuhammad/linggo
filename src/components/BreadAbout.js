@@ -18,8 +18,10 @@ export default function BreadAbout() {
                             fontWeight: "700"
                         }}
                     >
-                        <Breadcrumb.Item style={{ color: "#dddddd" }}>
-                            <Link to="/">Home</Link>
+                        <Breadcrumb.Item>
+                            <Link to="/" style={{ color: "#dddddd" }}>
+                                Home
+                            </Link>
                         </Breadcrumb.Item>
                         <Breadcrumb.Item style={{ color: "#dddddd" }}>
                             About Us
