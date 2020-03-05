@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, Fragment, useState } from "react";
 import { Row, Col } from "antd";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
@@ -6,13 +6,25 @@ import {
   getProfileById,
   getByIdUsers,
   deleteByid,
-  startProject
+  startProject,
+  inputProject
 } from "../actions";
-import { Button } from "react-bootstrap";
+import { Button, Modal, Form } from "react-bootstrap";
 import Swal from "sweetalert2";
+import { Formik } from "formik";
 import "./project.css";
 
 function MyProfile(props) {
+  const [show, setShow] = useState(false);
+  const [uplodFile, setUplodFile] = useState("");
+  const [idUsers, setIdUsers] = useState("");
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => {
+    setShow(true);
+
+    setIdUsers(localStorage.getItem("idusers"));
+  };
   const {
     match: {
       params: { id }
@@ -48,7 +60,6 @@ function MyProfile(props) {
   };
 
   const startProject = params => {
-    console.log("id project diterima", params);
     Swal.fire({
       title: "Are you sure want to start this project!",
       text: "once started the project can not be canceled",
@@ -62,11 +73,13 @@ function MyProfile(props) {
         Swal.fire("Your Project has started.");
       }
     });
-    console.log("startProject", params);
+  };
+
+  const handleFile = event => {
+    setUplodFile(event.target.files[0].name);
   };
 
   console.log("propsssssss", props);
-  // console.log("propsssssss", props.data);
 
   return (
     <div className="paddingPage">
@@ -100,6 +113,10 @@ function MyProfile(props) {
                   </Row>
                   <Row justify="center">
                     <Col span={24} className="project-table">
+                      <Button variant="primary" onClick={handleShow}>
+                        Add Project
+                      </Button>
+
                       <table>
                         <thead>
                           <tr>
@@ -131,18 +148,26 @@ function MyProfile(props) {
                                   <td>{item.status}</td>
                                   <td>{formatDate(item.dateStart)}</td>
                                   <td>
-                                    <Button
-                                      variant="primary"
-                                      onClick={() => startProject(item._id)}
-                                    >
-                                      Start Project
-                                    </Button>{" "}
-                                    <Button
-                                      variant="danger"
-                                      onClick={() => deleteProject(item._id)}
-                                    >
-                                      Delete
-                                    </Button>
+                                    {item.status === "New" ? (
+                                      <Fragment>
+                                        <Button
+                                          variant="primary"
+                                          onClick={() => startProject(item._id)}
+                                        >
+                                          Start Project
+                                        </Button>{" "}
+                                        <Button
+                                          variant="danger"
+                                          onClick={() =>
+                                            deleteProject(item._id)
+                                          }
+                                        >
+                                          Delete
+                                        </Button>
+                                      </Fragment>
+                                    ) : (
+                                      <div></div>
+                                    )}
                                   </td>
                                 </tr>
                               );
@@ -156,6 +181,85 @@ function MyProfile(props) {
             </Row>
           );
         })}
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Add Project</Modal.Title>
+        </Modal.Header>
+        <Formik
+          initialValues={{
+            fileProject: "",
+            idUsers: idUsers
+          }}
+          validate={values => {
+            const errors = {};
+            return errors;
+          }}
+          onSubmit={(values, { setSubmitting, resetForm }) => {
+            let formData = new FormData();
+
+            for (const key in values) {
+              if (values.hasOwnProperty(key)) {
+                formData.append(key, values[key]);
+              }
+            }
+            props.inputProject(formData);
+            handleClose();
+          }}
+        >
+          {({
+            values,
+            errors,
+            touched,
+            handleChange,
+            handleBlur,
+            handleSubmit,
+            isSubmitting,
+            setFieldValue
+          }) => (
+            <Form onSubmit={handleSubmit}>
+              <Modal.Body>
+                <Form.Group controlId="formBasicEmail">
+                  <Form.Label>Uplod File PDF</Form.Label>
+                  <br />
+                  <input
+                    type="file"
+                    name="fileProject"
+                    onChange={event => {
+                      setFieldValue(
+                        "fileProject",
+                        event.currentTarget.files[0]
+                      );
+                      setFieldValue(
+                        "fileProjectName",
+                        event.currentTarget.files[0].name
+                      );
+                      setFieldValue(
+                        "fileProjectType",
+                        event.currentTarget.files[0].type
+                      );
+                      setFieldValue(
+                        "fileProjectSize",
+                        event.currentTarget.files[0].size
+                      );
+                      console.log(event);
+                      handleFile(event);
+                    }}
+                  />
+                </Form.Group>
+              </Modal.Body>
+              <Modal.Footer>
+                <Button variant="primary" type="submit">
+                  Save Project
+                </Button>
+                <Button variant="secondary" onClick={handleClose}>
+                  Close
+                </Button>
+              </Modal.Footer>
+            </Form>
+          )}
+        </Formik>
+      </Modal>
     </div>
   );
 }
@@ -175,9 +279,9 @@ const mapDispatchToProps = dispatch => {
     getByIdUsers: id => {
       dispatch(getByIdUsers(id));
     },
-
     deleteByid: id => dispatch(deleteByid(id)),
-    startProject: id => dispatch(startProject(id))
+    startProject: id => dispatch(startProject(id)),
+    inputProject: data => dispatch(inputProject(data))
   };
 };
 
