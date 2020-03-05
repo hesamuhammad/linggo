@@ -31,6 +31,8 @@ export default class AdaptiveHeight extends Component {
                                     style={{
                                         alignItems: "center"
                                     }}
+                                    data-aos="fade-right"
+                                    data-aos-duration="2500"
                                 >
                                     <p
                                         style={{
@@ -71,7 +73,7 @@ export default class AdaptiveHeight extends Component {
                                                 to="/aboutus"
                                                 style={{ color: "white" }}
                                             >
-                                                About Us
+                                                About
                                             </Link>
                                         </Button>
                                     </div>
@@ -132,6 +134,8 @@ export default class AdaptiveHeight extends Component {
                                     style={{
                                         alignItems: "center"
                                     }}
+                                    data-aos="fade-left"
+                                    data-aos-duration="2500"
                                 >
                                     <p
                                         style={{

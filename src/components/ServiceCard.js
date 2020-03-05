@@ -9,10 +9,10 @@ export default class ServiceCard2 extends Component {
       <div
         style={{
           textAlign: "center",
-          marginLeft: "10%",
-          marginRight: "10%",
-          paddingRight: "4%",
-          paddingLeft: "4%"
+          marginLeft: "8%",
+          marginRight: "8%",
+          paddingRight: "3%",
+          paddingLeft: "3%"
         }}
       >
         <Row
@@ -23,26 +23,28 @@ export default class ServiceCard2 extends Component {
             paddingLeft: "5%",
             paddingRight: "5%",
             backgroundColor: "#ACBFAD",
-            paddingTop: "4%",
-            paddingBottom: "4%"
+            paddingTop: "1%",
+            paddingBottom: "5%"
           }}
         >
-          <Col xs={12} md={3}>
+          <Col xs={12} md={3} style={{ marginTop: "2%" }}>
           <HashLink className="hashHover" to="/service#service1" scroll={el => { el.scrollIntoView(true); window.scrollBy({top: 0 -50, behavior: 'smooth'})}}
               >
               <Card
                 bordered={false}
                 style={{
-                  maxWidth: 250,
-                  minHeight: "300px",
+                  maxWidth: 300,
+                  height: "100%",
                   marginTop: "8%"
                 }}
                 hoverable
+                data-aos="fade-up"
+                data-aos-duration="2000"
               >
                 <p
                   style={{
                     fontWeight: "bold",
-                    fontSize: "2.5vh"
+                    fontSize: "3vh"
                   }}
                 >
                   General <br />
@@ -50,32 +52,34 @@ export default class ServiceCard2 extends Component {
                 </p>
                 <hr style={{ opacity: "70%" }} />
                 <p style={{ fontSize: "2vh" }}>
-                  We have over 25,000 certified translation professionals
+                  Wee have over 25,000 certified translation professionals
                   working in more than 120 languages to handle any project you
                   have.
                 </p>
               </Card>
             </HashLink>
           </Col>
-          <Col xs={12} md={3}>
-          <HashLink className="hashHover" to="/service#service2" scroll={el => { el.scrollIntoView(true); window.scrollBy({top: 0 -50, behavior: 'smooth'})}}
+          <Col xs={12} md={3} style={{ marginTop: "2%" }}>
+          <HashLink className="hashHover" to="/service#service1" scroll={el => { el.scrollIntoView(true); window.scrollBy({top: 0 -50, behavior: 'smooth'})}}
               >
             <Card
               bordered={false}
               style={{
-                maxWidth: 250,
-                minHeight: "300px",
+                maxWidth: 300,
+                height: "100%",
                 marginTop: "8%"
               }}
               hoverable
+              data-aos="fade-up"
+              data-aos-duration="2000"
             >
               <p
                 style={{
                   fontWeight: "bold",
-                  fontSize: "2.5vh"
+                  fontSize: "3vh"
                 }}
               >
-                Localization & Transcreation
+                Localization Transcreation
               </p>
               <hr style={{ opacity: "70%" }} />
               <p style={{ fontSize: "2vh" }}>
@@ -86,25 +90,27 @@ export default class ServiceCard2 extends Component {
             </Card>
             </HashLink>
           </Col>
-          <Col xs={12} md={3}>
-          <HashLink className="hashHover" to="/service#service3" scroll={el => { el.scrollIntoView(true); window.scrollBy({top: 0 -50, behavior: 'smooth'})}}
+          <Col xs={12} md={3} style={{ marginTop: "2%" }}>
+          <HashLink className="hashHover" to="/service#service1" scroll={el => { el.scrollIntoView(true); window.scrollBy({top: 0 -50, behavior: 'smooth'})}}
               >
             <Card
               bordered={false}
               style={{
-                maxWidth: 250,
-                minHeight: "300px",
+                maxWidth: 300,
+                height: "100%",
                 marginTop: "8%"
               }}
               hoverable
+              data-aos="fade-up"
+              data-aos-duration="2000"
             >
               <p
                 style={{
                   fontWeight: "bold",
-                  fontSize: "2.5vh"
+                  fontSize: "3vh"
                 }}
               >
-                Subtitling & Transtitling
+                Subtitling Transtitling
               </p>
               <hr style={{ opacity: "70%" }} />
               <p style={{ fontSize: "2vh" }}>
@@ -123,17 +129,19 @@ export default class ServiceCard2 extends Component {
             </Card>
             </HashLink>
           </Col>
-          <Col xs={12} md={3}>
+          <Col xs={12} md={3} style={{ marginTop: "2%" }}>
           <HashLink className="hashHover" to="/service#service1" scroll={el => { el.scrollIntoView(true); window.scrollBy({top: 0 -50, behavior: 'smooth'})}}
               >
             <Card
               bordered={false}
               style={{
-                maxWidth: 250,
-                minHeight: "300px",
+                maxWidth: 300,
+                height: "100%",
                 marginTop: "8%"
               }}
               hoverable
+              data-aos="fade-up"
+              data-aos-duration="2000"
             >
               <p
                 style={{

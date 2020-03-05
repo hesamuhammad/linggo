@@ -3,7 +3,11 @@ import "../App.css";
 
 export default function PricingDetail() {
     return (
-        <div style={{ paddingLeft: "5%", paddingRight: "5%" }}>
+        <div
+            style={{ paddingLeft: "5%", paddingRight: "5%" }}
+            data-aos="fade-right"
+            data-aos-duration="2500"
+        >
             <p
                 style={{
                     marginTop: "3%",
