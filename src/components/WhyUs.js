@@ -33,10 +33,10 @@ export default class WhyUs extends Component {
                         data-aos-duration="2500"
                     >
                         <div className="gutter-box" style={{
-                                    backgroundColor: "#d8d8d8"
+                                    backgroundColor: "#d8d8d8", marginBottom: "3%"
                                 }}>
                         <h6 
-                            style={{color:"black", textAlign: "center", }}>
+                            style={{color:"black", textAlign: "center", paddingTop: "3%" }}>
                                 Documents Translation</h6>
                             <Card
                                 bordered={false}
@@ -75,9 +75,9 @@ export default class WhyUs extends Component {
                         data-aos-duration="2500"
                     >
                         <div className="gutter-box" style={{
-                                    backgroundColor: "#ACBFAD"
+                                    backgroundColor: "#ACBFAD", marginBottom: "3%"
                                 }}>
-                        <h6 style={{color:"black", textAlign: "center"}}>
+                        <h6 style={{color:"black", textAlign: "center", paddingTop: "3%"}}>
                             Apostile & Legalization</h6>
                             <Card
                                 bordered={false}
@@ -115,9 +115,9 @@ export default class WhyUs extends Component {
                         data-aos-duration="2500"
                     >
                         <div className="gutter-box" style={{
-                                    backgroundColor: "#d8d8d8"
+                                    backgroundColor: "#d8d8d8", marginBottom: "3%"
                                 }}>
-                        <h6 style={{color:"black", textAlign: "center"}}>
+                        <h6 style={{color:"black", textAlign: "center", paddingTop: "3%"}}>
                             Localization Services</h6>
                             <Card
                                 bordered={false}
@@ -155,9 +155,9 @@ export default class WhyUs extends Component {
                         data-aos-duration="2500"
                     >
                         <div className="gutter-box" style={{
-                                    backgroundColor: "#ACBFAD"
+                                    backgroundColor: "#ACBFAD", marginBottom: "3%"
                                 }}>
-                        <h6 style={{color:"black", textAlign: "center"}}>
+                        <h6 style={{color:"black", textAlign: "center", paddingTop: "3%"}}>
                             Website Translation</h6>
                             <Card
                                 bordered={false}

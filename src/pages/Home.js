@@ -5,6 +5,7 @@ import Pros from "../components/Home/Pros";
 import CaroselBlog from "../components/Home/CarouselBlog";
 import ServiceCard from "../components/ServiceCard";
 import WhyUsHome from "../components/WhyUsHome";
+import TranslatorHome from "../components/Home/TranslatorHome";
 
 export default class Home extends Component {
     render() {
@@ -15,6 +16,7 @@ export default class Home extends Component {
                 <Pros />
                 <Testimonial />
                 <WhyUsHome />
+                <TranslatorHome />
                 <CaroselBlog />
             </div>
         );
