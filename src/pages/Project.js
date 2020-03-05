@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Row, Col } from "antd";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
-import { getProfileById, getByIdUsers } from "../actions";
+import { getProfileById, getByIdUsers, deleteByid } from "../actions";
 import { Button } from "react-bootstrap";
 import "./project.css";
 
@@ -22,6 +22,11 @@ function MyProfile(props) {
     let getTgl = date.split("T");
     let tglIndo = getTgl[0].split("-");
     return `${tglIndo[2]} - ${tglIndo[1]} - ${tglIndo[0]}`;
+  };
+
+  const deleteProject = params => {
+    console.log("deleteProject", params);
+    props.deleteByid(params);
   };
 
   console.log("propsssssss", props);
@@ -58,8 +63,8 @@ function MyProfile(props) {
                     </Col>
                   </Row>
                   <Row justify="center">
-                    <Col span={24}>
-                      <table className="project-table">
+                    <Col span={24} className="project-table">
+                      <table>
                         <thead>
                           <tr>
                             <th>No</th>
@@ -91,7 +96,12 @@ function MyProfile(props) {
                                     <Button variant="primary">
                                       Start Project
                                     </Button>{" "}
-                                    <Button variant="danger">Delete</Button>
+                                    <Button
+                                      variant="danger"
+                                      onClick={() => deleteProject(item._id)}
+                                    >
+                                      Delete
+                                    </Button>
                                   </td>
                                 </tr>
                               );
@@ -123,7 +133,9 @@ const mapDispatchToProps = dispatch => {
     },
     getByIdUsers: id => {
       dispatch(getByIdUsers(id));
-    }
+    },
+
+    deleteByid: id => dispatch(deleteByid(id))
   };
 };
 
