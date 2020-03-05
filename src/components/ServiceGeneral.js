@@ -15,7 +15,7 @@ export default function ServiceGeneral() {
             >
                 General Translation
             </h3>
-            <p className="medFont desFont">
+            <p className="desFont" style={{ fontSize: "2vh" }}>
                 Whether it’s a few paragraphs that need to be translated from
                 one language to another, or a website and marketing plan that
                 needs a complex localization treatment, we have the experience,

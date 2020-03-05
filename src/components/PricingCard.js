@@ -23,16 +23,16 @@ export default function PricingCard() {
                     paddingLeft: "3%",
                     paddingRight: "3%",
                     backgroundColor: "#ACBFAD",
-                    paddingTop: "5%",
+                    paddingTop: "3%",
                     paddingBottom: "5%"
                 }}
             >
-                <Col xs={12} md={4}>
+                <Col xs={12} md={4} style={{ marginTop: "2%" }}>
                     <Card
                         hoverable
                         bordered={false}
                         style={{
-                            minHeight: "350px",
+                            height: "100%",
                             maxWidth: "300px",
                             marginTop: "2%"
                         }}
@@ -74,12 +74,12 @@ export default function PricingCard() {
                         </p>
                     </Card>
                 </Col>
-                <Col xs={12} md={4}>
+                <Col xs={12} md={4} style={{ marginTop: "2%" }}>
                     <Card
                         hoverable
                         bordered={false}
                         style={{
-                            minHeight: "410px",
+                            height: "100%",
                             maxWidth: "300px",
                             marginTop: "2%"
                         }}
@@ -115,12 +115,12 @@ export default function PricingCard() {
                         </p>
                     </Card>
                 </Col>
-                <Col xs={12} md={4}>
+                <Col xs={12} md={4} style={{ marginTop: "2%" }}>
                     <Card
                         hoverable
                         bordered={false}
                         style={{
-                            minHeight: "410px",
+                            height: "100%",
                             maxWidth: "300px",
                             marginTop: "2%"
                         }}

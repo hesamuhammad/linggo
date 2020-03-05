@@ -18,7 +18,7 @@ export default class AdaptiveHeight extends Component {
             accessibility: true
         };
         return (
-            <div>
+            <div style={{ marginTop: "2%", marginBottom: "2%" }}>
                 <Slider {...settings}>
                     <div>
                         <Container>

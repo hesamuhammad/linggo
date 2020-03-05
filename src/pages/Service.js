@@ -28,7 +28,13 @@ export default function Service() {
                     lg={{ span: 16, offset: 4 }}
                     xl={{ span: 16, offset: 4 }}
                 >
-                    <Row gutter={16} style={{ padding: "30px 0" }}>
+                    <Row
+                        gutter={16}
+                        style={{
+                            padding: "30px 0",
+                            backgroundColor: "#d8d8d8"
+                        }}
+                    >
                         <Col span={12}>
                             <img
                                 src={Service1}
@@ -48,7 +54,7 @@ export default function Service() {
             <Row
                 id="service2"
                 name="service2"
-                style={{ backgroundColor: "white" }}
+                style={{ backgroundColor: "white", marginTop: "2%" }}
             >
                 <Col
                     xs={{ span: 22, offset: 1 }}
@@ -83,7 +89,7 @@ export default function Service() {
             <Row
                 id="service3"
                 name="service3"
-                style={{ backgroundColor: "white" }}
+                style={{ backgroundColor: "white", marginTop: "2%" }}
             >
                 <Col
                     xs={{ span: 22, offset: 1 }}
@@ -92,7 +98,13 @@ export default function Service() {
                     lg={{ span: 16, offset: 4 }}
                     xl={{ span: 16, offset: 4 }}
                 >
-                    <Row gutter={16} style={{ padding: "30px 0" }}>
+                    <Row
+                        gutter={16}
+                        style={{
+                            padding: "30px 0",
+                            backgroundColor: "#d8d8d8"
+                        }}
+                    >
                         <Col span={12}>
                             <img
                                 src={Service3}
@@ -112,7 +124,7 @@ export default function Service() {
             <Row
                 name="service4"
                 id="service4"
-                style={{ backgroundColor: "white" }}
+                style={{ backgroundColor: "white", marginTop: "2%" }}
             >
                 <Col
                     xs={{ span: 22, offset: 1 }}

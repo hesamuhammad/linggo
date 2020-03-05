@@ -28,25 +28,25 @@ export default class WhyUs extends Component {
                             <Card
                                 title="Documents Translation"
                                 bordered={false}
-                                style={{ backgroundColor: "#d8d8d8" }}
+                                style={{
+                                    backgroundColor: "#d8d8d8",
+                                    height: "100%"
+                                }}
                                 cover={
                                     <img
                                         src={Why1}
                                         alt="terjemah dokumen"
                                         style={{
-                                            maxWidth: "12vh",
+                                            maxWidth: "14vh",
                                             display: "inline"
                                         }}
                                     />
                                 }
                             >
                                 <p style={{ fontWeight: "bold" }}>
-                                    <br />
-                                    letter translations
-                                    <br />
-                                    commercial documents translations
-                                    <br />
-                                    marketing materials translations
+                                    letter translations, commercial, documents
+                                    translations, marketing materials
+                                    translations
                                     <br />
                                     legal documents translations
                                 </p>
@@ -58,26 +58,26 @@ export default class WhyUs extends Component {
                             <Card
                                 title="Apostile & Legalization"
                                 bordered={false}
-                                style={{ backgroundColor: "#ACBFAD" }}
+                                style={{
+                                    backgroundColor: "#ACBFAD",
+                                    height: "100%"
+                                }}
                                 cover={
                                     <img
                                         src={Why2}
                                         alt="legalisasi"
                                         style={{
-                                            maxWidth: "12vh",
+                                            maxWidth: "14vh",
                                             display: "inline"
                                         }}
                                     />
                                 }
                             >
                                 <p style={{ fontWeight: "bold" }}>
-                                    authentication of documents
-                                    <br />
-                                    certify the signature identify the seal
-                                    <br />
-                                    involves several entities legalization
-                                    <br />
-                                    higher government authority
+                                    authentication of documents certify the
+                                    signature identify the seal involves several
+                                    entities legalization higher government
+                                    authority
                                 </p>
                             </Card>
                         </div>
@@ -87,27 +87,26 @@ export default class WhyUs extends Component {
                             <Card
                                 title="Localization Services"
                                 bordered={false}
-                                style={{ backgroundColor: "#d8d8d8" }}
+                                style={{
+                                    backgroundColor: "#d8d8d8",
+                                    height: "100%"
+                                }}
                                 cover={
                                     <img
                                         src={Why3}
                                         alt="servis lokal"
                                         style={{
-                                            maxWidth: "12vh",
+                                            maxWidth: "14vh",
                                             display: "inline"
                                         }}
                                     />
                                 }
                             >
                                 <p style={{ fontWeight: "bold" }}>
-                                    penetrate foreign markets
-                                    <br />
-                                    reach new clients or consumer groups
-                                    <br />
-                                    increase international sales gain a
-                                    competitive
-                                    <br />
-                                    advantage over regional rivals
+                                    penetrate foreign markets reach new clients
+                                    or consumer groups increase international
+                                    sales gain a competitive advantage over
+                                    regional rivals
                                 </p>
                             </Card>
                         </div>
@@ -117,26 +116,25 @@ export default class WhyUs extends Component {
                             <Card
                                 title="Website Translation"
                                 bordered={false}
-                                style={{ backgroundColor: "#ACBFAD" }}
+                                style={{
+                                    backgroundColor: "#ACBFAD",
+                                    height: "100%"
+                                }}
                                 cover={
                                     <img
                                         src={Why4}
                                         alt="terjemah website"
                                         style={{
-                                            maxWidth: "12vh",
+                                            maxWidth: "14vh",
                                             display: "inline"
                                         }}
                                     />
                                 }
                             >
                                 <p style={{ fontWeight: "bold" }}>
-                                    software applications
-                                    <br />
-                                    html, PHP, javascript and flash files
-                                    <br />
-                                    open source andproprietary CMS systems
-                                    <br />
-                                    multimedia files
+                                    software applications html, PHP, javascript
+                                    and flash files open source andproprietary
+                                    CMS systems multimedia files
                                 </p>
                             </Card>
                         </div>
