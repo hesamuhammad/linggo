@@ -63,7 +63,9 @@ function CheckPriceFromText(props) {
         <div style={mystyle.boxCount}>
           <h2 style={mystyle.h2}>UPLOAD MATERIAL</h2>
 
-          <Button style={mystyle.btnCekWord}>Add File</Button>
+          <Button style={mystyle.btnCekWord} href="/project">
+            Add File
+          </Button>
           <Button style={mystyle.btnCekWord} onClick={handleShow}>
             Type Text
           </Button>
@@ -83,7 +85,7 @@ function CheckPriceFromText(props) {
       <Modal show={show} onHide={handleClose}>
         <Formik
           initialValues={{
-            textProject: "vddddd dddddd ddddd ddddddddddd dddddd"
+            textProject: ""
           }}
           validate={values => {
             const errors = {};
@@ -92,8 +94,6 @@ function CheckPriceFromText(props) {
           onSubmit={(values, { setSubmitting, resetForm }) => {
             setSubmitting(false);
             setShow(false);
-            // wordCount(values);
-
             props.wordCount(values);
           }}
         >
