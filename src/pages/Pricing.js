@@ -3,7 +3,8 @@ import PricingDetail from "../components/PricingDetail";
 import PricingCard from "../components/PricingCard";
 import { Row, Col } from "antd";
 import BreadPricing from "../components/BreadPricing";
-import CountWord from "../components/CountWord"
+import CountPriceByNumber from "../components/CountPriceByNumber"
+import CountPriceByText from "../components/CountPriceByText"
 
 export default function Pricing() {
     return (
@@ -24,9 +25,20 @@ export default function Pricing() {
                     lg={{ span: 16, offset: 4 }}
                     xl={{ span: 16, offset: 4 }}
                 >
-                <CountWord/>
+                <CountPriceByNumber/>
                 </Col>
             </Row>
+            {/* <Row>
+            <Col
+                    xs={{ span: 22, offset: 1 }}
+                    sm={{ span: 20, offset: 2 }}
+                    md={{ span: 16, offset: 4 }}
+                    lg={{ span: 16, offset: 4 }}
+                    xl={{ span: 16, offset: 4 }}
+                >
+                <CountPriceByText/>
+                </Col>
+            </Row> */}
             <Row>
                 <PricingCard />
             </Row>
