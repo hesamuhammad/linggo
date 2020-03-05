@@ -23,7 +23,6 @@ export default class WhyUs extends Component {
                     gutter={16}
                     style={{ margin: "auto" }}
                 >
-<<<<<<< HEAD
                     <Col
                         xs={24}
                         sm={24}
@@ -33,9 +32,6 @@ export default class WhyUs extends Component {
                         data-aos="fade-right"
                         data-aos-duration="2500"
                     >
-=======
-                    <Col xs={24} sm={24} md={24} lg={6} xl={6}>
->>>>>>> bf579e067487d85d0e28445fd62e9542f70ebae0
                         <div className="gutter-box">
                             <Card
                                 title="Documents Translation"
@@ -65,7 +61,6 @@ export default class WhyUs extends Component {
                             </Card>
                         </div>
                     </Col>
-<<<<<<< HEAD
                     <Col
                         xs={24}
                         sm={24}
@@ -75,9 +70,6 @@ export default class WhyUs extends Component {
                         data-aos="fade-right"
                         data-aos-duration="2500"
                     >
-=======
-                    <Col xs={24} sm={24} md={24} lg={6} xl={6}>
->>>>>>> bf579e067487d85d0e28445fd62e9542f70ebae0
                         <div className="gutter-box">
                             <Card
                                 title="Apostile & Legalization"
@@ -106,7 +98,6 @@ export default class WhyUs extends Component {
                             </Card>
                         </div>
                     </Col>
-<<<<<<< HEAD
                     <Col
                         xs={24}
                         sm={24}
@@ -116,9 +107,6 @@ export default class WhyUs extends Component {
                         data-aos="fade-left"
                         data-aos-duration="2500"
                     >
-=======
-                    <Col xs={24} sm={24} md={24} lg={6} xl={6}>
->>>>>>> bf579e067487d85d0e28445fd62e9542f70ebae0
                         <div className="gutter-box">
                             <Card
                                 title="Localization Services"
@@ -147,7 +135,6 @@ export default class WhyUs extends Component {
                             </Card>
                         </div>
                     </Col>
-<<<<<<< HEAD
                     <Col
                         xs={24}
                         sm={24}
@@ -157,9 +144,6 @@ export default class WhyUs extends Component {
                         data-aos="fade-left"
                         data-aos-duration="2500"
                     >
-=======
-                    <Col xs={24} sm={24} md={24} lg={6} xl={6}>
->>>>>>> bf579e067487d85d0e28445fd62e9542f70ebae0
                         <div className="gutter-box">
                             <Card
                                 title="Website Translation"
