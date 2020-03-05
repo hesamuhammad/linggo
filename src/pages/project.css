@@ -1,0 +1,21 @@
+.project-table {
+  width: 100%;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.project-table tr {}
+
+.project-table tr th {
+  border: 1px solid black;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.project-table tr td {
+  border: 1px solid black;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

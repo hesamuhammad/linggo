@@ -73,7 +73,8 @@ function App() {
         <Route exact path="/profile/:id">
           <MyProfile />
         </Route>
-        <Route exact path="/project">
+        <Route exact path="/project-users/:id">
+          {/* 5e5188405ecd2866190ba224 */}
           <Project />
         </Route>
         <Route exact path="/project/:id">
