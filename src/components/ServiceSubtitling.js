@@ -19,8 +19,8 @@ export default function ServiceSubtitling() {
                 className="desFont"
                 style={{ fontSize: "2vh", maxWidth: "300px" }}
             >
-                Transtitling TM (steal info from other sites) <br />
-                Subtitling (steal info from other sites) <br />
+                Transtitling<br />
+                Subtitling<br />
                 Movies, TV Shows, Conferences, Documentaries, Research
                 Interviews
                 <p className="desFont" style={{ fontSize: "2vh" }}></p>
