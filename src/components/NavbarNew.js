@@ -69,7 +69,7 @@ const NavbarNew = props => {
                         <Nav className="mr-auto">
                             {props.users.isLogin ? (
                                 <Fragment>
-                                    <Nav.Link
+                                    {/* <Nav.Link
                                         className="MenuNav"
                                         href="/service"
                                     >
@@ -81,7 +81,7 @@ const NavbarNew = props => {
                                     </Nav.Link>
                                     <Nav.Link href="/contactus">
                                         CONTACT US
-                                    </Nav.Link>
+                                    </Nav.Link> */}
                                     <Nav.Link href="/profile/">
                                         MY PROFILE
                                     </Nav.Link>
