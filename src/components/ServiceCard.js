@@ -42,7 +42,7 @@ export default class ServiceCard2 extends Component {
                             <Card
                                 bordered={false}
                                 style={{
-                                    maxWidth: 250,
+                                    maxWidth: 350,
                                     minHeight: "300px",
                                     marginTop: "8%"
                                 }}
