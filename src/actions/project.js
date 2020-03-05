@@ -58,7 +58,7 @@ export const setProfileByIdUsers = data => {
 export const getByIdUsers = id => dispatch => {
   return axios({
     method: "GET",
-    url: `https://project-linggo.herokuapp.com/project/getbyusers/${id}`,
+    url: `http://localhost:3007/project/getbyusers/${id}`,
     headers: { authorization: `Bearer ${token}` }
   })
     .then(result => {
@@ -77,17 +77,20 @@ export const setDeleteProject = data => {
   };
 };
 export const deleteByid = id => dispatch => {
-  console.log("id diterima di action project", id);
-  return axios({
-    method: "delete",
-    url: `http://localhost:3007/project/delete/${id}`,
-    headers: { authorization: `Bearer ${token}` }
-  })
-    .then(result => {
-      // console.log("actions getByIdUsers result", result.data);
-      dispatch(getByIdUsers());
+  return axios
+    .delete(`http://localhost:3007/project/delete/${id}`, {
+      headers: { authorization: `Bearer ${token}` }
     })
-    .catch(error => {
-      console.log(error);
+    .then(res => {
+      dispatch(getByIdUsers());
+    });
+};
+export const startProject = id => dispatch => {
+  return axios
+    .put(`http://localhost:3007/project/start/${id}`, {
+      headers: { authorization: `Bearer ${token}` }
+    })
+    .then(res => {
+      dispatch(getByIdUsers());
     });
 };

@@ -2,8 +2,14 @@ import React, { useEffect } from "react";
 import { Row, Col } from "antd";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
-import { getProfileById, getByIdUsers, deleteByid } from "../actions";
+import {
+  getProfileById,
+  getByIdUsers,
+  deleteByid,
+  startProject
+} from "../actions";
 import { Button } from "react-bootstrap";
+import Swal from "sweetalert2";
 import "./project.css";
 
 function MyProfile(props) {
@@ -25,8 +31,37 @@ function MyProfile(props) {
   };
 
   const deleteProject = params => {
-    console.log("deleteProject", params);
-    props.deleteByid(params);
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#d33",
+      cancelButtonColor: "#3085d6",
+      confirmButtonText: "Yes, delete it!"
+    }).then(result => {
+      if (result.value) {
+        props.startProject(params);
+        Swal.fire("Deleted!", "Your file has been deleted.", "success");
+      }
+    });
+  };
+
+  const startProject = params => {
+    Swal.fire({
+      title: "Are you sure want to start this project!",
+      text: "once started the project can not be canceled",
+      showCancelButton: true,
+      confirmButtonColor: "#0062cc",
+      cancelButtonColor: "#3085d6",
+      confirmButtonText: "Yes, Start it!"
+    }).then(result => {
+      if (result.value) {
+        props.startProject(params);
+        Swal.fire("Your Project has started.");
+      }
+    });
+    console.log("startProject", params);
   };
 
   console.log("propsssssss", props);
@@ -72,6 +107,7 @@ function MyProfile(props) {
                             <th>File Size</th>
                             <th>Total Word</th>
                             <th>Price</th>
+                            <th>Status</th>
                             <th style={{ minWidth: "107px" }}>Date</th>
                             <th>Actions</th>
                           </tr>
@@ -91,9 +127,13 @@ function MyProfile(props) {
                                   </td>
                                   <td>Total Word</td>
                                   <td>Price</td>
+                                  <td>{item.status}</td>
                                   <td>{formatDate(item.dateStart)}</td>
                                   <td>
-                                    <Button variant="primary">
+                                    <Button
+                                      variant="primary"
+                                      onClick={() => startProject(item._id)}
+                                    >
                                       Start Project
                                     </Button>{" "}
                                     <Button
@@ -135,7 +175,8 @@ const mapDispatchToProps = dispatch => {
       dispatch(getByIdUsers(id));
     },
 
-    deleteByid: id => dispatch(deleteByid(id))
+    deleteByid: id => dispatch(deleteByid(id)),
+    startProject: id => dispatch(startProject(id))
   };
 };
 

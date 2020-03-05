@@ -38,9 +38,7 @@ const NavbarNew = props => {
   if (token) {
     let decode = jwt(token);
   }
-  const JWT = require("jsonwebtoken");
-  const decoded = JWT.verify(token, "INISECRET");
-  const idUsers = decoded._id;
+  const idusers = localStorage.getItem("idusers");
 
   return (
     <Navbar
@@ -75,10 +73,14 @@ const NavbarNew = props => {
                 <Nav.Link href="/contactus">
                     CONTACT US
                 </Nav.Link> */}
-                  <Nav.Link href={`/profile/${idUsers}`}>MY PROFILE</Nav.Link>
-                  <Nav.Link href={`/project-users/${idUsers}`}>
-                    MY PROJECT
+                  <Nav.Link href={`/profile/${idusers}`}>MY PROFILE</Nav.Link>
+                  <Nav.Link href={`/project-users/${idusers}`}>
+                    PROJECT
                   </Nav.Link>
+                  {/* <Fragment>
+                    <Nav.Link href={`/profile`}>MY PROFILE</Nav.Link>
+                    <Nav.Link href={`/project-users`}>PROJECT</Nav.Link>
+                  </Fragment> */}
                 </Fragment>
               ) : (
                 <Fragment>
