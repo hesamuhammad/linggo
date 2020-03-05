@@ -36,6 +36,8 @@ export default function PricingCard() {
                             maxWidth: "300px",
                             marginTop: "2%"
                         }}
+                        data-aos="fade-up"
+                        data-aos-duration="2500"
                     >
                         <p
                             style={{
@@ -83,6 +85,8 @@ export default function PricingCard() {
                             maxWidth: "300px",
                             marginTop: "2%"
                         }}
+                        data-aos="fade-up"
+                        data-aos-duration="2500"
                     >
                         <p
                             style={{
@@ -124,6 +128,8 @@ export default function PricingCard() {
                             maxWidth: "300px",
                             marginTop: "2%"
                         }}
+                        data-aos="fade-up"
+                        data-aos-duration="2500"
                     >
                         <p
                             style={{

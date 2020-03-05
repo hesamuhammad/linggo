@@ -95,9 +95,7 @@ const NavbarNew = props => {
                                         SERVICES
                                     </Nav.Link>
                                     <Nav.Link href="/pricing">PRICING</Nav.Link>
-                                    <Nav.Link href="/aboutus">
-                                        ABOUT LINGGO
-                                    </Nav.Link>
+                                    <Nav.Link href="/aboutus">ABOUT</Nav.Link>
                                     <Nav.Link href="/contactus">
                                         CONTACT US
                                     </Nav.Link>

@@ -10,7 +10,7 @@ export default function ServiceSubtitling() {
                     paddingBottom: "12px",
                     textAlign: "left",
                     fontWeight: "bold",
-                    fontSize: "2.5vh"
+                    fontSize: "3vh"
                 }}
             >
                 Subtitling & Transtitling

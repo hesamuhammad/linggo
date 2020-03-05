@@ -19,9 +19,13 @@ export default function BreadAbout() {
                         }}
                     >
                         <Breadcrumb.Item>
-                            <Link to="/">Home</Link>
+                            <Link to="/" style={{ color: "#dddddd" }}>
+                                Home
+                            </Link>
                         </Breadcrumb.Item>
-                        <Breadcrumb.Item>About Us</Breadcrumb.Item>
+                        <Breadcrumb.Item style={{ color: "#dddddd" }}>
+                            About Us
+                        </Breadcrumb.Item>
                     </Breadcrumb>
                 </Col>
             </Row>
