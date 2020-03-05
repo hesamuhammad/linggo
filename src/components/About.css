@@ -4,10 +4,11 @@
 
 @media (max-width: 1199px) {
 	.about-right {
-		margin-top: 20px;
-		width: 130%;
+		margin-top: 13px;
+		width: 60%;
 		padding: 25px;
-	}		
+		margin-left: -15px;
+	}
 }
 
 @media (max-width: 991px) {
@@ -17,9 +18,9 @@
 	}
 	.about-right {
 		margin-top: 20px;
-		width: 128%;
+		width: 97%;
 		padding: 20px;
-		margin-left: -70px;
+		margin-left: 12px;
 	}
 
 	.about-right p {

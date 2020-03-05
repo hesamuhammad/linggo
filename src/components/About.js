@@ -8,7 +8,7 @@ export default class About extends Component {
         return (
             <div style={{ paddingBottom: "4%" }}>
                 <Row>
-                    <Col xs={24} sm={24} md={8} lg={8} xl={12}>
+                    <Col xs={24} sm={24} md={8} lg={8} xl={12} className="about-left">
                         <img
                             src={Translate}
                             style={{
