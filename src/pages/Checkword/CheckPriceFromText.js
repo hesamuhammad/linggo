@@ -11,37 +11,28 @@ function CheckPriceFromText(props) {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const [resultCount, setResultCount] = useState({
+    jumlahKata: "",
+    hargaTotal: ""
+  });
+
   useEffect(() => {
-    // const wordcount = JSON.parse(localStorage.getItem("wordcount"));
-    // props.wordCount(wordcount);
-    // console.log("wordcount", wordcount);
+    if (localStorage.getItem("wordcount") !== null) {
+      const getData = JSON.parse(localStorage.getItem("wordcount"));
 
-    const timer = setTimeout(() => {
-      localStorage.removeItem("wordcount");
-      localStorage.removeItem("textWord");
-    }, 3000);
-    return () => clearTimeout(timer);
-  }, []);
+      let allData = {
+        harga: getData.hargaTotal,
+        jumlahKata: getData.jumlahKata
+      };
+      setResultCount(allData);
 
-  const getTextWord = () => {
-    const textWord = JSON.parse(localStorage.getItem("textWord"));
-    return textWord.textProject;
-  };
-
-  const harga = option => {
-    const wordcount = JSON.parse(localStorage.getItem("wordcount"));
-
-    let harga = wordcount.hargaTotal;
-    let jumlahKata = wordcount.jumlahKata;
-    // return harga.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1.");
-    // return wordcount.jumlahKata;
-
-    if (option === "kata") {
-    } else if (option === "harga") {
-    } else {
-      return "";
+      const timer = setTimeout(() => {
+        localStorage.removeItem("wordcount");
+        localStorage.removeItem("textWord");
+      }, 3000);
+      return () => clearTimeout(timer);
     }
-  };
+  }, []);
 
   const mystyle = {
     boxCount: {
@@ -61,20 +52,6 @@ function CheckPriceFromText(props) {
     }
   };
 
-  const cekLogin = () => {
-    if (props.users.isLogin === true) {
-      console.log("login");
-    } else {
-      console.log("belum login");
-    }
-  };
-
-  const timer = setTimeout(() => {
-    localStorage.removeItem("wordcount");
-    localStorage.removeItem("textWord");
-  }, 3000);
-
-  console.log("props", props);
   return (
     <Container
       style={{
@@ -93,9 +70,9 @@ function CheckPriceFromText(props) {
 
           {localStorage.getItem("wordcount") !== null ? (
             <Alert variant="dark">
-              word count : {harga("jumlahKata")}
+              word count : {resultCount.jumlahKata}
               <br />
-              Price : Rp. {harga("harga")}
+              Price : Rp. {resultCount.harga}
             </Alert>
           ) : (
             <div></div>
@@ -115,14 +92,7 @@ function CheckPriceFromText(props) {
           onSubmit={(values, { setSubmitting, resetForm }) => {
             setSubmitting(false);
             setShow(false);
-
-            localStorage.setItem("textWord", JSON.stringify(values));
-
-            const wordcount = JSON.parse(localStorage.getItem("wordcount"));
-            console.log("harga", wordcount);
-
-            // let harga = wordcount.hargaTotal;
-            // let jumlahKata = wordcount.jumlahKata;
+            // wordCount(values);
 
             props.wordCount(values);
           }}
@@ -171,8 +141,7 @@ function CheckPriceFromText(props) {
 }
 
 const mapDispatchToProps = dispatch => {
-  console.log("wordCount", wordCount);
-  console.log("dispatch", dispatch);
+  console.log("wordCount(data)", wordCount);
   return {
     wordCount: data => dispatch(wordCount(data))
   };

@@ -35,23 +35,18 @@ export const inputProject = (data, history) => dispatch => {
 };
 
 export const wordCount = (data, history) => dispatch => {
-  console.log("data", data);
-  return axios
-    .post(`http://localhost:3007/project/counttext`, data)
-    .then(res => {
-      // return axios.post(`${OWN_API}project/counttext`, data).then(res => {
-      if (res.status === 200) {
-        let datacount = {
-          jumlahKata: res.data.data.jumlahKata,
-          hargaTotal: res.data.data.hargaTotal
-        };
-        localStorage.setItem("wordcount", JSON.stringify(datacount));
-        dispatch(dataWord(res.data.data));
-
-        // console.log("datacount", datacount);
-        // history.push("/blog-users");
-        // window.location.reload();
-        // console.log("success : ", res);
-      }
-    });
+  console.log("data ssss", data);
+  // return axios
+  //   .post(`http://localhost:3007/project/counttext`, data)
+  //   .then(res => {
+  return axios.post(`${OWN_API}project/counttext`, data).then(res => {
+    if (res.status === 200) {
+      let datacount = {
+        jumlahKata: res.data.data.jumlahKata,
+        hargaTotal: res.data.data.hargaTotal
+      };
+      localStorage.setItem("wordcount", JSON.stringify(datacount));
+      window.location.reload();
+    }
+  });
 };
