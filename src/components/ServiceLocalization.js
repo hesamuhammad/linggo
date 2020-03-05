@@ -15,7 +15,10 @@ export default function ServiceLocalization() {
             >
                 Localization & Transcreation
             </h3>
-            <p className="smallFont desFont" style={{ textAlign: "right" }}>
+            <p
+                className="desFont"
+                style={{ fontSize: "2vh", textAlign: "right" }}
+            >
                 Transcreation is a X of ‘translation’ and ‘creation’. It for
                 those clients who want to add English language to their
                 business/corporate w but are not excited by the idea of a
@@ -23,14 +26,14 @@ export default function ServiceLocalization() {
                 creativitiy and life into your content as a result of a new
                 direction of the company or a change in company culture – LINGGO
                 transcreation is for you.
-                <br />
+                {/* <br />
                 Localization is the standard etc. (steal from other sites)
                 <br />
                 Marketing material
                 <br />
                 Website foreign language implementation / overhaul
                 <br />
-                Gaming & Digital Books
+                Gaming & Digital Books */}
             </p>
         </div>
     );

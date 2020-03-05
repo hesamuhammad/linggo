@@ -42,14 +42,31 @@ class Contact extends React.Component {
         return (
             <div>
                 <Row>
-                    <Col xs={24} md={24} style={{ paddingLeft: "20px" }}>
-                        <h2 style={{ textAlign: "center" }}>Send a Message</h2>
+                    <Col
+                        xs={24}
+                        md={24}
+                        // style={{ paddingLeft: "5%", paddingRight: "8%" }}
+                    >
+                        <p
+                            style={{
+                                textAlign: "left",
+                                fontWeight: "bold",
+                                fontSize: "5vh",
+                                marginTop: "5%"
+                            }}
+                        >
+                            Contacts{" "}
+                        </p>
                         <Form layout="vertical" onSubmit={this.handleSubmit}>
                             <Form.Item>
                                 <Input
                                     name="name"
                                     onChange={this.handleChange}
                                     placeholder="Full Name"
+                                    style={{
+                                        borderStyle: "none",
+                                        borderBottom: "1px solid"
+                                    }}
                                 />
                             </Form.Item>
                             <Form.Item>
@@ -57,6 +74,10 @@ class Contact extends React.Component {
                                     name="email"
                                     onChange={this.handleChange}
                                     placeholder="Email Address"
+                                    style={{
+                                        borderStyle: "none",
+                                        borderBottom: "1px solid"
+                                    }}
                                 />
                             </Form.Item>
                             <Form.Item>
@@ -64,6 +85,10 @@ class Contact extends React.Component {
                                     name="phone"
                                     onChange={this.handleChange}
                                     placeholder="Phone Number"
+                                    style={{
+                                        borderStyle: "none",
+                                        borderBottom: "1px solid"
+                                    }}
                                 />
                             </Form.Item>
                             <Form.Item>
@@ -72,13 +97,21 @@ class Contact extends React.Component {
                                     onChange={this.handleChange}
                                     rows={4}
                                     placeholder="Your Message"
+                                    style={{
+                                        borderStyle: "none",
+                                        borderBottom: "1px solid"
+                                    }}
                                 ></TextArea>
                             </Form.Item>
                             <Form.Item>
                                 <Button
                                     htmlType="submit"
                                     size="large"
-                                    type="danger"
+                                    style={{
+                                        backgroundColor: "#283e2e",
+                                        borderColor: "#283e2e",
+                                        color: "white"
+                                    }}
                                 >
                                     SEND
                                 </Button>

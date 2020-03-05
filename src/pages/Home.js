@@ -4,6 +4,7 @@ import Testimonial from "../components/Home/Testimonial";
 import Pros from "../components/Home/Pros";
 import CaroselBlog from "../components/Home/CarouselBlog";
 import ServiceCard from "../components/ServiceCard";
+import WhyUsHome from "../components/WhyUsHome";
 
 export default class Home extends Component {
     render() {
@@ -13,6 +14,7 @@ export default class Home extends Component {
                 <ServiceCard />
                 <Pros />
                 <Testimonial />
+                <WhyUsHome />
                 <CaroselBlog />
             </div>
         );

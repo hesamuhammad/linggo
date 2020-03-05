@@ -7,7 +7,7 @@ export default class Socialmedia extends Component {
                 <a
                     href="https://www.google.com"
                     target="_blank"
-                    style={{ color: "white" }}
+                    style={{ color: "#93d5a4" }}
                     rel="noopener noreferrer"
                 >
                     <Icon
@@ -19,7 +19,7 @@ export default class Socialmedia extends Component {
                 <a
                     href="https://www.google.com"
                     target="_blank"
-                    style={{ color: "white" }}
+                    style={{ color: "#93d5a4" }}
                     rel="noopener noreferrer"
                 >
                     <Icon
@@ -31,7 +31,7 @@ export default class Socialmedia extends Component {
                 <a
                     href="https://www.google.com"
                     target="_blank"
-                    style={{ color: "white" }}
+                    style={{ color: "#93d5a4" }}
                     rel="noopener noreferrer"
                 >
                     <Icon
@@ -43,7 +43,7 @@ export default class Socialmedia extends Component {
                 <a
                     href="https://www.google.com"
                     target="_blank"
-                    style={{ color: "white" }}
+                    style={{ color: "#93d5a4" }}
                     rel="noopener noreferrer"
                 >
                     <Icon

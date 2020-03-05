@@ -18,7 +18,7 @@ export default class AdaptiveHeight extends Component {
             accessibility: true
         };
         return (
-            <div>
+            <div style={{ marginTop: "2%", marginBottom: "2%" }}>
                 <Slider {...settings}>
                     <div>
                         <Container>
@@ -60,8 +60,19 @@ export default class AdaptiveHeight extends Component {
                                             justifyContent: "center"
                                         }}
                                     >
-                                        <Button variant="dark" size="lg">
-                                            <Link to="/aboutus">About Us</Link>
+                                        <Button
+                                            size="lg"
+                                            style={{
+                                                backgroundColor: "#283e2e",
+                                                borderColor: "#283e2e"
+                                            }}
+                                        >
+                                            <Link
+                                                to="/aboutus"
+                                                style={{ color: "white" }}
+                                            >
+                                                About Us
+                                            </Link>
                                         </Button>
                                     </div>
                                 </Col>
@@ -156,11 +167,19 @@ export default class AdaptiveHeight extends Component {
                                         }}
                                     >
                                         <Button
-                                            variant="dark"
                                             size="lg"
-                                            style={{ display: "flex" }}
+                                            style={{
+                                                display: "flex",
+                                                backgroundColor: "#283e2e",
+                                                borderColor: "#283e2e"
+                                            }}
                                         >
-                                            <Link to="/whyus">Why Us</Link>
+                                            <Link
+                                                to="/aboutus"
+                                                style={{ color: "white" }}
+                                            >
+                                                Why Us
+                                            </Link>
                                         </Button>
                                     </div>
                                 </Col>

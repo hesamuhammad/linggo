@@ -1,6 +1,5 @@
 import axios from "axios";
 import history from "../history";
-import jwt from "jwt-decode";
 import Swal from "sweetalert2";
 
 export const LOGGED_IN = "LOGGED_IN";
@@ -30,7 +29,7 @@ export const myData = data => {
     };
 };
 
-export const login = data => dispatch => {
+export const login = (data, routerHistory) => dispatch => {
     return axios
         .post(`https://project-linggo.herokuapp.com/users/login`, data)
         .then(res => {
@@ -44,7 +43,11 @@ export const login = data => dispatch => {
                     timer: 2000,
                     showConfirmButton: false
                 });
-                history.push("/profile");
+                const JWT = require("jsonwebtoken");
+                const decoded = JWT.verify(res.data.token, "INISECRET");
+                const _id = decoded._id;
+                console.log(_id);
+                routerHistory.push(`/profile/${_id}`);
             } else {
                 Swal.fire({
                     title: "Email or Password is wrong !",
@@ -52,9 +55,6 @@ export const login = data => dispatch => {
                     icon: "error"
                 });
             }
-        })
-        .then(res => {
-            history.push("/profile");
         });
 };
 

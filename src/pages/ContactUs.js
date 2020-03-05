@@ -2,26 +2,20 @@ import React from "react";
 import Gmap from "../components/Gmap";
 import FormContact from "../components/FormContact";
 import BreadContact from "../components/BreadContact";
-import { Row, Col } from "antd";
+import { Row, Col } from "react-bootstrap";
 
 export default function ContactUs() {
     return (
         <div>
             <BreadContact />
-                <Row>
-                    <Col xs={0} sm={2} md={4} lg={4} xl={2}></Col>
-                    <Col xs={24} sm={20} md={16} lg={20} xl={20}>
-                        <Gmap />
-                    </Col>
-                    <Col xs={0} sm={2} md={4} lg={4} xl={2}></Col>
-                </Row>
-                <Row>
-                    <Col xs={0} sm={2} md={4} lg={4} xl={4}></Col>
-                    <Col xs={24} sm={20} md={16} lg={16} xl={16}>
-                        <FormContact />
-                    </Col>
-                    <Col xs={0} sm={2} md={4} lg={4} xl={4}></Col>
-                </Row>
+            <Row gutter={[8, 8]} style={{marginLeft: "0", marginRight: "0"}}>
+                <Col xs={{span:24}} sm={{span:24}} md={{span:8}} lg={{span:8}} xl={{span:6}}>
+                    <Gmap />
+                </Col>
+                <Col xs={{span:24}} sm={{span:24}} md={{span:8}} lg={{span:8}} xl={{span:6}}>
+                    <FormContact />
+                </Col>
+            </Row>
         </div>
     );
 }

@@ -22,11 +22,11 @@ class Responsive extends Component {
     render() {
         var settings = {
             dots: false,
-            infinite: false,
+            infinite: true,
             speed: 3500,
-            slidesToShow: 4,
-            slidesToScroll: 4,
-            initialSlide: 0,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            initialSlide: 1,
             autoplay: true,
             autoplaySpeed: 500,
             responsive: [
@@ -63,50 +63,90 @@ class Responsive extends Component {
             ]
         };
         return (
-            <div>
+            <div
+                style={{
+                    backgroundColor: "#ACBFAD",
+                    paddingTop: "2%",
+                    paddingBottom: "2%",
+                    marginLeft: "5%",
+                    marginRight: "5%",
+                    marginBottom: "2%"
+                }}
+            >
                 <p
                     style={{
                         fontSize: "5vh",
                         fontWeight: "bold",
-                        textAlign: "center"
+                        textAlign: "center",
+                        paddingBottom: "1%"
                     }}
                 >
                     Our Blog
                 </p>
-                <Slider {...settings}>
-                    {this.state.post.length > 0 &&
-                        this.state.post.map(post => {
-                            // console.log(post);
+                <div
+                    style={{
+                        paddingLeft: "10%",
+                        paddingRight: "10%"
+                    }}
+                >
+                    <Slider {...settings}>
+                        {this.state.post.length > 0 &&
+                            this.state.post.map(post => {
+                                // console.log(post);
 
-                            return (
-                                <Container key={post.id}>
-                                    <Card
-                                        hoverable
-                                        style={{ width: "auto" }}
-                                        cover={
-                                            <img
-                                                alt="example"
-                                                src={post.avatar}
-                                            />
-                                        }
-                                    >
-                                        <p>
-                                            {post.title3}
-                                            {post.title3}
-                                            {post.title3}
-                                            {post.title3}
-                                            {post.title3}
-                                            {post.title3}
-                                            {post.title3}
-                                            {post.title3}
-                                            {post.title3}
-                                            {post.title3}
-                                        </p>
-                                    </Card>
-                                </Container>
-                            );
-                        })}
-                </Slider>
+                                return (
+                                    <Container key={post.id}>
+                                        <div
+                                            style={{
+                                                display: "flex",
+                                                justifyContent: "center"
+                                            }}
+                                        >
+                                            <Card
+                                                hoverable
+                                                style={{
+                                                    maxWidth: "350px",
+                                                    backgroundColor: "white",
+                                                    borderStyle: "none",
+                                                    height: "100%"
+                                                }}
+                                                cover={
+                                                    <img
+                                                        alt="example"
+                                                        src={post.avatar}
+                                                        style={{
+                                                            backgroundColor:
+                                                                "white"
+                                                        }}
+                                                    />
+                                                }
+                                            >
+                                                <p
+                                                    style={{
+                                                        textAlign: "justify",
+                                                        fontWeight: "bold",
+                                                        fontsize: "2vh"
+                                                    }}
+                                                >
+                                                    Pellentesque habitant morbi
+                                                    tristique senectus et netus
+                                                    et malesuada fames ac turpis
+                                                    egestas. Vestibulum tortor
+                                                    quam, feugiat vitae,
+                                                    ultricies eget, tempor sit
+                                                    amet, ante. Donec eu libero
+                                                    sit amet quam egestas
+                                                    semper. Aenean ultricies mi
+                                                    vitae est. Mauris placerat
+                                                    eleifend leo
+                                                </p>
+                                            </Card>
+                                        </div>
+                                    </Container>
+                                );
+                            })}
+                    </Slider>
+                </div>
             </div>
         );
     }

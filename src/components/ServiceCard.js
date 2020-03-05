@@ -1,39 +1,54 @@
 import React, { Component } from "react";
-import { Row, Col, Card } from "antd";
+import { Card } from "antd";
+import { Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 export default class ServiceCard2 extends Component {
     render() {
         return (
-            <div style={{ textAlign: "center" }}>
+            <div
+                style={{
+                    textAlign: "center",
+                    marginLeft: "8%",
+                    marginRight: "8%",
+                    paddingRight: "3%",
+                    paddingLeft: "3%"
+                }}
+            >
                 <Row
                     align="middle"
                     justify="space-around"
                     gutter={[16, 16]}
                     style={{
-                        margin: "0 auto",
-                        padding: "1% 10%",
-                        backgroundColor: "#f5f5f5"
+                        paddingLeft: "5%",
+                        paddingRight: "5%",
+                        backgroundColor: "#ACBFAD",
+                        paddingTop: "1%",
+                        paddingBottom: "5%"
                     }}
                 >
-                    <Col xs={24} sm={24} md={24} lg={12} xl={6}>
+                    <Col xs={12} md={3} style={{ marginTop: "2%" }}>
                         <Link to="/service#service4">
                             <Card
                                 bordered={false}
-                                style={{ width: 300, minHeight: "280px" }}
+                                style={{
+                                    maxWidth: 350,
+                                    height: "100%",
+                                    marginTop: "8%"
+                                }}
                                 hoverable
                             >
                                 <p
                                     style={{
                                         fontWeight: "bold",
-                                        fontSize: "2.5vh"
+                                        fontSize: "3vh"
                                     }}
                                 >
                                     General <br />
                                     Translation{" "}
                                 </p>
                                 <hr style={{ opacity: "70%" }} />
-                                <p>
+                                <p style={{ fontSize: "2vh" }}>
                                     We have over 25,000 certified translation
                                     professionals working in more than 120
                                     languages to handle any project you have.
@@ -41,22 +56,26 @@ export default class ServiceCard2 extends Component {
                             </Card>
                         </Link>
                     </Col>
-                    <Col xs={24} sm={24} md={24} lg={12} xl={6}>
+                    <Col xs={12} md={3} style={{ marginTop: "2%" }}>
                         <Card
                             bordered={false}
-                            style={{ width: 300, minHeight: "280px" }}
+                            style={{
+                                maxWidth: 300,
+                                height: "100%",
+                                marginTop: "8%"
+                            }}
                             hoverable
                         >
                             <p
                                 style={{
                                     fontWeight: "bold",
-                                    fontSize: "2.5vh"
+                                    fontSize: "3vh"
                                 }}
                             >
-                                Localization & Transcreation
+                                Localization Transcreation
                             </p>
                             <hr style={{ opacity: "70%" }} />
-                            <p>
+                            <p style={{ fontSize: "2vh" }}>
                                 It for those clients who want to add English
                                 language to their business/corporate w but are
                                 not excited by the idea of a literal
@@ -64,22 +83,26 @@ export default class ServiceCard2 extends Component {
                             </p>
                         </Card>
                     </Col>
-                    <Col xs={24} sm={24} md={24} lg={12} xl={6}>
+                    <Col xs={12} md={3} style={{ marginTop: "2%" }}>
                         <Card
                             bordered={false}
-                            style={{ width: 300, minHeight: "280px" }}
+                            style={{
+                                maxWidth: 300,
+                                height: "100%",
+                                marginTop: "8%"
+                            }}
                             hoverable
                         >
                             <p
                                 style={{
                                     fontWeight: "bold",
-                                    fontSize: "2.5vh"
+                                    fontSize: "3vh"
                                 }}
                             >
-                                Subtitling & Transtitling
+                                Subtitling Transtitling
                             </p>
                             <hr style={{ opacity: "70%" }} />
-                            <p>
+                            <p style={{ fontSize: "2vh" }}>
                                 Movies
                                 <br />
                                 TV Shows
@@ -94,10 +117,14 @@ export default class ServiceCard2 extends Component {
                             </p>
                         </Card>
                     </Col>
-                    <Col xs={24} sm={24} md={24} lg={12} xl={6}>
+                    <Col xs={12} md={3} style={{ marginTop: "2%" }}>
                         <Card
                             bordered={false}
-                            style={{ width: 300, minHeight: "280px" }}
+                            style={{
+                                maxWidth: 300,
+                                height: "100%",
+                                marginTop: "8%"
+                            }}
                             hoverable
                         >
                             <p
@@ -109,13 +136,11 @@ export default class ServiceCard2 extends Component {
                                 NAATI Certified & Sworn Translations
                             </p>
                             <hr style={{ opacity: "70%" }} />
-                            <p>
+                            <p style={{ fontSize: "2vh" }}>
                                 Identity Documents
                                 <br />
                                 Educational Transcripts <br />
                                 Affidavits & Sworn Testimonies
-                                <br />
-                                Notarized Deeds
                                 <br />
                                 Judicial Decisions
                             </p>

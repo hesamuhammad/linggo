@@ -12,10 +12,10 @@ export default class WhyUs extends Component {
                 style={{
                     margin: "auto",
                     textAlign: "center",
-                    paddingLeft: "10%",
-                    paddingRight: "10%",
-                    marginTop: "3%",
-                    marginBottom: "1%"
+                    paddingLeft: "15%",
+                    paddingRight: "15%",
+                    marginTop: "5%",
+                    marginBottom: "3%"
                 }}
             >
                 <Row
@@ -38,23 +38,7 @@ export default class WhyUs extends Component {
                                         }}
                                     />
                                 }
-                            >
-                                <p>
-                                    letter translations
-                                    <br />
-                                    -
-                                    <br />
-                                    commercial documents translations
-                                    <br />
-                                    -
-                                    <br />
-                                    marketing materials translations
-                                    <br />
-                                    -
-                                    <br />
-                                    legal documents translations
-                                </p>
-                            </Card>
+                            ></Card>
                         </div>
                     </Col>
                     <Col xs={24} sm={24} md={6} lg={6} xl={6}>
@@ -72,23 +56,7 @@ export default class WhyUs extends Component {
                                         }}
                                     />
                                 }
-                            >
-                                <p>
-                                    authentication of documents
-                                    <br />
-                                    -
-                                    <br />
-                                    certify the signature identify the seal
-                                    <br />
-                                    -
-                                    <br />
-                                    involves several entities legalization
-                                    <br />
-                                    -
-                                    <br />
-                                    higher government authority
-                                </p>
-                            </Card>
+                            ></Card>
                         </div>
                     </Col>
                     <Col xs={24} sm={24} md={6} lg={6} xl={6}>
@@ -106,24 +74,7 @@ export default class WhyUs extends Component {
                                         }}
                                     />
                                 }
-                            >
-                                <p>
-                                    penetrate foreign markets
-                                    <br />
-                                    -
-                                    <br />
-                                    reach new clients or consumer groups
-                                    <br />
-                                    -
-                                    <br />
-                                    increase international sales gain a
-                                    competitive
-                                    <br />
-                                    -
-                                    <br />
-                                    advantage over regional rivals
-                                </p>
-                            </Card>
+                            ></Card>
                         </div>
                     </Col>
                     <Col xs={24} sm={24} md={6} lg={6} xl={6}>
@@ -141,23 +92,7 @@ export default class WhyUs extends Component {
                                         }}
                                     />
                                 }
-                            >
-                                <p>
-                                    software applications
-                                    <br />
-                                    -
-                                    <br />
-                                    html, PHP, javascript and flash files
-                                    <br />
-                                    -
-                                    <br />
-                                    open source andproprietary CMS systems
-                                    <br />
-                                    -
-                                    <br />
-                                    multimedia files
-                                </p>
-                            </Card>
+                            ></Card>
                         </div>
                     </Col>
                 </Row>

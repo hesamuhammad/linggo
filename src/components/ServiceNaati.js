@@ -15,22 +15,18 @@ export default function ServiceNaati() {
             >
                 NAATI Certified & Sworn Translations
             </h3>
-            <p className="smallFont desFont" style={{ textAlign: "right" }}>
+            <p
+                className="desFont"
+                style={{ fontSize: "2vh", textAlign: "right" }}
+            >
                 NAATI certified translations are highly regarded throughout the
                 world. NAATI certified translations are usually required for
                 foreign government departments, immigration and other legal
-                functionaries, for which may include:
-                <br />
-                Identity Documents (Birth Certificates, Marriage Certificates,
-                National ID Cards etc.)
-                <br />
-                Educational Transcripts
-                <br />
-                Affidavits & Sworn Testimonies
-                <br />
-                Notarized Deeds
-                <br />
-                Judicial Decisions
+                functionaries, for which may{" "}
+                <span style={{ fontWeight: "bold" }}>INCLUDE:</span> Identity
+                Documents (Birth Certificates, Marriage Certificates, National
+                ID Cards etc.), Educational Transcripts , Affidavits, Sworn
+                Testimonies, Notarized Deeds, Judicial Decisions
             </p>
         </div>
     );

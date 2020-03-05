@@ -13,8 +13,8 @@ export default class Navbar extends Component {
                 <Layout className="layout">
                     <Footer
                         style={{
-                            color: "white",
-                            backgroundColor: "#3c4245",
+                            color: "#c4c4c4",
+                            backgroundColor: "#283e2e",
                             paddingLeft: "5%",
                             paddingRight: "5%",
                             paddingTop: "5%"
@@ -54,12 +54,20 @@ export default class Navbar extends Component {
                                     <p>For Customers</p>
                                     <ul>
                                         <li style={{ fontSize: "2vh" }}>
-                                            <Link to="/pricing" target="_blank">
+                                            <Link
+                                                to="/pricing"
+                                                target="_blank"
+                                                style={{ color: "#c4c4c4" }}
+                                            >
                                                 Pricing
                                             </Link>
                                         </li>
                                         <li style={{ fontSize: "2vh" }}>
-                                            <Link to="/service" target="_blank">
+                                            <Link
+                                                to="/service"
+                                                target="_blank"
+                                                style={{ color: "#c4c4c4" }}
+                                            >
                                                 Service
                                             </Link>
                                         </li>
@@ -70,12 +78,20 @@ export default class Navbar extends Component {
                                 <p>For Translator</p>
                                 <ul>
                                     <li style={{ fontSize: "2vh" }}>
-                                        <Link to="/translators" target="_blank">
+                                        <Link
+                                            to="/translators"
+                                            target="_blank"
+                                            style={{ color: "#c4c4c4" }}
+                                        >
                                             Become a translator
                                         </Link>
                                     </li>
                                     <li style={{ fontSize: "2vh" }}>
-                                        <Link to="/resource" target="_blank">
+                                        <Link
+                                            to="/resource"
+                                            target="_blank"
+                                            style={{ color: "#c4c4c4" }}
+                                        >
                                             Resources
                                         </Link>
                                     </li>
@@ -85,7 +101,11 @@ export default class Navbar extends Component {
                                 <p>Company</p>
                                 <ul>
                                     <li style={{ fontSize: "2vh" }}>
-                                        <Link to="/aboutus" target="_blank">
+                                        <Link
+                                            to="/aboutus"
+                                            target="_blank"
+                                            style={{ color: "#c4c4c4" }}
+                                        >
                                             About us
                                         </Link>
                                     </li>
@@ -93,6 +113,7 @@ export default class Navbar extends Component {
                                         <Link
                                             to="/terms-of-service/privacy-policy"
                                             target="_blank"
+                                            style={{ color: "#c4c4c4" }}
                                         >
                                             Privacy
                                         </Link>
@@ -101,12 +122,17 @@ export default class Navbar extends Component {
                                         <Link
                                             to="/terms-of-service"
                                             target="_blank"
+                                            style={{ color: "#c4c4c4" }}
                                         >
                                             Terms of services
                                         </Link>
                                     </li>
                                     <li style={{ fontSize: "2vh" }}>
-                                        <Link to="/our-team" target="_blank">
+                                        <Link
+                                            to="/our-team"
+                                            target="_blank"
+                                            style={{ color: "#c4c4c4" }}
+                                        >
                                             Our team
                                         </Link>
                                     </li>
@@ -114,7 +140,8 @@ export default class Navbar extends Component {
                                         style={{
                                             // textAlign: "right",
                                             fontSize: "1.5vh",
-                                            paddingTop: "5%"
+                                            paddingTop: "5%",
+                                            color: "#f7f7f7"
                                         }}
                                     >
                                         © Linggo Inc.

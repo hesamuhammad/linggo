@@ -4,7 +4,13 @@ import { Row, Col, Card } from "react-bootstrap";
 export default class OurTranslator extends Component {
     render() {
         return (
-            <div style={{ paddingLeft: "15%", paddingRight: "15%" }}>
+            <div
+                style={{
+                    paddingLeft: "15%",
+                    paddingRight: "15%",
+                    paddingBottom: "3%"
+                }}
+            >
                 <div style={{ textAlign: "center" }}>
                     <p
                         style={{
@@ -108,10 +114,6 @@ export default class OurTranslator extends Component {
                                 </Card.Body>
                             </Card>
                         </Col>
-                    </Row>
-                </div>
-                <div>
-                    <Row>
                         <Col
                             sm
                             style={{

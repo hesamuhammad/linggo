@@ -69,10 +69,10 @@ function App() {
                 <Route exact path="/pricing">
                     <Pricing />
                 </Route>
-                <Route exact path="/profile">
+                <Route exact path="/profile/:id">
                     <MyProfile />
                 </Route>
-                <Route exact path="/project">
+                <Route exact path="/project/:id">
                     <MyProject />
                 </Route>
             </Switch>
