@@ -17,6 +17,8 @@ export default class WhyUs extends Component {
                     marginTop: "5%",
                     marginBottom: "3%"
                 }}
+                data-aos="fade-right"
+                data-aos-duration="2500"
             >
                 <Row
                     justify="space-around"

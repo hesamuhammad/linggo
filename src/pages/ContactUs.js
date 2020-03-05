@@ -8,22 +8,26 @@ export default function ContactUs() {
     return (
         <div>
             <BreadContact />
-            <Row gutter={[8, 8]} style={{marginLeft: "0", marginRight: "0"}}>
-                <Col 
-                    xs={{span:24}} 
-                    sm={{span:24}} 
-                    md={{span:8}} 
-                    lg={{span:8}} 
-                    xl={{span:8}}
+            <Row gutter={[8, 8]} style={{ marginLeft: "0", marginRight: "0" }}>
+                <Col
+                    xs={{ span: 24 }}
+                    sm={{ span: 24 }}
+                    md={{ span: 8 }}
+                    lg={{ span: 8 }}
+                    xl={{ span: 8 }}
+                    data-aos="fade-right"
+                    data-aos-duration="2500"
                 >
                     <Gmap />
                 </Col>
-                <Col 
-                    xs={{span:24}} 
-                    sm={{span:24}} 
-                    md={{span:4}} 
-                    lg={{span:4}} 
-                    xl={{span:4}}
+                <Col
+                    xs={{ span: 24 }}
+                    sm={{ span: 24 }}
+                    md={{ span: 4 }}
+                    lg={{ span: 4 }}
+                    xl={{ span: 4 }}
+                    data-aos="fade-left"
+                    data-aos-duration="2500"
                 >
                     <FormContact />
                 </Col>

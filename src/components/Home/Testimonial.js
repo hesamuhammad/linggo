@@ -37,8 +37,6 @@ class Testimonials extends Component {
                     marginLeft: "5%",
                     marginRight: "5%"
                 }}
-                data-aos="zoom-in-down"
-                data-aos-duration="3000"
             >
                 <p
                     style={{

@@ -10,7 +10,7 @@ export default function ServiceNaati() {
                     paddingBottom: "12px",
                     textAlign: "right",
                     fontWeight: "bold",
-                    fontSize: "2.5vh"
+                    fontSize: "3vh"
                 }}
             >
                 NAATI Certified & Sworn Translations
