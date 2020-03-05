@@ -3,10 +3,6 @@
 /*--------------------*/
 
 @media (max-width: 1199px) {
-	.about-left img {
-		max-width: none;
-		width: 43rem;
-	}
 	.about-right {
 		margin-top: 20px;
 		width: 130%;

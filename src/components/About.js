@@ -8,8 +8,8 @@ export default class About extends Component {
         return (
                 <div style={{ paddingBottom: "4%" }}>
                     <Row>
-                        <Col xs={24} sm={24} md={8} lg={24} xl={12} className="about-left">
-                            <img src={Translate} alt="translate"/>
+                        <Col xs={24} sm={24} md={8} lg={24} xl={12} className="fadeInLeft">
+                            <img src={Translate} style={{ display: "inline", justifyContent: "left", width: "100%" }} alt="translate"/>
                         </Col>
                         <Col xs={24} sm={24} md={8} lg={24} xl={12} className="about-right">
                                 <p>LINGGO translation, the only dedicated Indonesian / English boutique translation studio who are not only translators but pride ourselves on being effective communicators.</p>
