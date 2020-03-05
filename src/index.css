@@ -121,7 +121,7 @@ li {
 .about-left {
 	display: inline;
     justify-content: left;
-	width: auto;
+	width: 100%;
 }
 
 .about-right {
