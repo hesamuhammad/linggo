@@ -20,7 +20,6 @@ export const setProjectById = data => {
 };
 
 export const getProject = () => dispatch => {
-  const token = localStorage.getItem("token");
   return axios({
     method: "GET",
     url: `https://project-linggo.herokuapp.com/project/getall`,
@@ -35,11 +34,9 @@ export const getProject = () => dispatch => {
 };
 
 export const getProjectById = id => dispatch => {
-  const token = localStorage.getItem("token");
-
     return axios({
       method: "GET",
-      url: `https://project-linggo.herokuapp.com/project/getbyusers/${id}`,
+      url: `https://project-linggo.herokuapp.com/project/getone/${id}`,
       headers: { authorization: `Bearer ${token}` }
     })
       .then(result => {

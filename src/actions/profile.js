@@ -57,7 +57,7 @@ const token = localStorage.getItem("token");
     });
 };
 
-export const getProfileById = id => dispatch => {
+export const getProfileById = (id, values) => dispatch => {
 const token = localStorage.getItem("token");
 
   return axios({

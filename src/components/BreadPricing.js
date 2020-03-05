@@ -18,10 +18,8 @@ export default function BreadPricing() {
                             fontWeight: "700"
                         }}
                     >
-                        <Breadcrumb.Item>
-                            <Link to="/" style={{ color: "#dddddd" }}>
-                                Home
-                            </Link>
+                        <Breadcrumb.Item style={{ color: "#dddddd" }}>
+                            <Link to="/">Home</Link>
                         </Breadcrumb.Item>
                         <Breadcrumb.Item style={{ color: "#dddddd" }}>
                             Pricing

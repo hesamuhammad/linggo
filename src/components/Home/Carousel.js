@@ -73,7 +73,7 @@ export default class AdaptiveHeight extends Component {
                                                 to="/aboutus"
                                                 style={{ color: "white" }}
                                             >
-                                                About
+                                                About Us
                                             </Link>
                                         </Button>
                                     </div>

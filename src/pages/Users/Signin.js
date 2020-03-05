@@ -86,6 +86,14 @@ function SignIn(props) {
                                 >
                                     <Form.Item>
                                         <Input
+                                            prefix={
+                                                <Icon
+                                                    type="lock"
+                                                    style={{
+                                                        color: "rgba(0,0,0,.25)"
+                                                    }}
+                                                />
+                                            }
                                             type="email"
                                             placeholder="Email"
                                             name="email"
@@ -96,6 +104,14 @@ function SignIn(props) {
                                     </Form.Item>
                                     <Form.Item>
                                         <Input
+                                            prefix={
+                                                <Icon
+                                                    type="lock"
+                                                    style={{
+                                                        color: "rgba(0,0,0,.25)"
+                                                    }}
+                                                />
+                                            }
                                             type="password"
                                             placeholder="Password"
                                             name="password"
