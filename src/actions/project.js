@@ -86,11 +86,24 @@ export const deleteByid = id => dispatch => {
     });
 };
 export const startProject = id => dispatch => {
-  return axios
-    .put(`http://localhost:3007/project/start/${id}`, {
-      headers: { authorization: `Bearer ${token}` }
+  // return axios
+  //   .put(`http://localhost:3007/project/start/${id}`, {
+  //     headers: { authorization: `Bearer ${token}` }
+  //   })
+  //   .then(res => {
+  //     dispatch(getByIdUsers());
+  //   });
+  console.log("id project diterima di action", id);
+
+  return axios({
+    method: "put",
+    url: `http://localhost:3007/project/start/${id}`,
+    headers: { authorization: `Bearer ${token}` }
+  })
+    .then(result => {
+      dispatch(setProjectById());
     })
-    .then(res => {
-      dispatch(getByIdUsers());
+    .catch(error => {
+      console.log(error);
     });
 };

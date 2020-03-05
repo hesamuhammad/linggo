@@ -41,13 +41,14 @@ function MyProfile(props) {
       confirmButtonText: "Yes, delete it!"
     }).then(result => {
       if (result.value) {
-        props.startProject(params);
+        props.deleteByid(params);
         Swal.fire("Deleted!", "Your file has been deleted.", "success");
       }
     });
   };
 
   const startProject = params => {
+    console.log("id project diterima", params);
     Swal.fire({
       title: "Are you sure want to start this project!",
       text: "once started the project can not be canceled",
