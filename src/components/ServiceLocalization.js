@@ -10,7 +10,7 @@ export default function ServiceLocalization() {
                     paddingBottom: "12px",
                     textAlign: "right",
                     fontWeight: "bold",
-                    fontSize: "2.5vh"
+                    fontSize: "3vh"
                 }}
             >
                 Localization & Transcreation

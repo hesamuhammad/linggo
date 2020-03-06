@@ -32,11 +32,13 @@ export default class ServiceCard2 extends Component {
                             <Card
                                 bordered={false}
                                 style={{
-                                    maxWidth: 350,
+                                    maxWidth: 300,
                                     height: "100%",
                                     marginTop: "8%"
                                 }}
                                 hoverable
+                                data-aos="fade-up"
+                                data-aos-duration="2000"
                             >
                                 <p
                                     style={{
@@ -49,7 +51,7 @@ export default class ServiceCard2 extends Component {
                                 </p>
                                 <hr style={{ opacity: "70%" }} />
                                 <p style={{ fontSize: "2vh" }}>
-                                    We have over 25,000 certified translation
+                                    Wee have over 25,000 certified translation
                                     professionals working in more than 120
                                     languages to handle any project you have.
                                 </p>
@@ -65,6 +67,8 @@ export default class ServiceCard2 extends Component {
                                 marginTop: "8%"
                             }}
                             hoverable
+                            data-aos="fade-up"
+                            data-aos-duration="2000"
                         >
                             <p
                                 style={{
@@ -92,6 +96,8 @@ export default class ServiceCard2 extends Component {
                                 marginTop: "8%"
                             }}
                             hoverable
+                            data-aos="fade-up"
+                            data-aos-duration="2000"
                         >
                             <p
                                 style={{
@@ -126,6 +132,8 @@ export default class ServiceCard2 extends Component {
                                 marginTop: "8%"
                             }}
                             hoverable
+                            data-aos="fade-up"
+                            data-aos-duration="2000"
                         >
                             <p
                                 style={{

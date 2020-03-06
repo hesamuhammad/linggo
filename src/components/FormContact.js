@@ -45,7 +45,7 @@ class Contact extends React.Component {
                     <Col
                         xs={24}
                         md={24}
-                        style={{ paddingLeft: "5%", paddingRight: "8%" }}
+                        style={{ paddingLeft: "1%", paddingRight: "5%" }}
                     >
                         <p
                             style={{

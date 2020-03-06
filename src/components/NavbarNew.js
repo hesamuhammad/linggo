@@ -84,10 +84,56 @@ const NavbarNew = props => {
                 </Fragment>
               ) : (
                 <Fragment>
-                  <Nav.Link href="/service">SERVICES</Nav.Link>
-                  <Nav.Link href="/pricing">PRICING</Nav.Link>
-                  <Nav.Link href="/aboutus">ABOUT LINGGO</Nav.Link>
-                  <Nav.Link href="/contactus">CONTACT US</Nav.Link>
+                  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                  <Navbar.Collapse id="responsive-navbar-nav" isOpen={isOpen}>
+                    <Nav className="mr-auto">
+                      {props.users.isLogin ? (
+                        <Fragment>
+                          {/* <Nav.Link
+                                        className="MenuNav"
+                                        href="/service"
+                                    >
+                                        SERVICES
+                                    </Nav.Link>
+                                    <Nav.Link href="/pricing">PRICING</Nav.Link>
+                                    <Nav.Link href="/aboutus">
+                                        ABOUT LINGGO
+                                    </Nav.Link>
+                                    <Nav.Link href="/contactus">
+                                        CONTACT US
+                                    </Nav.Link> */}
+                          <Nav.Link href="/profile/">MY PROFILE</Nav.Link>
+                          <Nav.Link href="/project">MY PROJECT</Nav.Link>
+                        </Fragment>
+                      ) : (
+                        <Fragment>
+                          <Nav.Link href="/service">SERVICES</Nav.Link>
+                          <Nav.Link href="/pricing">PRICING</Nav.Link>
+                          <Nav.Link href="/aboutus">ABOUT</Nav.Link>
+                          <Nav.Link href="/contactus">CONTACT US</Nav.Link>
+                        </Fragment>
+                      )}
+                    </Nav>
+                    <Nav>
+                      <Nav.Link>
+                        <Drawer />
+                      </Nav.Link>
+                    </Nav>
+                    {console.log(props.isLogin, "islog")}
+                    {props.users.isLogin ? (
+                      <Nav>
+                        <Nav.Link eventKey={2} onClick={handleLogout}>
+                          SIGN OUT
+                        </Nav.Link>
+                      </Nav>
+                    ) : (
+                      <Nav>
+                        <Nav.Link eventKey={2} href="/signin">
+                          SIGN IN
+                        </Nav.Link>
+                      </Nav>
+                    )}
+                  </Navbar.Collapse>
                 </Fragment>
               )}
             </Nav>

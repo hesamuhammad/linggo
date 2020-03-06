@@ -3,76 +3,78 @@
 /*--------------------*/
 
 @media (max-width: 1199px) {
-	.about-right {
-		margin-top: 20px;
-		width: 140%;
-		padding: 25px;
-		margin-left: -190px;
-	}		
+    .about-right {
+        margin-top: 13px;
+        width: 60%;
+        padding: 25px;
+        margin-left: -15px;
+    }
 }
 
-@media (max-width: 991px) {	
-	.about-right {
-		margin-top: 75px;
-		width: 160%;
-		padding: 20px;
-		margin-left: -190px;
-	}
+@media (max-width: 991px) {
+    .about-left img {
+        max-width: none;
+        width: 32rem;
+    }
+    .about-right {
+        margin-top: 20px;
+        width: 97%;
+        padding: 20px;
+        margin-left: 12px;
+    }
 
-	.about-right p {
-		font-size: 14px;
-	}
+    .about-right p {
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 767px) {
-	.about-right {
-		margin-top: 30px;
-		width: 100%;
-		padding: 0;
-		margin-left: 0;
-		box-shadow: none;
-	}
+    .about-left img {
+        max-width: 100%;
+        width: auto;
+    }
+    .about-right {
+        margin-top: 30px;
+        width: 100%;
+        padding: 0;
+        margin-left: 0;
+        box-shadow: none;
+    }
 
-	.about-right p {
-		font-size: 15px;
-	}
+    .about-right p {
+        font-size: 15px;
+    }
 }
 
-
-@media (max-width: 640px){
-	
+@media (max-width: 640px) {
 }
-
 
 @media (max-width: 480px) {
-	body {
-		font-size: 14px;
+    body {
+        font-size: 14px;
     }
-    
-	h2 {
-		font-size: 28px;
-	}
 
-	h3 {
-		font-size: 24px;
-	}
+    h2 {
+        font-size: 28px;
+    }
 
-	h4 {
-		font-size: 20px;
-	}
+    h3 {
+        font-size: 24px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
 }
-
 
 @media (max-width: 360px) {
-	h2 {
-		font-size: 25px;
-	}
+    h2 {
+        font-size: 25px;
+    }
 }
 
-
-
 @media (max-width: 320px) {
-	h2 {
-		font-size: 22px;
-	}
+    h2 {
+        font-size: 22px;
+    }
 }

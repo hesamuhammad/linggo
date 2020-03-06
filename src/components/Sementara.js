@@ -1,167 +1,132 @@
-import React, { Component } from "react";
-import { Card, Col, Row } from "antd";
-import Why1 from "../images/document.svg";
-import Why2 from "../images/project.svg";
-import Why3 from "../images/sharing.svg";
-import Why4 from "../images/transfer.svg";
+import React from "react";
+import { Form, Input, Tooltip, Icon, Button } from "antd";
 
-export default class WhyUs extends Component {
-    render() {
-        return (
-            <div
-                style={{
-                    margin: "auto",
-                    textAlign: "center",
-                    paddingLeft: "10%",
-                    paddingRight: "10%",
-                    marginTop: "3%",
-                    marginBottom: "1%"
+import { Formik } from "formik";
+import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
+
+import { register } from "../../actions/users";
+
+function SignUp(props) {
+    return (
+        <div
+            style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center"
+            }}
+        >
+            <h1>Register</h1>
+            <Formik
+                initialValues={{ email: "", password: "" }}
+                validate={values => {
+                    const errors = {};
+                    if (!values.email) {
+                        errors.email = "Required";
+                    } else if (
+                        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(
+                            values.email
+                        )
+                    ) {
+                        errors.email = "Invalid email address";
+                    }
+                    return errors;
+                }}
+                onSubmit={(values, { setSubmitting }) => {
+                    props.register(values);
                 }}
             >
-                <Row
-                    justify="space-around"
-                    gutter={16}
-                    style={{ margin: "auto" }}
-                >
-                    <Col xs={24} sm={24} md={6} lg={6} xl={6}>
-                        <div className="gutter-box">
-                            <Card
-                                title="Documents Translation"
-                                bordered={false}
-                                cover={
-                                    <img
-                                        src={Why1}
-                                        alt="terjemah dokumen"
-                                        style={{
-                                            maxWidth: "12vh",
-                                            display: "inline"
-                                        }}
-                                    />
-                                }
-                            >
-                                <p>
-                                    letter translations
-                                    <br />
-                                    -
-                                    <br />
-                                    commercial documents translations
-                                    <br />
-                                    -
-                                    <br />
-                                    marketing materials translations
-                                    <br />
-                                    -
-                                    <br />
-                                    legal documents translations
-                                </p>
-                            </Card>
-                        </div>
-                    </Col>
-                    <Col xs={24} sm={24} md={6} lg={6} xl={6}>
-                        <div className="gutter-box">
-                            <Card
-                                title="Apostile & Legalization"
-                                bordered={false}
-                                cover={
-                                    <img
-                                        src={Why2}
-                                        alt="legalisasi"
-                                        style={{
-                                            maxWidth: "12vh",
-                                            display: "inline"
-                                        }}
-                                    />
-                                }
-                            >
-                                <p>
-                                    authentication of documents
-                                    <br />
-                                    -
-                                    <br />
-                                    certify the signature identify the seal
-                                    <br />
-                                    -
-                                    <br />
-                                    involves several entities legalization
-                                    <br />
-                                    -
-                                    <br />
-                                    higher government authority
-                                </p>
-                            </Card>
-                        </div>
-                    </Col>
-                    <Col xs={24} sm={24} md={6} lg={6} xl={6}>
-                        <div className="gutter-box">
-                            <Card
-                                title="Localization Services"
-                                bordered={false}
-                                cover={
-                                    <img
-                                        src={Why3}
-                                        alt="servis lokal"
-                                        style={{
-                                            maxWidth: "12vh",
-                                            display: "inline"
-                                        }}
-                                    />
-                                }
-                            >
-                                <p>
-                                    penetrate foreign markets
-                                    <br />
-                                    -
-                                    <br />
-                                    reach new clients or consumer groups
-                                    <br />
-                                    -
-                                    <br />
-                                    increase international sales gain a
-                                    competitive
-                                    <br />
-                                    -
-                                    <br />
-                                    advantage over regional rivals
-                                </p>
-                            </Card>
-                        </div>
-                    </Col>
-                    <Col xs={24} sm={24} md={6} lg={6} xl={6}>
-                        <div className="gutter-box">
-                            <Card
-                                title="Website Translation"
-                                bordered={false}
-                                cover={
-                                    <img
-                                        src={Why4}
-                                        alt="terjemah website"
-                                        style={{
-                                            maxWidth: "12vh",
-                                            display: "inline"
-                                        }}
-                                    />
-                                }
-                            >
-                                <p>
-                                    software applications
-                                    <br />
-                                    -
-                                    <br />
-                                    html, PHP, javascript and flash files
-                                    <br />
-                                    -
-                                    <br />
-                                    open source andproprietary CMS systems
-                                    <br />
-                                    -
-                                    <br />
-                                    multimedia files
-                                </p>
-                            </Card>
-                        </div>
-                    </Col>
-                </Row>
-            </div>
-        );
-    }
+                {({
+                    values,
+                    errors,
+                    touched,
+                    handleChange,
+                    handleBlur,
+                    handleSubmit,
+                    isSubmitting
+                    /* and other goodies */
+                }) => (
+                    <Form onSubmit={handleSubmit}>
+                        <Form.Item
+                            label={
+                                <span>
+                                    First Name &nbsp;
+                                    <Tooltip title="What is your first name?">
+                                        <Icon type="question-circle-o" />
+                                    </Tooltip>
+                                </span>
+                            }
+                        >
+                            <Input
+                                type="text"
+                                name="firstName"
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                value={values.firstName}
+                            />
+                            {errors.firstName &&
+                                touched.firstName &&
+                                errors.firstName}
+                        </Form.Item>
+                        <Form.Item
+                            label={
+                                <span>
+                                    Last Name &nbsp;
+                                    <Tooltip title="What is your last name?">
+                                        <Icon type="question-circle-o" />
+                                    </Tooltip>
+                                </span>
+                            }
+                        >
+                            <Input
+                                type="text"
+                                name="lastName"
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                value={values.lastName}
+                            />
+                            {errors.lastName &&
+                                touched.lastName &&
+                                errors.lastName}
+                        </Form.Item>
+                        <Form.Item label="E-mail">
+                            <Input
+                                type="email"
+                                name="email"
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                value={values.email}
+                            />
+                            {errors.email && touched.email && errors.email}
+                        </Form.Item>
+                        <Form.Item label="Password" hasFeedback>
+                            <Input
+                                type="password"
+                                name="password"
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                value={values.password}
+                            />
+                            {errors.password &&
+                                touched.password &&
+                                errors.password}
+                        </Form.Item>
+                        <Form.Item>
+                            <Button type="primary" disabled={isSubmitting}>
+                                Submit
+                            </Button>
+                        </Form.Item>
+                    </Form>
+                )}
+            </Formik>
+        </div>
+    );
 }
+
+const mapDispatchToProps = dispatch => {
+    return {
+        register: data => dispatch(register(data))
+    };
+};
+
+export default withRouter(connect(null, mapDispatchToProps)(SignUp));

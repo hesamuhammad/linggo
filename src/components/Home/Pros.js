@@ -38,6 +38,8 @@ export default class Pros extends Component {
                                     borderStyle: "none",
                                     margin: "2%"
                                 }}
+                                data-aos="fade-up"
+                                data-aos-duration="2500"
                             >
                                 <Card.Body>
                                     <Card.Title style={{ fontWeight: "bold" }}>
@@ -88,6 +90,8 @@ export default class Pros extends Component {
                                     borderStyle: "none",
                                     margin: "2%"
                                 }}
+                                data-aos="fade-up"
+                                data-aos-duration="2500"
                             >
                                 <Card.Body>
                                     <Card.Title style={{ fontWeight: "bold" }}>
@@ -138,6 +142,8 @@ export default class Pros extends Component {
                                     borderStyle: "none",
                                     margin: "2%"
                                 }}
+                                data-aos="fade-up"
+                                data-aos-duration="2500"
                             >
                                 <Card.Body>
                                     <Card.Title style={{ fontWeight: "bold" }}>
