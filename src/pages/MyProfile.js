@@ -88,13 +88,7 @@ function MyProfile(props) {
                                         display: "flex",
                                         justifyContent: "center"
                                     }}
-                                >
-                                    <p>
-                                        First Name: : {item.firstName} <br />
-                                        Last Name : {item.lastName} <br />
-                                        Password : *******
-                                    </p>
-                                </div>
+                                ></div>
                             </Col>
                             <Col
                                 xs={12}

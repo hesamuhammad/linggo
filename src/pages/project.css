@@ -1,0 +1,38 @@
+.project-table {
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.project-table::-webkit-scrollbar {
+  height: 3px
+}
+
+.project-table::-webkit-scrollbar-track {
+  background: black;
+}
+
+.project-table::-webkit-scrollbar-thumb {
+  background: #1d2d22;
+}
+
+.project-table table {
+  width: 100%;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+
+.project-table table tr th {
+  border: 1px solid black;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  min-width: 50px;
+}
+
+.project-table table tr td {
+  border: 1px solid black;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

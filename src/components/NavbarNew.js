@@ -42,8 +42,7 @@ const NavbarNew = props => {
     if (token) {
         let decode = jwt(token);
     }
-
-    console.log(props);
+    const idusers = localStorage.getItem("idusers");
 
     return (
         <Navbar
@@ -70,6 +69,42 @@ const NavbarNew = props => {
                             {props.users.isLogin ? (
                                 <Fragment>
                                     {/* <Nav.Link
+                    className="MenuNav"
+                    href="/service"
+                >
+                    SERVICES
+                </Nav.Link>
+                <Nav.Link href="/pricing">PRICING</Nav.Link>
+                <Nav.Link href="/aboutus">
+                    ABOUT LINGGO
+                </Nav.Link>
+                <Nav.Link href="/contactus">
+                    CONTACT US
+                </Nav.Link> */}
+                                    <Nav.Link href={`/profile/${idusers}`}>
+                                        MY PROFILE
+                                    </Nav.Link>
+                                    <Nav.Link
+                                        href={`/project-users/${idusers}`}
+                                    >
+                                        PROJECT
+                                    </Nav.Link>
+                                    {/* <Fragment>
+                    <Nav.Link href={`/profile`}>MY PROFILE</Nav.Link>
+                    <Nav.Link href={`/project-users`}>PROJECT</Nav.Link>
+                  </Fragment> */}
+                                </Fragment>
+                            ) : (
+                                <Fragment>
+                                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                                    <Navbar.Collapse
+                                        id="responsive-navbar-nav"
+                                        isOpen={isOpen}
+                                    >
+                                        <Nav className="mr-auto">
+                                            {props.users.isLogin ? (
+                                                <Fragment>
+                                                    {/* <Nav.Link
                                         className="MenuNav"
                                         href="/service"
                                     >
@@ -82,23 +117,31 @@ const NavbarNew = props => {
                                     <Nav.Link href="/contactus">
                                         CONTACT US
                                     </Nav.Link> */}
-                                    <Nav.Link href="/profile/">
-                                        MY PROFILE
-                                    </Nav.Link>
-                                    <Nav.Link href="/project">
-                                        MY PROJECT
-                                    </Nav.Link>
-                                </Fragment>
-                            ) : (
-                                <Fragment>
-                                    <Nav.Link href="/service">
-                                        SERVICES
-                                    </Nav.Link>
-                                    <Nav.Link href="/pricing">PRICING</Nav.Link>
-                                    <Nav.Link href="/aboutus">ABOUT</Nav.Link>
-                                    <Nav.Link href="/contactus">
-                                        CONTACT US
-                                    </Nav.Link>
+                                                    <Nav.Link href="/profile/">
+                                                        MY PROFILE
+                                                    </Nav.Link>
+                                                    <Nav.Link href="/project">
+                                                        MY PROJECT
+                                                    </Nav.Link>
+                                                </Fragment>
+                                            ) : (
+                                                <Fragment>
+                                                    <Nav.Link href="/service">
+                                                        SERVICES
+                                                    </Nav.Link>
+                                                    <Nav.Link href="/pricing">
+                                                        PRICING
+                                                    </Nav.Link>
+                                                    <Nav.Link href="/aboutus">
+                                                        ABOUT
+                                                    </Nav.Link>
+                                                    <Nav.Link href="/contactus">
+                                                        CONTACT US
+                                                    </Nav.Link>
+                                                </Fragment>
+                                            )}
+                                        </Nav>
+                                    </Navbar.Collapse>
                                 </Fragment>
                             )}
                         </Nav>
@@ -107,7 +150,6 @@ const NavbarNew = props => {
                                 <Drawer />
                             </Nav.Link>
                         </Nav>
-                        {console.log(props.isLogin, "islog")}
                         {props.users.isLogin ? (
                             <Nav>
                                 <Nav.Link eventKey={2} onClick={handleLogout}>
@@ -129,8 +171,6 @@ const NavbarNew = props => {
 };
 
 const mapStateToProps = state => {
-    console.log(state.users);
-
     return {
         users: state.users
     };
