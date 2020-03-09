@@ -11,7 +11,7 @@ class Responsive extends Component {
 
     componentDidMount() {
         axios
-            .get("http://5e3134bf576f9d0014d644c4.mockapi.io/blog")
+            .get("https://5e3134bf576f9d0014d644c4.mockapi.io/blog")
             .then(result => {
                 this.setState({
                     post: result.data
@@ -128,17 +128,7 @@ class Responsive extends Component {
                                                         fontsize: "2vh"
                                                     }}
                                                 >
-                                                    Pellentesque habitant morbi
-                                                    tristique senectus et netus
-                                                    et malesuada fames ac turpis
-                                                    egestas. Vestibulum tortor
-                                                    quam, feugiat vitae,
-                                                    ultricies eget, tempor sit
-                                                    amet, ante. Donec eu libero
-                                                    sit amet quam egestas
-                                                    semper. Aenean ultricies mi
-                                                    vitae est. Mauris placerat
-                                                    eleifend leo
+                                                    {post.title3}
                                                 </p>
                                             </Card>
                                         </div>
