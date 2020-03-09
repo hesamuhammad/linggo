@@ -1,5 +1,4 @@
 import axios from "axios";
-const API = "users";
 
 export const SET_CONTACT = "SET_CONTACT";
 
@@ -12,7 +11,7 @@ export const setContact = data => {
 
 export const postContact = values => dispatch => {
     return axios
-        .post(`https://project-linggo.herokuapp.com/contact/add`, values)
+        .post("https://project-linggo.herokuapp.com/contact/add", values)
         .then(result => {
             console.log(result);
         })
@@ -20,3 +19,5 @@ export const postContact = values => dispatch => {
             console.log(error);
         });
 };
+
+import axios from 'axios';
