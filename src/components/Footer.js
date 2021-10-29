@@ -127,7 +127,7 @@ export default class Navbar extends Component {
                                             Terms of services
                                         </Link>
                                     </li>
-                                    <li style={{ fontSize: "2vh" }}>
+                                    {/* <li style={{ fontSize: "2vh" }}>
                                         <Link
                                             to="/our-team"
                                             target="_blank"
@@ -135,7 +135,7 @@ export default class Navbar extends Component {
                                         >
                                             Our team
                                         </Link>
-                                    </li>
+                                    </li> */}
                                     <p
                                         style={{
                                             // textAlign: "right",
