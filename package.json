@@ -8,7 +8,7 @@
         "@testing-library/user-event": "^7.1.2",
         "antd": "^3.26.12",
         "aos": "^3.0.0-beta.6",
-        "axios": "^0.19.2",
+        "axios": "^0.21.2",
         "bootstrap": "^4.4.1",
         "formik": "^2.1.4",
         "jsonwebtoken": "^8.5.1",
